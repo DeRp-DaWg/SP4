@@ -1,18 +1,20 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class Question {
-    Answers : String[]
+package Question {
+    abstract class Question {
+        Answers : String[]
+    }
+
+    class MultipleChoice {
+    }
+
+    'class CheckboxChoice {'
+    '}'
+
+    Question --|> MultipleChoice
+    'Question --|> CheckboxChoice'
 }
-
-class MultipleChoice {
-}
-
-'class CheckboxChoice {'
-'}'
-
-Question --|> MultipleChoice
-'Question --|> CheckboxChoice'
 
 class Survey {
     Questions : Question[]
@@ -20,30 +22,35 @@ class Survey {
 
 Survey *--"1..*" Question
 
-interface IO {
-+abstract uploadSurvey()
-+abstract getSurvey()
+
+package IO {
+    interface IO {
+        +abstract uploadSurvey()
+        +abstract getSurvey()
+    }
+
+    class IOFile {
+    }
+
+    class IODatabase {
+        +uploadSurvey()
+        +getSurvey()
+    }
+
+    IO --|> IOFile
+    IO --|> IODatabase
 }
 
-class IOFile {
+package UI {
+    interface UI {
+    }
+
+    class UICommandLine {
+    }
+
+    UI --|> UICommandLine
+    UI --|> UIJavaFX
 }
-
-class IODatabase {
-+uploadSurvey()
-+getSurvey()
-}
-
-IO --|> IOFile
-IO --|> IODatabase
-
-interface UI {
-}
-
-class UICommandLine {
-}
-
-UI --|> UICommandLine
-UI --|> UIJavaFX
 
 class Controller {
 }
