@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class QuestionType {
+}
+
+class MultipleChoice {
+}
+
+'class CheckboxChoice {'
+'}'
+
+QuestionType --|> MultipleChoice
+'QuestionType --|> CheckboxChoice'
+
+class Survey {
+}
+
+Survey *-- QuestionType
+
+interface IO {
+}
+
+class IOFile {
+}
+
+class IODatabase {
+}
+
+IO --|> IOFile
+IO --|> IODatabase
+
+interface UI {
+}
+
+class UICommandLine {
+}
+
+UI --|> UICommandLine
+UI --|> UIJavaFX
+
+@enduml
