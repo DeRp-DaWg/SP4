@@ -1,27 +1,52 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+abstract class Question {
+    Answers : String[]
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class MultipleChoice {
 }
+
+'class CheckboxChoice {'
+'}'
+
+Question --|> MultipleChoice
+'Question --|> CheckboxChoice'
+
+class Survey {
+    Questions : Question[]
+}
+
+Survey *--"1..*" Question
+
+interface IO {
+}
+
+class IOFile {
+}
+
+class IODatabase {
+}
+
+IO --|> IOFile
+IO --|> IODatabase
+
+interface UI {
+}
+
+class UICommandLine {
+}
+
+UI --|> UICommandLine
+UI --|> UIJavaFX
+
+class Controller {
+}
+
+Controller -- Survey
+Controller -- IO
+Controller -- UI
+
 
 @enduml
