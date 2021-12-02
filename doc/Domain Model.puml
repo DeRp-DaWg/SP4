@@ -16,7 +16,7 @@ Question --|> MultipleChoice
 class Survey {
 }
 
-Survey *-- Question
+Survey *--"1..*" Question
 
 interface IO {
 }
