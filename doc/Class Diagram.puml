@@ -12,8 +12,8 @@ package Question {
     'class CheckboxChoice {'
     '}'
 
-    Question --|> MultipleChoice
-    'Question --|> CheckboxChoice'
+    Question <|-- MultipleChoice
+    'Question <|-- CheckboxChoice'
 }
 
 class Survey {
@@ -37,19 +37,38 @@ package IO {
         +getSurvey()
     }
 
-    IO --|> IOFile
-    IO --|> IODatabase
+    IO <|-- IOFile
+    IO <|-- IODatabase
 }
 
 package UI {
-    interface UI {
+    class UI {
     }
 
-    class UICommandLine {
+    interface UIAnswer {
     }
 
-    UI --|> UICommandLine
-    UI --|> UIJavaFX
+    interface UICreate {
+    }
+
+    UI *-- UIAnswer
+    UI *-- UICreate
+    package UICommandLine {
+        class UICommandLineAnswer {
+        }
+        class UICommandLineCreate {
+        }
+    }
+    package UIJavaFX {
+        class UIJavaFXAnswer {
+        }
+        class UIJavaFXCreate {
+        }
+    }
+    UIAnswer <|.. UICommandLineAnswer
+    UIAnswer <|.. UIJavaFXAnswer
+    UICreate <|.. UICommandLineCreate
+    UICreate <|.. UIJavaFXCreate
 }
 
 class Controller {
