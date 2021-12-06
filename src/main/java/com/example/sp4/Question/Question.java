@@ -1,4 +1,5 @@
 package com.example.sp4.Question;
 
-public class Question {
+public abstract class Question {
+    String answer[];
 }

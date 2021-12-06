@@ -1,4 +1,4 @@
 package com.example.sp4.IO;
 
-public class IO {
+public interface IO {
 }
