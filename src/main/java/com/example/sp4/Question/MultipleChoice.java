@@ -24,16 +24,16 @@ public class MultipleChoice extends Question {
         ArrayList<String> questions = new ArrayList<>();
         String getNextQuestion = "";
         String getNextAnswerInput = "";
-        ArrayList<String> getNextAnswer = new ArrayList<>();
         HashMap<String, ArrayList<String>> answerPossibilites = new HashMap<>();
         while(!getNextQuestion.toLowerCase().equals("e")){
+            ArrayList<String> getNextAnswer = new ArrayList<>();
             System.out.println("Enter the questions you want to ask and their answer possibilites. Click E when you're done: ");
             getNextQuestion = sc.nextLine();
             if(getNextQuestion.equals("e")){
                 break;
             }
 
-            while(!getNextAnswerInput.toLowerCase().equals("b")){
+            while(true){
                 System.out.println("Enter the answer possibilites for this question, type b when you're done: ");
                 getNextAnswerInput = sc.nextLine();
                 if(getNextAnswerInput.equals("b")){
@@ -41,7 +41,6 @@ public class MultipleChoice extends Question {
                 }
                 getNextAnswer.add(getNextAnswerInput);
             }
-
             answerPossibilites.put(getNextQuestion, getNextAnswer);
         }
         System.out.println(answerPossibilites);
