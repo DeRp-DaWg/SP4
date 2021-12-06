@@ -10,7 +10,7 @@ public class IOFile implements IO {
     public Survey read(String name) {
         Survey survey = null;
         try {
-            FileInputStream file = new FileInputStream("surveys/"+name+".survey");
+            FileInputStream file = new FileInputStream("surveys/"+name+".ser");
             ObjectInputStream in = new ObjectInputStream(file);
     
             survey = (Survey) in.readObject();
@@ -32,7 +32,7 @@ public class IOFile implements IO {
     @Override
     public void save(Survey survey) {
         try {
-            FileOutputStream file = new FileOutputStream("surveys/"+survey.getName()+".survey");
+            FileOutputStream file = new FileOutputStream("surveys/"+survey.getName()+".ser");
             ObjectOutputStream out = new ObjectOutputStream(file);
         
             out.writeObject(survey);
@@ -41,7 +41,6 @@ public class IOFile implements IO {
             file.close();
         
             System.out.println("Survey has been serialized");
-        
         }
         catch (IOException e) {
             e.printStackTrace();
