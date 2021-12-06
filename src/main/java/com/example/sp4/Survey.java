@@ -2,17 +2,17 @@ package com.example.sp4;
 
 import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
+import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Survey {
-    public String getName() {
-        return name;
-    }
 
-    String name;
-ArrayList<Question> listOfQuestions;
+    public Survey(){
+        UICommandLineCreate uiCommandLineCreate = new UICommandLineCreate();
+    }
+    //ArrayList<Question> listOfQuestions;
+
 
 /*public void addQuestion(){
     Scanner scanner = new Scanner(System.in);
