@@ -1,5 +1,6 @@
 @startuml
 'https://plantuml.com/class-diagram
+title SP4 - Class Diagram
 
 package Question {
     abstract class Question {
@@ -43,8 +44,13 @@ package IO {
 
 package UI {
     class UI {
+        + uistart : UIStart
         + uianswer : UIAnswer
         + uicreate : UICreate
+    }
+
+    interface UIStart {
+        + UIShowStart()
     }
 
     interface UIAnswer {
@@ -55,24 +61,41 @@ package UI {
         + UIShowCreate()
     }
 
+    UI *-- UIStart
     UI *-- UIAnswer
     UI *-- UICreate
-    package UICommandLine {
+    package UICommandLine #CCFFCC {
+        abstract class UICommandLine {
+        }
+        class UICommandLineStart {
+        }
         class UICommandLineAnswer {
         }
         class UICommandLineCreate {
         }
+        UICommandLineStart --|> UICommandLine
+        UICommandLineAnswer --|> UICommandLine
+        UICommandLineCreate --|> UICommandLine
     }
-    package UIJavaFX {
+    package UIJavaFX #99DDFF {
+        abstract class UIJavaFX {
+        }
+        class UIJavaFXStart {
+        }
         class UIJavaFXAnswer {
         }
         class UIJavaFXCreate {
         }
+        UIJavaFXStart --|> UIJavaFX
+        UIJavaFXAnswer --|> UIJavaFX
+        UIJavaFXCreate --|> UIJavaFX
     }
-    UIAnswer <|.. UICommandLineAnswer
-    UIAnswer <|.. UIJavaFXAnswer
-    UICreate <|.. UICommandLineCreate
-    UICreate <|.. UIJavaFXCreate
+    UIStart <|..[#green,thickness=2] UICommandLineStart
+    UIStart <|..[#blue,thickness=2] UIJavaFXStart
+    UIAnswer <|..[#green,thickness=2] UICommandLineAnswer
+    UIAnswer <|..[#blue,thickness=2] UIJavaFXAnswer
+    UICreate <|..[#green,thickness=2] UICommandLineCreate
+    UICreate <|..[#blue,thickness=2] UIJavaFXCreate
 }
 
 class Controller {
