@@ -22,7 +22,7 @@ public class MultipleChoice extends Question{
             }
 
             while(true){
-                System.out.println("Enter the answer possibilites for this question, type b when you're done: ");
+                System.out.println("Enter what people can answer, type b when you're done: ");
                 getNextAnswerInput = sc.nextLine();
                 if(getNextAnswerInput.equals("b")){
                     break;
