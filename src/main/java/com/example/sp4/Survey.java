@@ -2,19 +2,25 @@ package com.example.sp4;
 
 import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
+import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Survey implements Serializable {
     public static final long serialVersionUID = 104877509L;
+    private String name;
+    
+    public Survey(){
+        UICommandLineCreate uiCommandLineCreate = new UICommandLineCreate();
+        uiCommandLineCreate.UIShowCreate("multiplechoice");
+    }
+    
     public String getName() {
         return name;
     }
+    //ArrayList<Question> listOfQuestions;
 
-    String name;
-ArrayList<Question> listOfQuestions;
 
 /*public void addQuestion(){
     Scanner scanner = new Scanner(System.in);

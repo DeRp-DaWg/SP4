@@ -12,21 +12,24 @@ public class UICommandLineCreate implements UICreate {
     private String email;
 
     public UICommandLineCreate(){
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Din surveys titel: ");
-        surveyTitle = sc.nextLine();
-
-        System.out.println("survey description: ");
-        surveyDescription = sc.nextLine();
-
-        MultipleChoice multipleChoice = new MultipleChoice(surveyTitle, surveyDescription, name, email);
-
-        //System.out.println(surveyTitle + "\n" + surveyDescription);
     }
 
     @Override
-    public void UIShowCreate() {
+    public void UIShowCreate(String surveyType) {
+        if(surveyType.equals("multiplechoice")){
+            Scanner sc = new Scanner(System.in);
 
+            System.out.println("Din surveys titel: ");
+            surveyTitle = sc.nextLine();
+
+            System.out.println("survey description: ");
+            surveyDescription = sc.nextLine();
+
+            //Tilføj name og email
+
+            MultipleChoice multipleChoice = new MultipleChoice();
+
+            //System.out.println(surveyTitle + "\n" + surveyDescription);
+        }
     }
 }
