@@ -5,17 +5,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class MultipleChoice {
-    private String surveyTitle;
-    private String surveyDescription;
-    private String name;
-    private String email;
-
-    public MultipleChoice(String surveyTitle, String surveyDescription, String name, String email) {
-        this.surveyTitle = surveyTitle;
-        this.surveyDescription = surveyDescription;
-        this.name = name;
-        this.email = email;
+public class MultipleChoice extends Question{
+    public MultipleChoice() {
 
         Scanner sc = new Scanner(System.in);
         ArrayList<String> questions = new ArrayList<>();

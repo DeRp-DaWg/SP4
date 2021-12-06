@@ -10,6 +10,7 @@ public class Survey {
 
     public Survey(){
         UICommandLineCreate uiCommandLineCreate = new UICommandLineCreate();
+        uiCommandLineCreate.UIShowCreate("multiplechoice");
     }
     //ArrayList<Question> listOfQuestions;
 
