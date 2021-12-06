@@ -20,8 +20,8 @@ public class UICommandLineCreate implements UICreate {
         System.out.println("survey description: ");
         surveyDescription = sc.nextLine();
 
-        //MultipleChoice multipleChoice = new MultipleChoice(surveyTitle, surveyDescription, name, email);
+        MultipleChoice multipleChoice = new MultipleChoice(surveyTitle, surveyDescription, name, email);
 
-        System.out.println(surveyTitle + "\n" + surveyDescription);
+        //System.out.println(surveyTitle + "\n" + surveyDescription);
     }
 }

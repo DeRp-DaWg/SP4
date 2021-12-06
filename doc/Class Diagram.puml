@@ -37,8 +37,8 @@ package IO {
         +getSurvey()
     }
 
-    IO <|-- IOFile
-    IO <|-- IODatabase
+    IO <|.. IOFile
+    IO <|.. IODatabase
 }
 
 package UI {
