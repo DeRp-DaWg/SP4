@@ -7,7 +7,7 @@ import java.io.*;
 public class IOFile implements IO {
     
     @Override
-    public Survey read(String name) {
+    public Survey read(String name) throws Exception {
         Survey survey = null;
         try {
             FileInputStream file = new FileInputStream("surveys/"+name+".ser");
@@ -19,9 +19,6 @@ public class IOFile implements IO {
             file.close();
     
             System.out.println("Survey has been deserialized");
-        }
-        catch (IOException e) {
-            e.printStackTrace();
         }
         catch (ClassNotFoundException e) {
             e.printStackTrace();
