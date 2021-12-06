@@ -2,23 +2,19 @@ package com.example.sp4;
 
 import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
+import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Survey implements Serializable {
-    public static final long serialVersionUID = 104877509L;
-    public String getName() {
-        return name;
+public class Survey {
 
+    public Survey(){
+        UICommandLineCreate uiCommandLineCreate = new UICommandLineCreate();
     }
+    //ArrayList<Question> listOfQuestions;
 
-    String name;
-ArrayList<Question> listOfQuestions;
 
-public void addQuestion(){
-    //scanner is temporary, it's there until UI is put together
+/*public void addQuestion(){
     Scanner scanner = new Scanner(System.in);
     System.out.println("What do you want to ask?");
     String questionTitle = scanner.nextLine();
@@ -31,10 +27,10 @@ public void addQuestion(){
 public void addQuestion(String input){
     switch (input){
         case "MultipleChoice":
-           // Question question = new MultipleChoice();
-         //   listOfQuestions.add(question);
+            Question question = new MultipleChoice();
+            listOfQuestions.add(question);
             break;
     }
 }
-
+*/
 }
