@@ -24,4 +24,9 @@ public class UICommandLineCreate implements UICreate {
 
         //System.out.println(surveyTitle + "\n" + surveyDescription);
     }
+
+    @Override
+    public void UIShowCreate() {
+
+    }
 }
