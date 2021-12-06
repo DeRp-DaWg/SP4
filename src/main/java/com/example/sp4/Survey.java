@@ -9,12 +9,14 @@ import java.util.Scanner;
 public class Survey {
     public String getName() {
         return name;
+
     }
 
     String name;
 ArrayList<Question> listOfQuestions;
 
-/*public void addQuestion(){
+public void addQuestion(){
+    //scanner is temporary, it's there until UI is put together
     Scanner scanner = new Scanner(System.in);
     System.out.println("What do you want to ask?");
     String questionTitle = scanner.nextLine();
@@ -27,10 +29,10 @@ ArrayList<Question> listOfQuestions;
 public void addQuestion(String input){
     switch (input){
         case "MultipleChoice":
-            Question question = new MultipleChoice();
-            listOfQuestions.add(question);
+           // Question question = new MultipleChoice();
+         //   listOfQuestions.add(question);
             break;
     }
 }
-*/
+
 }

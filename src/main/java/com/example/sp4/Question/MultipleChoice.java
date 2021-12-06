@@ -5,7 +5,10 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class MultipleChoice {
+public class MultipleChoice extends Question {
+   public MultipleChoice(String title, int amountOfAnswers){}
+    public void addQuestion(String title){}
+
     private String surveyTitle;
     private String surveyDescription;
     private String name;
