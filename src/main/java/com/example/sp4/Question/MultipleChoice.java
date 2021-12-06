@@ -46,6 +46,6 @@ public class MultipleChoice extends Question {
         }
         System.out.println(answerPossibilites);
 
-        //I hashmappet answerPossibilites ligger spørgsmålene, efterfulgt af svarmulighederne i et array
+        //I hashmappet answerPossibilites ligger spørgsmålene, efterfulgt af svarmulighederne i et smukt array
     }
 }
