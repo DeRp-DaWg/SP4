@@ -1,16 +1,17 @@
-package com.example.sp4.UI;
+package com.example.sp4.UI.CommandLine;
 
 import com.example.sp4.Question.MultipleChoice;
+import com.example.sp4.UI.UICreate;
 
 import java.util.Scanner;
 
-public class UICommandLine {
+public class UICommandLineCreate implements UICreate {
     private String surveyTitle;
     private String surveyDescription;
     private String name;
     private String email;
 
-    public UICommandLine(){
+    public UICommandLineCreate(){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Din surveys titel: ");

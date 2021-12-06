@@ -11,4 +11,8 @@ module com.example.sp4 {
     opens com.example.sp4.UI to javafx.fxml;
     exports com.example.sp4.Question;
     opens com.example.sp4.Question to javafx.fxml;
+    exports com.example.sp4.UI.JavaFX;
+    opens com.example.sp4.UI.JavaFX to javafx.fxml;
+    exports com.example.sp4.UI.CommandLine;
+    opens com.example.sp4.UI.CommandLine to javafx.fxml;
 }

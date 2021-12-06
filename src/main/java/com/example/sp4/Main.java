@@ -1,9 +1,9 @@
 package com.example.sp4;
 
-import com.example.sp4.UI.UICommandLine;
+import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
 public class Main {
     public static void main(String[] args) {
-        UICommandLine uiCommandLine = new UICommandLine();
+        UICommandLineCreate uiCommandLine = new UICommandLineCreate();
     }
 }

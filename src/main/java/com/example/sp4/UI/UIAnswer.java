@@ -1,4 +1,4 @@
 package com.example.sp4.UI;
 
-public class UIJavaFX {
+public interface UIAnswer {
 }
