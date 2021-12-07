@@ -13,7 +13,7 @@ public class Survey implements Serializable {
     
     public Survey(){
         UICommandLineCreate uiCommandLineCreate = new UICommandLineCreate();
-        uiCommandLineCreate.UIShowCreate("multiplechoice");
+        //uiCommandLineCreate.UIShowCreate("multiplechoice");
     }
     
     public String getName() {

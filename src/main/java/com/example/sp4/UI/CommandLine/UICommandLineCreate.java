@@ -1,6 +1,7 @@
 package com.example.sp4.UI.CommandLine;
 
 import com.example.sp4.Question.MultipleChoice;
+import com.example.sp4.Survey;
 import com.example.sp4.UI.UICreate;
 
 import java.util.Scanner;
@@ -14,6 +15,12 @@ public class UICommandLineCreate extends UICommandLine implements UICreate {
     public UICommandLineCreate(){
     }
 
+    @Override
+    public Survey UIShowCreate() {
+        return null;
+    }
+
+    /*
     @Override
     public void UIShowCreate(String surveyType) {
         if(surveyType.equals("multiplechoice")){
@@ -32,4 +39,5 @@ public class UICommandLineCreate extends UICommandLine implements UICreate {
             //System.out.println(surveyTitle + "\n" + surveyDescription);
         }
     }
+    */
 }
