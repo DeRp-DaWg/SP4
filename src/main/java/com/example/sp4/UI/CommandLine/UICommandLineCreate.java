@@ -14,6 +14,9 @@ public class UICommandLineCreate implements UICreate {
     public UICommandLineCreate(){
     }
 
+    public static void run() {
+    }
+
     @Override
     public void UIShowCreate(String surveyType) {
         if(surveyType.equals("multiplechoice")){
