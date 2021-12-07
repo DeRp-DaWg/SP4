@@ -5,7 +5,7 @@ import com.example.sp4.UI.UICreate;
 
 import java.util.Scanner;
 
-public class UICommandLineCreate implements UICreate {
+public class UICommandLineCreate extends UICommandLine implements UICreate {
     private String surveyTitle;
     private String surveyDescription;
     private String name;
