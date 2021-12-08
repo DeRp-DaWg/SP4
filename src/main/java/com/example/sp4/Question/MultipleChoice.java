@@ -2,37 +2,36 @@ package com.example.sp4.Question;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
-import java.util.Scanner;
 
-public class MultipleChoice extends Question{
-    public MultipleChoice() {
+public class MultipleChoice extends Question {
+    HashMap<String,Integer> answers;
 
-        Scanner sc = new Scanner(System.in);
-        ArrayList<String> questions = new ArrayList<>();
-        String getNextQuestion = "";
-        String getNextAnswerInput = "";
-        HashMap<String, ArrayList<String>> answerPossibilites = new HashMap<>();
-        while(!getNextQuestion.toLowerCase().equals("e")){
-            ArrayList<String> getNextAnswer = new ArrayList<>();
-            System.out.println("Enter the questions you want to ask and their answer possibilites. Click E when you're done: ");
-            getNextQuestion = sc.nextLine();
-            if(getNextQuestion.equals("e")){
-                break;
-            }
+    public MultipleChoice(String questionName, String questionDescription, HashMap<String, Integer> answers) {
+        super(questionName, questionDescription);
+        this.answers = answers;
+    }
+    public MultipleChoice(String questionName, String questionDescription) {
+        super(questionName, questionDescription);
+    }
 
-            while(true){
-                System.out.println("Enter what people can answer, type b when you're done: ");
-                getNextAnswerInput = sc.nextLine();
-                if(getNextAnswerInput.equals("b")){
-                    break;
-                }
-                getNextAnswer.add(getNextAnswerInput);
-            }
-            answerPossibilites.put(getNextQuestion, getNextAnswer);
-        }
-        System.out.println(answerPossibilites);
+    public void addQuestion(String title){}
 
-        //I hashmappet answerPossibilites ligger spørgsmålene, efterfulgt af svarmulighederne i et smukt array
+    @Override
+    public void addAnswer() {
+
+    }
+
+    @Override
+    public void addResult() {
+
+    }
+
+    @Override
+    public HashMap<String, Integer> getAnswers() {
+        return null;
+    }
+
+    public void draw(){
+
     }
 }
