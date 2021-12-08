@@ -4,13 +4,20 @@ import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
 import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Survey {
-
+public class Survey implements Serializable {
+    public static final long serialVersionUID = 104877509L;
+    private String name;
+    
     public Survey(){
         UICommandLineCreate uiCommandLineCreate = new UICommandLineCreate();
         uiCommandLineCreate.UIShowCreate("multiplechoice");
+    }
+    
+    public String getName() {
+        return name;
     }
     //ArrayList<Question> listOfQuestions;
 

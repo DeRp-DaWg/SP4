@@ -32,9 +32,4 @@ public class UICommandLineCreate extends UICommandLine implements UICreate {
             //System.out.println(surveyTitle + "\n" + surveyDescription);
         }
     }
-
-    @Override
-    public void UIShowCreate() {
-
-    }
 }
