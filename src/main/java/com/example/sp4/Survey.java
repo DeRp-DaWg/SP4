@@ -7,32 +7,32 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Survey {
-    public String getName() {
-        return name;
-
+    private String surveyTitle;
+    private String surveyDescription;
+    private ArrayList<Question> questions = new ArrayList<>();
+    public Survey(String surveyTitle, String surveyDescription){
+        this.surveyTitle = surveyTitle;
+        this.surveyDescription = surveyDescription;
     }
 
-    String name;
-ArrayList<Question> listOfQuestions;
-
-public void addQuestion(){
-    //scanner is temporary, it's there until UI is put together
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("What do you want to ask?");
-    String questionTitle = scanner.nextLine();
-    System.out.println("How many answers do you want?");
-    int amountOfAnswers = scanner.nextInt();
-    Question question = new MultipleChoice(questionTitle,amountOfAnswers);
-    listOfQuestions.add(question);
-}
-//Skeleton to if we add more kinds of questions
-public void addQuestion(String input){
-    switch (input){
-        case "MultipleChoice":
-           // Question question = new MultipleChoice();
-         //   listOfQuestions.add(question);
-            break;
+    public Survey(String surveyTitle, String surveyDescription, ArrayList<Question> questions) {
+        this.surveyTitle = surveyTitle;
+        this.surveyDescription = surveyDescription;
+        this.questions = questions;
     }
-}
 
+    public String getSurveyTitle() {
+        return surveyTitle;
+    }
+
+    public String getSurveyDescription() {
+        return surveyDescription;
+    }
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+    public void addQuestion(Question question){
+        questions.add(question);
+    }
 }

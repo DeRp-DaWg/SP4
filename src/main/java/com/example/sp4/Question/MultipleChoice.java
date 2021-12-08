@@ -2,50 +2,36 @@ package com.example.sp4.Question;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
-import java.util.Scanner;
 
 public class MultipleChoice extends Question {
-   public MultipleChoice(String title, int amountOfAnswers){}
+    HashMap<String,Integer> answers;
+
+    public MultipleChoice(String questionName, String questionDescription, HashMap<String, Integer> answers) {
+        super(questionName, questionDescription);
+        this.answers = answers;
+    }
+    public MultipleChoice(String questionName, String questionDescription) {
+        super(questionName, questionDescription);
+    }
+
     public void addQuestion(String title){}
 
-    private String surveyTitle;
-    private String surveyDescription;
-    private String name;
-    private String email;
+    @Override
+    public void addAnswer() {
 
-    public MultipleChoice(String surveyTitle, String surveyDescription, String name, String email) {
-        this.surveyTitle = surveyTitle;
-        this.surveyDescription = surveyDescription;
-        this.name = name;
-        this.email = email;
+    }
 
-        Scanner sc = new Scanner(System.in);
-        ArrayList<String> questions = new ArrayList<>();
-        String getNextQuestion = "";
-        String getNextAnswerInput = "";
-        ArrayList<String> getNextAnswer = new ArrayList<>();
-        HashMap<String, ArrayList<String>> answerPossibilites = new HashMap<>();
-        while(!getNextQuestion.toLowerCase().equals("e")){
-            System.out.println("Enter the questions you want to ask and their answer possibilites. Click E when you're done: ");
-            getNextQuestion = sc.nextLine();
-            if(getNextQuestion.equals("e")){
-                break;
-            }
+    @Override
+    public void addResult() {
 
-            while(!getNextAnswerInput.toLowerCase().equals("b")){
-                System.out.println("Enter the answer possibilites for this question, type b when you're done: ");
-                getNextAnswerInput = sc.nextLine();
-                if(getNextAnswerInput.equals("b")){
-                    break;
-                }
-                getNextAnswer.add(getNextAnswerInput);
-            }
+    }
 
-            answerPossibilites.put(getNextQuestion, getNextAnswer);
-        }
-        System.out.println(answerPossibilites);
+    @Override
+    public HashMap<String, Integer> getAnswers() {
+        return null;
+    }
 
-        //I hashmappet answerPossibilites ligger spørgsmålene, efterfulgt af svarmulighederne i et array
+    public void draw(){
+
     }
 }
