@@ -5,7 +5,12 @@ import com.example.sp4.Survey;
 public class IODatabase implements IO {
     public void uploadSurvey(){}
     public void getSurvey(){}
-
+    
+    @Override
+    public Survey[] read() throws Exception {
+        return new Survey[0];
+    }
+    
     @Override
     public Survey read(String name) throws Exception {
         return null;

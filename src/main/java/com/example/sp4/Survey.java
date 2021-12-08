@@ -5,21 +5,44 @@ import com.example.sp4.Question.Question;
 import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Survey implements Serializable {
     public static final long serialVersionUID = 104877509L;
-    private String name;
+    private String surveyName;
+    private String surveyDescription;
+    private ArrayList<Question> questions;
     
-    public Survey(){
-        UICommandLineCreate uiCommandLineCreate = new UICommandLineCreate();
-        //uiCommandLineCreate.UIShowCreate("multiplechoice");
+    public Survey(String surveyName, String surveyDescription) {
+        this.surveyName = surveyName;
+        this.surveyDescription = surveyDescription;
     }
     
-    public String getName() {
-        return name;
+    public Survey(String surveyName, String surveyDescription, ArrayList<Question> questions) {
+        this.surveyName = surveyName;
+        this.surveyDescription = surveyDescription;
+        this.questions = questions;
     }
-    //ArrayList<Question> listOfQuestions;
+    
+    public void addQuestion(Question question) {
+        questions.add(question);
+    }
+    
+    public String getSurveyName() {
+        return surveyName;
+    }
+    
+    public String getSurveyDescription() {
+        return surveyDescription;
+    }
+    
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+    
+    
+//ArrayList<Question> listOfQuestions;
 
 
 /*public void addQuestion(){

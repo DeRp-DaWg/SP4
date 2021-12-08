@@ -6,8 +6,38 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class MultipleChoice extends Question{
-    public MultipleChoice() {
-
+    HashMap<String, Integer> answers;
+    
+    public MultipleChoice(String questionName, String questionDescription) {
+        super(questionName, questionDescription);
+    }
+    
+    public MultipleChoice(String questionName, String questionDescription, String[] answers) {
+        super(questionName, questionDescription);
+        for (String answer : answers) {
+            addAnswer(answer);
+        }
+    }
+    
+    @Override
+    public void addAnswer(String answer) {
+        this.answers.put(answer, 0);
+    }
+    
+    @Override
+    public void addResult(String answer) {
+        this.answers.put(answer, this.answers.get(answer) + 1);
+    }
+    
+    @Override
+    public HashMap<String, Integer> getAnswers() {
+        return answers;
+    }
+    
+    
+    
+    /*public MultipleChoice() {
+    
         Scanner sc = new Scanner(System.in);
         ArrayList<String> questions = new ArrayList<>();
         String getNextQuestion = "";
@@ -34,5 +64,5 @@ public class MultipleChoice extends Question{
         System.out.println(answerPossibilites);
 
         //I hashmappet answerPossibilites ligger spørgsmålene, efterfulgt af svarmulighederne i et smukt array
-    }
+    }*/
 }

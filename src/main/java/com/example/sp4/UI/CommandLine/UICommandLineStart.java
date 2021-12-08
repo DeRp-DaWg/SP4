@@ -4,10 +4,10 @@ import com.example.sp4.Survey;
 import com.example.sp4.UI.UIStart;
 
 public class UICommandLineStart extends UICommandLine implements UIStart {
-    private String IOType;
+    private String IOType = "file";
 
     @Override
-    public Survey UIShowStart() {
+    public Survey UIShowStart(Survey[] surveys) {
         return null;
     }
 

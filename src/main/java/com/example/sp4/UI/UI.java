@@ -1,11 +1,14 @@
 package com.example.sp4.UI;
 
 import com.example.sp4.Survey;
+import com.example.sp4.UI.CommandLine.UICommandLineStart;
+import com.example.sp4.UI.CommandLine.UICommandLineAnswer;
+import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
 public class UI {
-    private UIStart uiStart;
-    private UIAnswer uiAnswer;
-    private UICreate uiCreate;
+    private UIStart uiStart = new UICommandLineStart();
+    private UIAnswer uiAnswer = new UICommandLineAnswer();
+    private UICreate uiCreate = new UICommandLineCreate();
 
     /*
     public void showCMD() {
@@ -20,12 +23,11 @@ public class UI {
     }
     */
     public Survey start(Survey[] surveys) {
-        return uiStart.UIShowStart();
+        return uiStart.UIShowStart(surveys);
     }
 
     public Survey answer(Survey survey) {
-        uiAnswer.UIShowAnswer(survey);
-        return null;
+        return uiAnswer.UIShowAnswer(survey);
     }
 
     public Survey create() {
@@ -35,6 +37,8 @@ public class UI {
     public String getIOType() {
         return uiStart.getIOType();
     }
+    
+    
     //Starter med at vise uiStart.
     /*
     public Survey start() {

@@ -7,7 +7,7 @@ public class UIJavaFXStart extends UIJavaFX implements UIStart {
     private String IOType;
 
     @Override
-    public Survey UIShowStart() {
+    public Survey UIShowStart(Survey[] surveys) {
         return null;
     }
 

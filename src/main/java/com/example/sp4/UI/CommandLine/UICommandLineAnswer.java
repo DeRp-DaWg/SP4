@@ -5,7 +5,7 @@ import com.example.sp4.UI.UIAnswer;
 
 public class UICommandLineAnswer extends UICommandLine implements UIAnswer {
     @Override
-    public void UIShowAnswer(Survey survey) {
-
+    public Survey UIShowAnswer(Survey survey) {
+        return null;
     }
 }
