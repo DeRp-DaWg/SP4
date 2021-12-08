@@ -3,35 +3,32 @@ package com.example.sp4.Question;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MultipleChoice extends Question {
-    HashMap<String,Integer> answers;
-
-    public MultipleChoice(String questionName, String questionDescription, HashMap<String, Integer> answers) {
-        super(questionName, questionDescription);
-        this.answers = answers;
-    }
+public class MultipleChoice extends Question{
+    HashMap<String, Integer> answers;
+    
     public MultipleChoice(String questionName, String questionDescription) {
         super(questionName, questionDescription);
     }
-
-    public void addQuestion(String title){}
-
-    @Override
-    public void addAnswer() {
-
+    
+    public MultipleChoice(String questionName, String questionDescription, String[] answers) {
+        super(questionName, questionDescription);
+        for (String answer : answers) {
+            addAnswer(answer);
+        }
     }
-
+    
     @Override
-    public void addResult() {
-
+    public void addAnswer(String answer) {
+        this.answers.put(answer, 0);
     }
-
+    
+    @Override
+    public void addResult(String answer) {
+        this.answers.put(answer, this.answers.get(answer) + 1);
+    }
+    
     @Override
     public HashMap<String, Integer> getAnswers() {
-        return null;
-    }
-
-    public void draw(){
-
+        return answers;
     }
 }

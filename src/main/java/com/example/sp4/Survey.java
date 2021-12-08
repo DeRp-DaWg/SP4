@@ -2,14 +2,17 @@ package com.example.sp4;
 
 import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
+import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Survey {
+public class Survey implements Serializable {
+    public static final long serialVersionUID = 104877509L;
     private String surveyTitle;
     private String surveyDescription;
     private ArrayList<Question> questions = new ArrayList<>();
+    
     public Survey(String surveyTitle, String surveyDescription){
         this.surveyTitle = surveyTitle;
         this.surveyDescription = surveyDescription;
