@@ -12,6 +12,6 @@ class SurveyTest {
     
     @Test
     void serializeSurvey() throws IOException {
-        new ObjectOutputStream(new ByteArrayOutputStream()).writeObject(new Survey());
+        new ObjectOutputStream(new ByteArrayOutputStream()).writeObject(new Survey("TestName", "TestDescription"));
     }
 }
