@@ -1,7 +1,5 @@
 package com.example.sp4.UI.CommandLine;
 
-import com.example.sp4.Question.Question;
-import com.example.sp4.Survey;
 import com.example.sp4.UI.UIAnswer;
 
 import java.util.ArrayList;
@@ -50,11 +48,3 @@ public class UICommandLineAnswer implements UIAnswer {
             int choice = Integer.parseInt(scan.getUserInput("Choose one of the listed answers to the above question by writing the corresponding number:(single choice)", validOptions));
             answersToQuestions.add(q.getChoices().get(choice));
         }
-
-        Answer answer = new Answer(name, email, answersToQuestions);
-
-        chosenSurvey.addAnswers(answer);
-    }
-
-
-
