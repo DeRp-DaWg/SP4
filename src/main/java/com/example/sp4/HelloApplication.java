@@ -8,18 +8,39 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        Button button = new Button();
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().add(button);
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage s){
+// set title for the stage
+        s.setTitle("creating buttons");
+        StackPane r = new StackPane();
+        ArrayList<Button> buttonList = new ArrayList<>();
+        // create a button
+        for (int i = 0; i < 10; i++) {
+            Random random = new Random();
+            String lol = i+ " button";
+            Button b = new Button(lol);
+            buttonList.add(b);
+            if (i != 0) {
+                b.setTranslateY(buttonList.get(i - 1).getTranslateY() + 50);
+            }
+            r.getChildren().add(b);
+        }
+        // create a stack pane
+
+        // add button
+
+        // create a scene
+        Scene sc = new Scene(r, 200, 200);
+
+        // set the scene
+        s.setScene(sc);
+
+        s.show();
     }
     
     public static void main(String[] args) {
