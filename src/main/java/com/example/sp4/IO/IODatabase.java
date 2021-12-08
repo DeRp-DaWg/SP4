@@ -28,6 +28,11 @@ public class IODatabase implements IO{
     private ArrayList<String> questionTitle = new ArrayList<>();
 
     @Override
+    public Survey[] read() throws Exception {
+        return new Survey[0];
+    }
+
+    @Override
     public Survey read(String titleOfSurvey) {
         int id = getIdOfSurvey(titleOfSurvey);
         try {
