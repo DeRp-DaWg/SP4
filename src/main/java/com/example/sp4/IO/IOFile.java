@@ -46,7 +46,7 @@ public class IOFile implements IO {
     @Override
     public void save(Survey survey) {
         try {
-            FileOutputStream file = new FileOutputStream("surveys/"+survey.getSurveyName()+".ser");
+            FileOutputStream file = new FileOutputStream("surveys/"+survey.getSurveyTitle()+".ser");
             ObjectOutputStream out = new ObjectOutputStream(file);
         
             out.writeObject(survey);
