@@ -13,6 +13,7 @@ import java.util.Random;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class HelloApplication extends Application {
+    String hello = "";
     @Override
     public void start(Stage s){
 // set title for the stage
@@ -22,7 +23,7 @@ public class HelloApplication extends Application {
         // create a button
         for (int i = 0; i < 10; i++) {
             Random random = new Random();
-            String lol = i+ " button";
+            String lol = i+ hello;
             Button b = new Button(lol);
             buttonList.add(b);
             if (i != 0) {
