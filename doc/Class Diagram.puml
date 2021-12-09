@@ -64,18 +64,43 @@ package UI {
     UI *-- UIStart
     UI *-- UIAnswer
     UI *-- UICreate
-    package UICommandLine #CCFFCC {
-        abstract class UICommandLine {
+    package UICommandLineScanner #CCFFCC {
+        class UICommandLineScanner {
+        -Scanner sc;
+
+        +getUserInput(String msg);
+        +getUserInput(String msg, String[] validOptions);
+        +getUserInputYesOrNo(String msg)
+
         }
         class UICommandLineStart {
+        -String userChoice;
+        -String[] validOptions;
+        -UICommandLineScanner scan;
+
+        +UIShowStart(ArrayList<Survey> surveys);
         }
         class UICommandLineAnswer {
+             -String[] validOptions;
+             -Survey chosenSurvey;
+             -String name;
+             -String email;
+             -ArrayList<String> answersToQuestions;
+             -UICommandLineScanner scan;
+             +UIShowAnswer(ArrayList<Survey> surveys);i
+
         }
         class UICommandLineCreate {
+               -String surveyTitle;
+               -String surveyDescription;
+                    -String choice;
+                    -Survey survey;
+                    -UICommandLineScanner scan;
+                    +UIShowCreate(ArrayList<Survey> surveys);
         }
-        UICommandLineStart --|> UICommandLine
-        UICommandLineAnswer --|> UICommandLine
-        UICommandLineCreate --|> UICommandLine
+        UICommandLineStart *-- UICommandLineScanner
+        UICommandLineAnswer *-- UICommandLineScanner
+        UICommandLineCreate *-- UICommandLineScanner
     }
     package UIJavaFX #99DDFF {
         abstract class UIJavaFX {

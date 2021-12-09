@@ -9,8 +9,10 @@ public class UICommandLineStart{
     private String[] validOptions = {"q", "c", "a"};
     private UICommandLineScanner scan = new UICommandLineScanner();
 
-    public ArrayList<Survey> UIShowStart(ArrayList<Survey> surveys) {
+    public UICommandLineStart() {
+    }
 
+    public ArrayList<Survey> UIShowStart(ArrayList<Survey> surveys) {
         do {
             System.out.println("\n" + "Press Q to quit");
             System.out.println("Press C to create a new survey");
@@ -23,12 +25,12 @@ public class UICommandLineStart{
 
             }
             if (userChoice.equals("a")) {
-                UICommandLineAnswer answer = new UICommandLineAnswer(surveys);
-                answer.UIShowAnswer();
+                UICommandLineAnswer answer = new UICommandLineAnswer();
+                answer.UIShowAnswer(surveys);
 
             }
         } while (!userChoice.equals("q"));
         System.out.println("Quitting...");
-        return surveys;
+        return surveys;//maybe not needed to return arraylist of surveys.???
     }
 }
