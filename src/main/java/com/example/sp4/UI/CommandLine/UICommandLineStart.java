@@ -9,7 +9,8 @@ public class UICommandLineStart{
     private String[] validOptions = {"q", "c", "a"};
     private UICommandLineScanner scan = new UICommandLineScanner();
 
-    public ArrayList<Survey> run(ArrayList<Survey> surveys) {
+    public ArrayList<Survey> UIShowStart(ArrayList<Survey> surveys) {
+
         do {
             System.out.println("\n" + "Press Q to quit");
             System.out.println("Press C to create a new survey");
@@ -18,7 +19,7 @@ public class UICommandLineStart{
             userChoice = scan.getUserInput("", validOptions);
             if (userChoice.equals("c")) {
                 UICommandLineCreate create = new UICommandLineCreate();
-                create.(surveys);
+                create.UICreate(surveys);
 
             }
             if (userChoice.equals("a")) {

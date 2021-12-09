@@ -5,30 +5,33 @@ import com.example.sp4.Question.Question;
 import com.example.sp4.Survey;
 import com.example.sp4.UI.UICreate;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UICommandLineCreate {
     private String surveyTitle;
     private String surveyDescription;
-    private String name;
-    private String email;
+    private String choice;
+    private Survey survey;
+    private UICommandLineScanner scan = new UICommandLineScanner();
 
     public UICommandLineCreate(){
     }
 
     public void UICreate(ArrayList<Survey> surveys) {
-
         surveyTitle = scan.getUserInput("Whats the title of your survey?");
 
-            System.out.println("Din surveys titel: ");
-            surveyTitle = sc.nextLine();
+        choice = scan.getUserInputYesOrNo("Do you want to add a description to your survey?(y/n)");
+        if (choice.equalsIgnoreCase("y")) {
+            surveyDescription = scan.getUserInput("Survey description:");
+        }
+        survey = new Survey(surveyTitle, surveyDescription);
 
-            System.out.println("survey description: ");
-            surveyDescription = sc.nextLine();
+        System.out.println(surveyTitle + " : " + surveyDescription);
 
         String question1 = (scan.getUserInput("Add a question:"));
-        Question quest = new Question(question1);
-        survey.addQuestions(quest);
+        Question quest = new MultipleChoice(question1,"");
+        survey.addQuestion(quest);
 
         createQuestionAnswer(quest);
         String questionChoice;
@@ -36,15 +39,22 @@ public class UICommandLineCreate {
             questionChoice = scan.getUserInputYesOrNo("Do you want to add another question?(y/n)");
             if (questionChoice.equalsIgnoreCase("y")) {
                 String question2 = (scan.getUserInput("Question name:"));
-                Question quest2= new Question(question2);
-                survey.addQuestions(quest2);
+                Question quest2= new MultipleChoice(question2,"");
+                survey.addQuestion(quest2);
                 createQuestionAnswer(quest2);
             }
         } while (!questionChoice.equalsIgnoreCase("n"));
         surveys.add(survey);
     }
 
-            //System.out.println(surveyTitle + "\n" + surveyDescription);
-        }
+    private void createQuestionAnswer(Question q) {
+        q.addAnswer(scan.getUserInput("Answer:"));
+        q.addAnswer(scan.getUserInput("Answer:"));
+        do {
+            choice = scan.getUserInputYesOrNo("Add another answer?(y/n)");
+            if (choice.equalsIgnoreCase("y")) {
+                q.addAnswer(scan.getUserInput("Answer:"));
+            }
+        } while (!choice.equalsIgnoreCase("n"));
     }
 }
