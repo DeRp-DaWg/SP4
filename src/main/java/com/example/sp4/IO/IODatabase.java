@@ -90,14 +90,12 @@ public class IODatabase implements IO{
     }*/
 
     @Override
-    public Survey[] read() {
+    public ArrayList<Survey> read() {
         ArrayList<Survey> surveys = new ArrayList<>();
         for(int i = 0; i <= sizeOfTable("survey"); i++){
             surveys.add(read(String.valueOf(i)));
         }
-        Survey[] convertSurveys = new Survey[surveys.size()];
-        convertSurveys = surveys.toArray(convertSurveys);
-        return convertSurveys;
+        return surveys;
     }
 
     public boolean isNumber(String myString){
