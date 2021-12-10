@@ -13,7 +13,7 @@
                <content>
                   <VBox>
                      <children>
-                        <VBox prefHeight="347.0" prefWidth="550.0">
+                        <VBox fx:id="questionBox" prefHeight="347.0" prefWidth="550.0">
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
@@ -107,6 +107,6 @@
             </ScrollPane>
          </children>
       </HBox>
-      <Button layoutX="14.0" layoutY="374.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="End Survey" />
+      <Button fx:id="endSurveyButton" layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onAction="#endSurvey" prefHeight="25.0" prefWidth="95.0" text="End Survey" />
    </children>
 </Pane>
