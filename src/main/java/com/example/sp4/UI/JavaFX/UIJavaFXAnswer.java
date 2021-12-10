@@ -40,4 +40,6 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
             e.printStackTrace();
         }
     }
+    public void test(){
+    }
 }
