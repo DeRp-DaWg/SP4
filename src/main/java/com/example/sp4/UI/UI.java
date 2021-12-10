@@ -5,12 +5,13 @@ import com.example.sp4.UI.CommandLine.UICommandLineStart;
 import com.example.sp4.UI.CommandLine.UICommandLineAnswer;
 import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 
-public class UI {
+import java.util.ArrayList;
+
+public interface UI {
+    void UIShowStart(ArrayList<Survey> surveys);
     //private String surveyTitle;
     //private String surveyDescription;
-    private UIStart uiStart = new UICommandLineStart();
-    private UIAnswer uiAnswer = new UICommandLineAnswer();
-    private UICreate uiCreate = new UICommandLineCreate();
+    //private UIStart uiStart = new UICommandLineStart();
     /*Scanner sc = new Scanner(System.in);
     public void start(){
         System.out.println("What do you want to do?");
@@ -61,10 +62,12 @@ public class UI {
         uiCreate = new UIJavaFXCreate();
     }
     */
-    public Survey start(Survey[] surveys) {
-        return uiStart.UIShowStart(surveys);
-    }
 
+    /*
+    public Survey start(Survey[] surveys) {
+       return uiStart.UIShowStart(surveys);
+
+    }
     public Survey answer(Survey survey) {
         return uiAnswer.UIShowAnswer(survey);
     }

@@ -2,54 +2,48 @@ package com.example.sp4.UI.CommandLine;
 
 import com.example.sp4.Question.Question;
 import com.example.sp4.Survey;
-import com.example.sp4.UI.UIAnswer;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 public class UICommandLineAnswer {
     private String[] validOptions;
     private Survey chosenSurvey;
+    private String choice;
     private String name;
-    private String email;
-    private ArrayList<String> answersToQuestions;
     private UICommandLineScanner scan = new UICommandLineScanner();
 
     public UICommandLineAnswer() {
-        this.answersToQuestions = new ArrayList<>();
     }
 
     public void UIShowAnswer(ArrayList<Survey> surveys) {
+        //Sets validOptions to the indexes of surveys.
         this.validOptions = new String[surveys.size()];
         for (Survey s : surveys) {
-            validOptions[surveys.indexOf(s)] = String.valueOf(surveys.indexOf(s));
+            validOptions[surveys.indexOf(s)] = String.valueOf(surveys.indexOf(s)+1);
         }
 
-        int counter = 0;
+        //prints all surveys and lets the user chose one to answer.
+        //maybe make list of surveys output start at 1?
+        int counter = 1;
         for (Survey s : surveys) {
             System.out.println(counter + ": " + s);
             counter++;
         }
-        chosenSurvey = surveys.get(Integer.parseInt(scan.getUserInput("choose a survey from the list to answer by writing the corresponding number:(single choice)", validOptions)));
+        chosenSurvey = surveys.get(Integer.parseInt(scan.getUserInput("choose a survey from the list to answer by writing the corresponding number:", validOptions))-1);
 
         name = scan.getUserInput("Write your name:");
-        email = scan.getUserInput("Write your email");
 
+        //prints all questions and their answer choices and lets the user choose an answer.
         for (Question q : chosenSurvey.getQuestions()) {
-            System.out.println(q);
-            System.out.println(q.getAnswers().keySet());
+            do {
+                System.out.println(q);
+                System.out.println("Answers: \n"+q.getAnswers().keySet());
 
-            validOptions = q.getAnswers().keySet().toArray(new String[q.getAnswers().size()]);
-            String choice = scan.getUserInput("Choose one of the listed answers to the above question by writing the answer:", validOptions);
-            if (q.getAnswers().containsKey(choice)) {
-                int newChoiceValue = q.getAnswers().get(choice) + 1;
-                answersToQuestions.add(choice);
-                q.getAnswers().put(choice, newChoiceValue);
-            }
-        }
-        System.out.println("Your answers:");
-        for (String answers : answersToQuestions) {
-            System.out.println(answers);
+                validOptions = q.getAnswers().keySet().toArray(new String[q.getAnswers().size()]);
+                choice = scan.getUserInput("Choose one of the listed answers to the above question by writing the answer:", validOptions);
+            }while (!q.getAnswers().containsKey(choice));
+            int newChoiceValue = q.getAnswers().get(choice) + 1;
+            q.getAnswers().put(choice, newChoiceValue);
         }
     }
 }

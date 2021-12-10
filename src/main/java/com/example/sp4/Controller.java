@@ -26,7 +26,7 @@ public class Controller {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            survey = ui.start(surveys);
+           /* survey = ui.start(surveys);
             switch (ui.getIOType()) {
                 case "file":
                     io = new IOFile();
@@ -34,6 +34,8 @@ public class Controller {
                 case "db":
                     io = new IODatabase();
                     break;
+
+
             }
 
             //Hvis survey ikke er null, så skal den survey besvares. Hvis den er null så er det fordi brugeren vil lave en.
@@ -44,6 +46,10 @@ public class Controller {
                 survey = ui.create();
             }
             io.save(survey);
+
+            */
         }
+
+
     }
 }

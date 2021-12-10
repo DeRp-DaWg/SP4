@@ -2,6 +2,7 @@
   <library name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar!/" />
+      <root url="file://$USER_HOME$/Documents/javafx-sdk-17.0.1/lib" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1-javadoc.jar!/" />
@@ -9,5 +10,6 @@
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1-sources.jar!/" />
     </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Documents/javafx-sdk-17.0.1/lib" recursive="false" />
   </library>
 </component>

@@ -43,63 +43,60 @@ package IO {
 }
 
 package UI {
-    class UI {
-        + uistart : UIStart
-        + uianswer : UIAnswer
-        + uicreate : UICreate
+    interface UI {
+    +UIShowStart()
     }
 
-    interface UIStart {
-        + UIShowStart()
-    }
-
-    interface UIAnswer {
-        + UIShowAnswer()
-    }
-
-    interface UICreate {
-        + UIShowCreate()
-    }
-
-    UI *-- UIStart
-    UI *-- UIAnswer
-    UI *-- UICreate
-    package UICommandLineScanner #CCFFCC {
+    package UICommandLine #CCFFCC {
         class UICommandLineScanner {
-        -Scanner sc;
+             -Scanner sc
 
-        +getUserInput(String msg);
-        +getUserInput(String msg, String[] validOptions);
-        +getUserInputYesOrNo(String msg)
+             +getUserInput(String msg)
+             +getUserInput(String msg, String[] validOptions)
+             +getUserInputYesOrNo(String msg)
 
         }
         class UICommandLineStart {
-        -String userChoice;
-        -String[] validOptions;
-        -UICommandLineScanner scan;
+              -String[] validOptions
+              -String choice
+              -UICommandLineScanner scan
 
-        +UIShowStart(ArrayList<Survey> surveys);
+               +UIShowStart(ArrayList<Survey> surveys)
         }
         class UICommandLineAnswer {
-             -String[] validOptions;
-             -Survey chosenSurvey;
-             -String name;
-             -String email;
-             -ArrayList<String> answersToQuestions;
-             -UICommandLineScanner scan;
-             +UIShowAnswer(ArrayList<Survey> surveys);i
+             -String[] validOptions
+             -String choice
+             -Survey chosenSurvey
+             -String name
+             -String email
+             -UICommandLineScanner scan
+
+             +UIShowAnswer(ArrayList<Survey> surveys)
 
         }
+                class UICommandLineViewAnswers {
+                     -String[] validOptions
+                     -String choice
+                     -UICommandLineScanner scan
+
+                     +UIShowViewAnswers(ArrayList<Survey> surveys)
+
+                }
         class UICommandLineCreate {
-               -String surveyTitle;
-               -String surveyDescription;
-                    -String choice;
-                    -Survey survey;
-                    -UICommandLineScanner scan;
-                    +UIShowCreate(ArrayList<Survey> surveys);
+               -String choice
+               -String surveyTitle
+               -String surveyDescription
+               -Survey survey
+               -UICommandLineScanner scan
+
+               +UIShowCreate(ArrayList<Survey> surveys)
         }
+        UICommandLineStart -- UICommandLineCreate
+        UICommandLineStart -- UICommandLineAnswer
+        UICommandLineStart -- UICommandLineViewAnswers
         UICommandLineStart *-- UICommandLineScanner
         UICommandLineAnswer *-- UICommandLineScanner
+        UICommandLineViewAnswers *-- UICommandLineScanner
         UICommandLineCreate *-- UICommandLineScanner
     }
     package UIJavaFX #99DDFF {
@@ -115,12 +112,10 @@ package UI {
         UIJavaFXAnswer --|> UIJavaFX
         UIJavaFXCreate --|> UIJavaFX
     }
-    UIStart <|..[#green,thickness=2] UICommandLineStart
-    UIStart <|..[#blue,thickness=2] UIJavaFXStart
-    UIAnswer <|..[#green,thickness=2] UICommandLineAnswer
-    UIAnswer <|..[#blue,thickness=2] UIJavaFXAnswer
-    UICreate <|..[#green,thickness=2] UICommandLineCreate
-    UICreate <|..[#blue,thickness=2] UIJavaFXCreate
+    UI <|..[#green,thickness=2] UICommandLineStart
+    UI <|..[#blue,thickness=2] UIJavaFXStart
+    UI <|..[#blue,thickness=2] UIJavaFXAnswer
+    UI <|..[#blue,thickness=2] UIJavaFXCreate
 }
 
 class Controller {
