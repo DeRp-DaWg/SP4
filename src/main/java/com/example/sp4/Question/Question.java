@@ -21,5 +21,9 @@ public abstract class Question implements Serializable {
         return questionName;
     }
     
+    public String getQuestionDescription() {
+        return questionDescription;
+    }
+    
     public abstract HashMap<String, Integer> getAnswers();
 }

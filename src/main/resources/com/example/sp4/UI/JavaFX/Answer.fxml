@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sp4.UI.JavaFX.UIJavaFXAnswer">
+   <children>
+      <HBox alignment="CENTER" layoutX="15.0" layoutY="20.0" prefHeight="348.0" prefWidth="577.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="728.0" prefWidth="565.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox>
+                     <children>
+                        <VBox prefHeight="347.0" prefWidth="550.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="550.0" text="Question Title">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="120.0" prefWidth="550.0" text="Question Description" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="386.0" prefWidth="550.0" spacing="30.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="Question 1" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 2" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 3" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 4" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="347.0" prefWidth="550.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="550.0" text="Question Title">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="120.0" prefWidth="550.0" text="Question Description" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="386.0" prefWidth="553.0" spacing="30.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="Question 1" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 2" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 3" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 4" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="357.0" prefHeight="347.0" prefWidth="550.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="550.0" text="Question Title">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="120.0" prefWidth="550.0" text="Question Description" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="386.0" prefWidth="553.0" spacing="30.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="Question 1" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 2" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 3" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 4" />
+                                    <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Question 5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+
+            </ScrollPane>
+         </children>
+      </HBox>
+      <Button layoutX="14.0" layoutY="374.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="End Survey" />
+   </children>
+</Pane>

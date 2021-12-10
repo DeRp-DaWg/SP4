@@ -1,39 +1,20 @@
 package com.example.sp4;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import com.example.sp4.IO.IODatabase;
 
 public class Main {
-    public static void main(String[] args) {
-      Controller controller = new Controller();
-      //Anders test
-        ArrayList<String> ohNo = new ArrayList<>();
-        ArrayList<String> ohNo1 = new ArrayList<>();
-        ArrayList<String> ohNo2 = new ArrayList<>();
-        ArrayList<ArrayList<String>> questions = new ArrayList<>();
-        questions.add(ohNo);
-        questions.add(ohNo1);
-        questions.add(ohNo2);
-        String type = "";
-        ohNo.add("Pizza");
-        ohNo.add("Pasta");
-        ohNo.add("Pumpkin");
-        ohNo1.add("Potion");
-        ohNo1.add("Pancake");
-        ohNo2.add("Hello");
-        ohNo2.add("ohNo");
-        ohNo2.add("average");
-        ohNo2.add("goblin");
+    public static void main(String[] args) throws Exception {
+        //Survey survey = new Survey();
 
-       /* Scanner scanner = new Scanner(System.in);
-        while(!type.equals("no")){
-            type = scanner.nextLine();
-            if(!type.equals("no")){
-                ohNo.add(type);
-            }
-        }*/
-       HelloApplication helloApplication = new HelloApplication();
-       helloApplication.setQuestions(questions);
-       helloApplication.launchHello();
+        IODatabase ioDatabase = new IODatabase();
+        //System.out.println(ioDatabase.read("age survey"));
+        //System.out.println(ioDatabase.getIdOfSurvey("Age survey"));
+        //ioDatabase.read();
+
+
+        //Controller controller = new Controller();
+      //Anders test
+       // HelloApplication helloApplication = new HelloApplication();
+       // helloApplication.hello = "Oh No";
     }
 }
