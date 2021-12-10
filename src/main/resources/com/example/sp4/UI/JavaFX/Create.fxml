@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sp4.UI.JavaFX.UIJavaFXCreate">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="95.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="surveyTitleField" promptText="Survey title" />
+                  <TextArea fx:id="surveyDescriptionField" promptText="Survey description" />
+               </children></VBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="270.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+              <content>
+                  <VBox fx:id="questionsVBox" prefWidth="600.0" spacing="20.0" />
+              </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onAddNewQuestion" text="Add new question" />
+                  <Button mnemonicParsing="false" onAction="#onSendSurvey" text="Send survey" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></HBox>
+         </children></VBox>
+   </children>
+</Pane>
