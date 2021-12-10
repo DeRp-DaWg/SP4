@@ -3,6 +3,8 @@ package com.example.sp4;
 import com.example.sp4.IO.IO;
 import com.example.sp4.IO.IODatabase;
 import com.example.sp4.IO.IOFile;
+import com.example.sp4.Question.MultipleChoice;
+import com.example.sp4.Question.Question;
 import com.example.sp4.UI.UI;
 
 public class Controller {
@@ -13,19 +15,34 @@ public class Controller {
     //TODO: Find en måde at vælge command line eller GUI med JavaFX måske inden man starter programmet.
     //      Det kunne gøres med argumenter fra Main.
     public Controller() {
+        ui.init();
         programLoop();
     }
 
     private void programLoop() {
         while (true) {
+            System.out.println("Running programLoop");
             //TODO: Gør så man kan skifte IO og genindlæs så de viste surveys med den type af IO.
             //Vis start vinduet/dialoget. Derefter få fat i typen af IO som bliver specificeret i vinduet/dialoget i UIStart.
-            Survey[] surveys = null;
-            try {
+            Survey[] surveys = new Survey[2];
+            surveys[0] = new Survey("Cake survey","This is a description where i describe what this survey is about.");
+            Question mc = new MultipleChoice("What cakes do you like the most?", "Chocolate is the only right answer!");
+            mc.addAnswer("Chocolate");
+            mc.addAnswer("Vanilla");
+            mc.addAnswer("None of the above");
+            surveys[0].addQuestion(mc);
+            surveys[1] = new Survey("Another survey","Here's the description");
+            Question mc2 = new MultipleChoice("I don't have a good question?", "And only bad answers.");
+            mc2.addAnswer("Chocolate");
+            mc2.addAnswer("Vanilla");
+            mc2.addAnswer("None of the above");
+            surveys[1].addQuestion(mc2);
+            /*try {
                 surveys = io.read();
             } catch (Exception e) {
                 e.printStackTrace();
-            }
+            }*/
+            
             survey = ui.start(surveys);
             switch (ui.getIOType()) {
                 case "file":
@@ -43,7 +60,7 @@ public class Controller {
             else {
                 survey = ui.create();
             }
-            io.save(survey);
+            //io.save(survey);
         }
     }
 }

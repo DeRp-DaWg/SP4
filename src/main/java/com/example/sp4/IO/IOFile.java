@@ -3,11 +3,12 @@ package com.example.sp4.IO;
 import com.example.sp4.Survey;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class IOFile implements IO {
     
     @Override
-    public Survey[] read() throws Exception {
+    public ArrayList<Survey> read() throws Exception {
         File folder = new File("surveys/");
         File[] filesInFolder = folder.listFiles();
         String[] fileNames = new String[filesInFolder.length];
@@ -16,9 +17,9 @@ public class IOFile implements IO {
             fileName = fileName.split("\\.")[0];
             fileNames[i] = fileName;
         }
-        Survey[] surveys = new Survey[filesInFolder.length];
+        ArrayList<Survey> surveys = new ArrayList<>(filesInFolder.length);
         for (int i = 0; i < fileNames.length; i++) {
-            surveys[i] = read(fileNames[i]);
+            surveys.add(read(fileNames[i]));
         }
         return surveys;
     }
@@ -46,7 +47,10 @@ public class IOFile implements IO {
     @Override
     public void save(Survey survey) {
         try {
-            FileOutputStream file = new FileOutputStream("surveys/"+survey.getSurveyTitle()+".ser");
+            File folder = new File("surveys/");
+            File[] filesInFolder = folder.listFiles();
+            
+            FileOutputStream file = new FileOutputStream("surveys/Survey"+filesInFolder.length+".ser");
             ObjectOutputStream out = new ObjectOutputStream(file);
         
             out.writeObject(survey);
