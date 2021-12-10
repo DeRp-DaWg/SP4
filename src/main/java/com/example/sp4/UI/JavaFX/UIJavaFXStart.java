@@ -1,27 +1,16 @@
 package com.example.sp4.UI.JavaFX;
 
-import com.example.sp4.Question.MultipleChoice;
-import com.example.sp4.Question.Question;
-import com.example.sp4.Survey;
-import com.example.sp4.UI.UIStart;
-import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class UIJavaFXStart extends UIJavaFX implements Initializable {
@@ -81,6 +70,18 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
             e.printStackTrace();
         }
         //stage.setScene(sceneHashMap.get("answer"));
+    }
+
+    @FXML
+    private void onOpenSurveyResults(){
+        try {
+            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Read.fxml"));
+            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
+            stage.setScene(scene);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
     @FXML

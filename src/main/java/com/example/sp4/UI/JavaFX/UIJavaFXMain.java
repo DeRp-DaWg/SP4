@@ -13,6 +13,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -42,14 +43,15 @@ public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnsw
         
         
         UIJavaFX.setStage(stage);
-        
+
+        stage.getIcons().add(new Image("file:resources/logo.png"));
+
         this.stage.setTitle("Survey program");
-        
+
         this.stage.setScene(startScene);
         this.stage.show();
         this.stage.setMinWidth(stage.getWidth());
         this.stage.setMinHeight(stage.getHeight());
-    
         
     }
     
