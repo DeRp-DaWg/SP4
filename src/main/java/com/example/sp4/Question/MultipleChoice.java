@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MultipleChoice extends Question{
-    HashMap<String, Integer> answers;
+    HashMap<String, Integer> answers = new HashMap<>();
     
     public MultipleChoice(String questionName, String questionDescription) {
         super(questionName, questionDescription);

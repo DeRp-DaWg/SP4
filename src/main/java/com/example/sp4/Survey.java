@@ -7,7 +7,7 @@ import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Survey implements Serializable {
+public class Survey implements Serializable, Comparable<Survey> {
     public static final long serialVersionUID = 104877509L;
     private String surveyTitle;
     private String surveyDescription;
@@ -37,5 +37,11 @@ public class Survey implements Serializable {
     }
     public void addQuestion(Question question){
         questions.add(question);
+    }
+    
+    
+    @Override
+    public int compareTo(Survey o) {
+        return surveyTitle.compareTo(o.getSurveyTitle());
     }
 }

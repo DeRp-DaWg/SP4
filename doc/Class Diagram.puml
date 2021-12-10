@@ -44,9 +44,9 @@ package IO {
 
 package UI {
     class UI {
-        + uistart : UIStart
-        + uianswer : UIAnswer
-        + uicreate : UICreate
+        + uiStart : UIStart
+        + uiAnswer : UIAnswer
+        + uiCreate : UICreate
     }
 
     interface UIStart {
@@ -78,6 +78,8 @@ package UI {
         UICommandLineCreate --|> UICommandLine
     }
     package UIJavaFX #99DDFF {
+        class UIJavaFXMain {
+        }
         abstract class UIJavaFX {
         }
         class UIJavaFXStart {
@@ -89,13 +91,23 @@ package UI {
         UIJavaFXStart --|> UIJavaFX
         UIJavaFXAnswer --|> UIJavaFX
         UIJavaFXCreate --|> UIJavaFX
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXStart
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXAnswer
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXCreate
+
+        'Ignore the four lines below, their only purpose is to center UIJavaFXMain'
+        hiddenhidden -- UIJavaFXStart
+        UIJavaFXAnswerr -- UIJavaFXAnswer
+        hide hiddenhidden
+        hide UIJavaFXAnswerr
+
     }
     UIStart <|..[#green,thickness=2] UICommandLineStart
-    UIStart <|..[#blue,thickness=2] UIJavaFXStart
+    UIStart <|..[#blue,thickness=2] UIJavaFXMain
     UIAnswer <|..[#green,thickness=2] UICommandLineAnswer
-    UIAnswer <|..[#blue,thickness=2] UIJavaFXAnswer
+    UIAnswer <|..[#blue,thickness=2] UIJavaFXMain
     UICreate <|..[#green,thickness=2] UICommandLineCreate
-    UICreate <|..[#blue,thickness=2] UIJavaFXCreate
+    UICreate <|..[#blue,thickness=2] UIJavaFXMain
 }
 
 class Controller {

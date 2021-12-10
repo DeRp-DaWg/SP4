@@ -1,16 +1,16 @@
 package com.example.sp4.UI;
 
 import com.example.sp4.Survey;
-import com.example.sp4.UI.CommandLine.UICommandLineStart;
-import com.example.sp4.UI.CommandLine.UICommandLineAnswer;
-import com.example.sp4.UI.CommandLine.UICommandLineCreate;
+import com.example.sp4.UI.JavaFX.UIJavaFXMain;
 
 public class UI {
     //private String surveyTitle;
     //private String surveyDescription;
-    private UIStart uiStart = new UICommandLineStart();
-    private UIAnswer uiAnswer = new UICommandLineAnswer();
-    private UICreate uiCreate = new UICommandLineCreate();
+    private UIJavaFXMain javaFXMain = new UIJavaFXMain();
+    private UIInit uiInit = javaFXMain;
+    private UIStart uiStart = javaFXMain;
+    private UIAnswer uiAnswer = javaFXMain;
+    private UICreate uiCreate = javaFXMain;
     /*Scanner sc = new Scanner(System.in);
     public void start(){
         System.out.println("What do you want to do?");
@@ -61,6 +61,10 @@ public class UI {
         uiCreate = new UIJavaFXCreate();
     }
     */
+    public void init() {
+        uiInit.initt();
+    }
+    
     public Survey start(Survey[] surveys) {
         return uiStart.UIShowStart(surveys);
     }

@@ -17,7 +17,6 @@ public class IODatabase implements IO{
     //  Database credentials
     private final String USER = "root";
     private String PASS = "test";
-
     private String getAnswer1 = null;
     private String getAnswer2 = null;
     private String getAnswer3 = null;
@@ -28,8 +27,8 @@ public class IODatabase implements IO{
     private ArrayList<String> questionTitle = new ArrayList<>();
 
     @Override
-    public Survey[] read() throws Exception {
-        return new Survey[0];
+    public ArrayList<Survey> read() throws Exception {
+        return new ArrayList<>();
     }
 
     @Override
