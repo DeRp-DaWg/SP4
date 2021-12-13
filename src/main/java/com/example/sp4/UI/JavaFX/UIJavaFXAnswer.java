@@ -1,5 +1,8 @@
 package com.example.sp4.UI.JavaFX;
 
+import com.example.sp4.IO.IO;
+import com.example.sp4.IO.IODatabase;
+import com.example.sp4.IO.IOFile;
 import com.example.sp4.Question.Question;
 import com.example.sp4.Survey;
 import com.example.sp4.UI.UIAnswer;
@@ -86,6 +89,11 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
                 System.out.println(key + " " + value);
             }
         }
+        IO io = new IOFile();
+        if(survey.isFromDB()){
+            io = new IODatabase();
+        }
+        io.update(survey);
         try {
             FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
             Scene scene = new Scene(createFXMLLoader.load(), 600, 400);

@@ -69,7 +69,7 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
         showLocal = showLocalCheckBox.isSelected();
         showDatabase = showDatabaseCheckBox.isSelected();
         
-        if (surveys == null) return;
+        if (surveys == null || surveys.size() == 0) return;
         surveys.sort(choiceBoxItemss.get("Sort by title"));
         updateSurveysBox();
         changeActiveSurvey(0);
