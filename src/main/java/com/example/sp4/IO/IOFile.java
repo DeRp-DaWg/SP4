@@ -64,4 +64,13 @@ public class IOFile implements IO {
             e.printStackTrace();
         }
     }
+    @Override
+    public void remove(Survey survey) {
+        File file = new File("surveys/" + survey.getSurveyTitle() + ".ser");
+        if (file.delete()) {
+            System.out.println("Deleted the file: " + file.getName());
+        } else {
+            System.out.println("Failed to delete the file.");
+        }
+    }
 }

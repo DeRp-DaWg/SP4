@@ -245,6 +245,10 @@ public class IODatabase implements IO{
     public void save(Survey survey) {
         //Laves når survey er færdig
     }
+
+    @Override
+    public void remove(Survey survey) {
+    }
     /*
     public void uploadToQuestion(String questionTitle, String questionDescription, String email){
         //Question table contains: id(auto increments), questionTitle, questionDescription, email
