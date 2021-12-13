@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
@@ -64,19 +65,26 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
     }
     @FXML
     public void endSurvey(){
-    /*    for (int i = 0; i < questionBox.getChildren().size(); i++){
+       for (int i = 0; i < questionBox.getChildren().size(); i++){
             if (questionBox.getChildren().get(i) instanceof VBox){
                 for (int j = 0; j < ((VBox) questionBox.getChildren().get(i)).getChildren().size(); j++){
                     if(((VBox) questionBox.getChildren().get(i)).getChildren().get(j) instanceof RadioButton){
-                        if (((RadioButton) ((VBox) questionBox.getChildren().get(i)).getChildren().get(j)).isSelected()){
-                            survey.getQuestions().get(i).getAnswers().get(j).
+                        RadioButton result = ((RadioButton) ((VBox) questionBox.getChildren().get(i)).getChildren().get(j));
+                        if (result.isSelected()){
+                            survey.getQuestions().get(i).addResult(result.getText());
                         }
                     }
                 }
             }
         }
-
-     */
+        for (Question question : survey.getQuestions()){
+            System.out.println(question.getQuestionName());
+            for (String name : question.getAnswers().keySet()){
+                String key = name.toString();
+                String value = question.getAnswers().get(name).toString();
+                System.out.println(key + " " + value);
+            }
+        }
         try {
             FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
             Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
