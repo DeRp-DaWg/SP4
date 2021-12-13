@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.skin.TextInputControlSkin;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -20,13 +22,33 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
 
     @FXML
     private VBox questionBox;
+    @FXML
+    private Label questionTitle;
+    @FXML
+    private Label questionDescription;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        surveys.get(1);
+        loadQuestions();
     }
+    
+    @FXML
     public void loadQuestions(){
-        for(int i = 0; i < surveys.get(8).getQuestions().size();i++){
-
+        for(int i = 0; i < survey.getQuestions().size();i++){
+            ToggleGroup toggleGroup = new ToggleGroup();
+            VBox questionBox = new VBox();
+            Label questionTitle = new Label();
+            Label questionDescription = new Label();
+            questionTitle.setId(survey.getQuestions().get(i).getQuestionName());
+            questionBox.getChildren().add(questionTitle);
+            questionDescription.setId(survey.getQuestions().get(i).getQuestionDescription());
+            questionBox.getChildren().add(questionDescription);
+            for (int j = 0; j < survey.getQuestions().get(i).getAnswers().size(); j++){
+                RadioButton radioButton = new RadioButton();
+                radioButton.setId(survey.getQuestions().get(i).getAnswers().toString());
+                radioButton.setToggleGroup(toggleGroup);
+                questionBox.getChildren().add(radioButton);
+            }
+            this.questionBox.getChildren().add(questionBox);
         }
     }
     @FXML
@@ -39,5 +61,7 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
         catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void test(){
     }
 }
