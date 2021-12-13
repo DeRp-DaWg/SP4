@@ -7,13 +7,14 @@ import com.example.sp4.UI.CommandLine.UICommandLineCreate;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Survey implements Serializable {
+public class Survey implements Serializable, Comparable<Survey> {
     public static final long serialVersionUID = 104877509L;
     private String surveyTitle;
     private String surveyDescription;
     private ArrayList<Question> questions = new ArrayList<>();
-
-    public Survey(String surveyTitle, String surveyDescription) {
+    private boolean fromDB = false;
+    
+    public Survey(String surveyTitle, String surveyDescription){
         this.surveyTitle = surveyTitle;
         this.surveyDescription = surveyDescription;
     }
@@ -35,21 +36,20 @@ public class Survey implements Serializable {
     public ArrayList<Question> getQuestions() {
         return questions;
     }
-
-    public void addQuestion(Question question) {
+    public void addQuestion(Question question){
         questions.add(question);
     }
-
+    
+    public boolean isFromDB() {
+        return fromDB;
+    }
+    
+    public void setFromDB(boolean fromDB) {
+        this.fromDB = fromDB;
+    }
+    
     @Override
-    public String toString() {
-        String s="";
-
-        if (surveyDescription != null) {
-           s= "Survey title: " + surveyTitle + "\n" +
-                    "Survey description: " + surveyDescription + "\n";
-        }else {
-            s="Survey title: " + surveyTitle;
-        }
-        return s;
+    public int compareTo(Survey o) {
+        return surveyTitle.compareTo(o.getSurveyTitle());
     }
 }

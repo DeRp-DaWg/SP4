@@ -16,4 +16,6 @@ module com.example.sp4 {
     opens com.example.sp4.UI.JavaFX to javafx.fxml;
     exports com.example.sp4.UI.CommandLine;
     opens com.example.sp4.UI.CommandLine to javafx.fxml;
+    exports com.example.sp4.Comparators;
+    opens com.example.sp4.Comparators to javafx.fxml;
 }
