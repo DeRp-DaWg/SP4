@@ -77,6 +77,7 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
                 }
             }
         }
+       // this foreach loop is used to check if answers get registered, can be removed when were done.
         for (Question question : survey.getQuestions()){
             System.out.println(question.getQuestionName());
             for (String name : question.getAnswers().keySet()){
