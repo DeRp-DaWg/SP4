@@ -1,6 +1,5 @@
 package com.example.sp4.Question;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MultipleChoice extends Question {
