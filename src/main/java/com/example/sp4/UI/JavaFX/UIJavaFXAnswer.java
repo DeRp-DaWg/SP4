@@ -1,5 +1,6 @@
 package com.example.sp4.UI.JavaFX;
 
+import com.example.sp4.Question.Question;
 import com.example.sp4.Survey;
 import com.example.sp4.UI.UIAnswer;
 import javafx.fxml.FXML;
@@ -19,10 +20,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
-
     @FXML
     private VBox questionBox;
     @FXML
@@ -63,6 +64,19 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
     }
     @FXML
     public void endSurvey(){
+    /*    for (int i = 0; i < questionBox.getChildren().size(); i++){
+            if (questionBox.getChildren().get(i) instanceof VBox){
+                for (int j = 0; j < ((VBox) questionBox.getChildren().get(i)).getChildren().size(); j++){
+                    if(((VBox) questionBox.getChildren().get(i)).getChildren().get(j) instanceof RadioButton){
+                        if (((RadioButton) ((VBox) questionBox.getChildren().get(i)).getChildren().get(j)).isSelected()){
+                            survey.getQuestions().get(i).getAnswers().get(j).
+                        }
+                    }
+                }
+            }
+        }
+
+     */
         try {
             FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
             Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
