@@ -49,6 +49,7 @@ public class IOFile implements IO {
         try {
             File folder = new File("surveys/");
             File[] filesInFolder = folder.listFiles();
+            survey.setId(filesInFolder.length);
             
             FileOutputStream file = new FileOutputStream("surveys/Survey"+filesInFolder.length+".ser");
             ObjectOutputStream out = new ObjectOutputStream(file);
@@ -59,6 +60,32 @@ public class IOFile implements IO {
             file.close();
         
             System.out.println("Survey has been serialized");
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @Override
+    public void remove(Survey survey) {
+        File file = new File("surveys/" + survey.getSurveyTitle() + ".ser");
+        if (file.delete()) {
+            System.out.println("Deleted the file: " + file.getName());
+        } else {
+            System.out.println("Failed to delete the file.");
+        }
+    }
+    
+    @Override
+    public void update(Survey survey) {
+        try {
+            FileOutputStream file = new FileOutputStream("surveys/Survey"+survey.getId()+".ser");
+            ObjectOutputStream out = new ObjectOutputStream(file);
+        
+            out.writeObject(survey);
+        
+            out.close();
+            file.close();
         }
         catch (IOException e) {
             e.printStackTrace();
