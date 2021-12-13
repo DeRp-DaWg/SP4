@@ -1,5 +1,6 @@
 package com.example.sp4.UI.JavaFX;
 
+import com.example.sp4.Survey;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -18,9 +19,9 @@ public class UIJavaFXRead extends UIJavaFX implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        for (int i = 0; i < surveys.size(); i++) {
-            Button button = new Button(surveys.get(i).getSurveyTitle());
-            Label test = new Label("Hello, world");
+        for (Survey i : surveys) {
+            Button button = new Button(i.getSurveyTitle());
+            Label test = new Label(i.getSurveyTitle());
             vBox.getChildren().add(test);
         }
     }
