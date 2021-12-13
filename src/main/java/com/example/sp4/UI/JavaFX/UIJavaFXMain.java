@@ -22,17 +22,24 @@ import java.util.ResourceBundle;
 
 public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnswer, UICreate {
     private Stage stage;
-    private ArrayList<Survey> surveys;
+    private ArrayList<Survey> surveys = new ArrayList<>();
     
     @Override
     public void start(Stage stage) throws Exception {
         UI ui = new UI();
-        IO io = new IOFile();
         try {
-            surveys = io.read();
+            IO io = new IOFile();
+            surveys.addAll(io.read());
         }
         catch (Exception e) {
-            surveys = new ArrayList<>();
+            System.out.println("Files not loaded");
+        }
+        try {
+            IO io = new IODatabase();
+            surveys.addAll(io.read());
+        }
+        catch (Exception e) {
+            System.out.println("Database not loaded");
         }
         UIJavaFX.setSurveys(surveys);
         this.stage = stage;
