@@ -20,7 +20,9 @@
       <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="600.0" spacing="50.0">
          <children>
             <Button mnemonicParsing="false" onAction="#onAddNewQuestion" text="Add new question" />
+            <CheckBox fx:id="saveToDatabaseCheckBox" mnemonicParsing="false" onAction="#onSaveToDatabase" text="Save to database" />
             <Button mnemonicParsing="false" onAction="#onSendSurvey" text="Send survey" />
+            <Button mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

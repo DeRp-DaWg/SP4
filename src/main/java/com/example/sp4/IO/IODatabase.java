@@ -239,7 +239,7 @@ public class IODatabase implements IO {
     }
     
     @Override
-    public void remove(Survey survey) {
+    public void remove(ArrayList<Survey> surveys, Survey survey) {
     }
     
     @Override

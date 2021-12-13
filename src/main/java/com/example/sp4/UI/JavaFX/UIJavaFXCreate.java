@@ -1,6 +1,7 @@
 package com.example.sp4.UI.JavaFX;
 
 import com.example.sp4.IO.IO;
+import com.example.sp4.IO.IODatabase;
 import com.example.sp4.IO.IOFile;
 import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
@@ -11,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -31,6 +33,7 @@ public class UIJavaFXCreate extends UIJavaFX implements Initializable {
     private ArrayList<QuestionContainer> questionContainers = new ArrayList<>();
     private HashMap<QuestionContainer, Button> questionContainerButtonHashMap = new HashMap<>();
     private String invalidStyle = "-fx-border-color: red";
+    private boolean saveToDatabase;
     
     @FXML
     private TextField surveyTitleField;
@@ -41,8 +44,12 @@ public class UIJavaFXCreate extends UIJavaFX implements Initializable {
     @FXML
     private VBox questionsVBox;
     
+    @FXML
+    private CheckBox saveToDatabaseCheckBox;
+    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        saveToDatabase = saveToDatabaseCheckBox.isSelected();
         onAddNewQuestion();
         surveyTitleField.setOnKeyTyped(keyEvent -> QuestionContainer.removeStyles(surveyTitleField));
     }
@@ -75,7 +82,14 @@ public class UIJavaFXCreate extends UIJavaFX implements Initializable {
                 }
                 survey.addQuestion(question);
             }
-            IO io = new IOFile();
+            IO io = null;
+            if (saveToDatabase) {
+                survey.setFromDB(true);
+                io = new IODatabase();
+            }
+            else {
+                io = new IOFile();
+            }
             io.save(survey);
             surveys.add(survey);
             try {
@@ -104,6 +118,23 @@ public class UIJavaFXCreate extends UIJavaFX implements Initializable {
         }
         else {
             removeQuestionButton.setDisable(true);
+        }
+    }
+    
+    @FXML
+    private void onSaveToDatabase() {
+        saveToDatabase = saveToDatabaseCheckBox.isSelected();
+    }
+    
+    @FXML
+    private void onCancel() {
+        try {
+            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
+            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
+            stage.setScene(scene);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
     }
     
