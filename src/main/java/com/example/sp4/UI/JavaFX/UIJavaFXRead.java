@@ -19,10 +19,8 @@ public class UIJavaFXRead extends UIJavaFX implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        for (Survey i : surveys) {
-            Button button = new Button(i.getSurveyTitle());
-            Label test = new Label(i.getSurveyTitle());
-            vBox.getChildren().add(test);
-        }
+        Button button = new Button(surveys.get(0).getSurveyTitle());
+        //Label test = new Label(i.getSurveyTitle());
+        //vBox.getChildren().add(test);
     }
 }
