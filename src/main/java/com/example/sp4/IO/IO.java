@@ -6,4 +6,5 @@ public interface IO {
     Survey[] read() throws Exception;
     Survey read(String name) throws Exception;
     void save(Survey survey);
+    void remove(Survey survey);
 }
