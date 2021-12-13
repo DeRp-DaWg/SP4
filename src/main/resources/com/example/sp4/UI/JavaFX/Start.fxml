@@ -5,16 +5,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <HBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sp4.UI.JavaFX.UIJavaFXStart">
    <children>
-      <ScrollPane hbarPolicy="NEVER" vbarPolicy="ALWAYS">
-         <content>
-            <VBox fx:id="surveysBox" prefHeight="365.0" prefWidth="211.0" spacing="10.0">
+      <VBox maxHeight="1.7976931348623157E308" prefHeight="1.0E10" spacing="5.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <ChoiceBox fx:id="choiceBox" onInputMethodTextChanged="#onChoiceBoxItemChange" prefWidth="140.0" />
+                  <VBox>
+                     <children>
+                        <CheckBox fx:id="showLocalCheckBox" mnemonicParsing="false" onAction="#onShowLocal" selected="true" text="Show Local" />
+                        <CheckBox fx:id="showDatabaseCheckBox" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onShowDatabase" selected="true" text="Show Database" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="1.0E10" prefWidth="250.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="surveysBox" maxHeight="1.7976931348623157E308" prefHeight="365.0" spacing="10.0">
 
                   </VBox>
-         </content>
-      </ScrollPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="325.0">
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -28,6 +42,7 @@
                      </font>
                   </Label>
                   <Label fx:id="surveyDescriptionLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="145.0" prefHeight="10.0" prefWidth="10.0" text="Survey description" wrapText="true" />
+                  <Label fx:id="surveyAmountOfQuestionsLabel" text="Questions: " />
                </children>
             </VBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
