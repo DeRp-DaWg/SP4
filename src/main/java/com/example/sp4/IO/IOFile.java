@@ -49,6 +49,7 @@ public class IOFile implements IO {
         try {
             File folder = new File("surveys/");
             File[] filesInFolder = folder.listFiles();
+            survey.setId(filesInFolder.length);
             
             FileOutputStream file = new FileOutputStream("surveys/Survey"+filesInFolder.length+".ser");
             ObjectOutputStream out = new ObjectOutputStream(file);
