@@ -28,7 +28,7 @@ public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnsw
     @Override
     public void start(Stage stage) throws Exception {
         UI ui = new UI();
-        IO io = new IOFile();
+        IO io = new IODatabase();
         try {
             surveys = io.read();
         }

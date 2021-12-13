@@ -184,6 +184,7 @@ public class IODatabase implements IO{
             /* */
 
             survey = new Survey(titleOfSurvey, descriptionOfSurvey, questions);
+            survey.setFromDB(true);
             /* */
 
             System.out.println(titleOfSurvey + "\n" +
