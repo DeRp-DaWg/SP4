@@ -5,42 +5,57 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sp4.UI.JavaFX.UIJavaFXStart">
+<HBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sp4.UI.JavaFX.UIJavaFXStart">
    <children>
-      <HBox layoutX="23.0" layoutY="19.0" prefHeight="365.0" prefWidth="551.0">
+      <VBox maxHeight="1.7976931348623157E308" prefHeight="1.0E10" spacing="5.0">
          <children>
-            <ScrollPane hbarPolicy="NEVER" vbarPolicy="ALWAYS">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <ChoiceBox fx:id="choiceBox" onInputMethodTextChanged="#onChoiceBoxItemChange" prefWidth="140.0" />
+                  <VBox>
+                     <children>
+                        <CheckBox fx:id="showLocalCheckBox" mnemonicParsing="false" onAction="#onShowLocal" selected="true" text="Show Local" />
+                        <CheckBox fx:id="showDatabaseCheckBox" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onShowDatabase" selected="true" text="Show Database" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="1.0E10" prefWidth="250.0" vbarPolicy="ALWAYS">
                <content>
-                  <VBox fx:id="surveysBox" prefHeight="365.0" prefWidth="211.0" spacing="10.0">
+                  <VBox fx:id="surveysBox" maxHeight="1.7976931348623157E308" prefHeight="365.0" spacing="10.0">
 
                   </VBox>
                </content>
             </ScrollPane>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="325.0">
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="325.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <Label fx:id="surveyTitleLabel" maxWidth="1.7976931348623157E308" text="Survey title">
-                           <font>
-                              <Font size="26.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="surveyDescriptionLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="145.0" prefHeight="10.0" prefWidth="10.0" text="Survey description" wrapText="true" />
-                     </children>
-                  </VBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Button fx:id="openSurveyButton" mnemonicParsing="false" onAction="#onOpenSurvey" prefWidth="125.0" text="Open survey" />
-                        <Button fx:id="openSurveyResultsButton" mnemonicParsing="false" prefWidth="125.0" text="Open survey results" />
-                     </children>
-                  </HBox>
-                  <Button fx:id="createNewSurveyButton" mnemonicParsing="false" onAction="#onCreateNewSurvey" prefWidth="260.0" text="Create new survey" />
+                  <Label fx:id="surveyTitleLabel" maxWidth="1.7976931348623157E308" text="Survey title">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="surveyDescriptionLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="145.0" prefHeight="10.0" prefWidth="10.0" text="Survey description" wrapText="true" />
+                  <Label fx:id="surveyAmountOfQuestionsLabel" text="Questions: " />
                </children>
             </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="openSurveyButton" mnemonicParsing="false" onAction="#onOpenSurvey" prefWidth="125.0" text="Open survey" />
+                  <Button fx:id="openSurveyResultsButton" mnemonicParsing="false" prefWidth="125.0" text="Open survey results" />
+               </children>
+            </HBox>
+            <Button fx:id="createNewSurveyButton" mnemonicParsing="false" onAction="#onCreateNewSurvey" prefWidth="260.0" text="Create new survey" />
          </children>
-      </HBox>
+      </VBox>
    </children>
-</Pane>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</HBox>

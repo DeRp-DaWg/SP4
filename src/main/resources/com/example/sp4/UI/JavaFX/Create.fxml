@@ -8,8 +8,8 @@
    <children>
       <VBox prefHeight="95.0" prefWidth="600.0">
          <children>
-            <TextField fx:id="surveyTitleField" promptText="Survey title" />
-            <TextArea fx:id="surveyDescriptionField" promptText="Survey description" />
+            <TextField fx:id="surveyTitleField" promptText="Survey title" style="-fx-border-color: lightgray;" />
+            <TextArea fx:id="surveyDescriptionField" promptText="Survey description" style="-fx-background-color: lightgray;" />
          </children>
       </VBox>
       <ScrollPane fitToHeight="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="270.0" minWidth="200.0" prefHeight="1.0E8" vbarPolicy="ALWAYS">

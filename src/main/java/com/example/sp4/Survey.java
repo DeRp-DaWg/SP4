@@ -12,6 +12,7 @@ public class Survey implements Serializable, Comparable<Survey> {
     private String surveyTitle;
     private String surveyDescription;
     private ArrayList<Question> questions = new ArrayList<>();
+    private boolean fromDB = false;
     
     public Survey(String surveyTitle, String surveyDescription){
         this.surveyTitle = surveyTitle;
@@ -39,6 +40,13 @@ public class Survey implements Serializable, Comparable<Survey> {
         questions.add(question);
     }
     
+    public boolean isFromDB() {
+        return fromDB;
+    }
+    
+    public void setFromDB(boolean fromDB) {
+        this.fromDB = fromDB;
+    }
     
     @Override
     public int compareTo(Survey o) {

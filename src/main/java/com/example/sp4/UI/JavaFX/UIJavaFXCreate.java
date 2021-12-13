@@ -13,9 +13,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.lang.reflect.Array;
@@ -26,9 +27,10 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class UIJavaFXCreate extends UIJavaFX implements Initializable {
-    //private ArrayList<ArrayList<TextField>> questionAnswersTextFields = new ArrayList<>();
-    private HashMap<VBox, Integer> questionAnswersCounts = new HashMap<>();
     private HashMap<TextField[], ArrayList<TextField>> questionsAndAnswersContainer = new HashMap<>();
+    private ArrayList<QuestionContainer> questionContainers = new ArrayList<>();
+    private HashMap<QuestionContainer, Button> questionContainerButtonHashMap = new HashMap<>();
+    private String invalidStyle = "-fx-border-color: red";
     
     @FXML
     private TextField surveyTitleField;
@@ -42,86 +44,75 @@ public class UIJavaFXCreate extends UIJavaFX implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         onAddNewQuestion();
+        surveyTitleField.setOnKeyTyped(keyEvent -> QuestionContainer.removeStyles(surveyTitleField));
     }
     
     @FXML
     private void onSendSurvey() {
         boolean isLegal = true;
+        if (surveyTitleField.getText().equals("")) {
+            surveyTitleField.setStyle(invalidStyle);
+            surveyTitleField.setStyle("-fx-border-color: red");
+            isLegal = false;
+        }
+        for (QuestionContainer questionContainer : questionContainers) {
+            for (TextField illegalTextField : questionContainer.findIllegalTextFields()) {
+                isLegal = false;
+                illegalTextField.setStyle(invalidStyle);
+            }
+        }
+        
         if (isLegal) {
             String surveyName = surveyTitleField.getText();
             String surveyDescription = surveyDescriptionField.getText();
             Survey survey = new Survey(surveyName, surveyDescription);
-            for (TextField[] questionName : questionsAndAnswersContainer.keySet()) {
-                String questionTitle = questionName[0].getText();
-                String questionDescription = questionName[1].getText();
-                Question question = new MultipleChoice(questionTitle, questionDescription);
-                for (TextField textField : questionsAndAnswersContainer.get(questionName)) {
-                    question.addAnswer(textField.getText());
+            for (QuestionContainer questionContainer : questionContainers) {
+                String questionName = questionContainer.getQuestionTitleTextField().getText();
+                String questionDescription = questionContainer.getQuestionDescriptionTextField().getText();
+                Question question = new MultipleChoice(questionName, questionDescription);
+                for (TextField answerTextField : questionContainer.getAnswerTextFields()) {
+                    question.addAnswer(answerTextField.getText());
                 }
                 survey.addQuestion(question);
             }
-            /*System.out.println("Survey title = " + survey.getSurveyTitle());
-            System.out.println("Survey description = " + survey.getSurveyDescription());
-            for (Question question : survey.getQuestions()) {
-                System.out.println("Question = " + question.getQuestionName());
-                System.out.println("Question desc = " + question.getQuestionDescription());
-                HashMap<String, Integer> answers = question.getAnswers();
-                for (String str : answers.keySet()) {
-                    System.out.println("Answer = " + str);
-                }
-            }*/
             IO io = new IOFile();
             io.save(survey);
             surveys.add(survey);
+            try {
+                FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
+                Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
+                stage.setScene(scene);
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        
-        try {
-            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
-            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
-            stage.setScene(scene);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-//        stage.setScene(sceneHashMap.get("start"));
-        
     }
     
     @FXML
     private void onAddNewQuestion() {
-        VBox questionVBox = new VBox();
-        VBox answersVBox = new VBox();
-        TextField questionTitleTextField = new TextField();
-        questionTitleTextField.setPromptText("Question title");
-        TextField questionDescriptionTextField = new TextField();
-        questionDescriptionTextField.setPromptText("Question description");
-        Button button = new Button("Add new answer");
-        //int finalQuestionsCount = questionsCount;
-        
-        ArrayList<TextField> answerTextFields = new ArrayList<>();
-        questionAnswersCounts.put(answersVBox, 0);
-        //questionAnswersTextFields.add(answerTextFields);
-        
-        TextField[] questionTextFields = {questionTitleTextField, questionDescriptionTextField};
-        questionsAndAnswersContainer.put(questionTextFields, answerTextFields);
-        
-        
-        button.setOnAction(actionEvent -> onAddNewAnswer(answersVBox, answerTextFields));
-        
-        answersVBox.getChildren().addAll(questionTitleTextField, questionDescriptionTextField, button);
-        questionVBox.getChildren().addAll(answersVBox, button);
-        
-        questionsVBox.getChildren().add(questionVBox);
-        //questionsCount++;
+        HBox questionContainerHBox = new HBox();
+        QuestionContainer questionContainer = new QuestionContainer(questionContainerHBox);
+        Button removeQuestionButton = new Button("X");
+        removeQuestionButton.setOnAction(actionEvent -> onRemoveQuestion(questionContainer, questionContainerHBox));
+        questionContainerHBox.getChildren().add(removeQuestionButton);
+        questionsVBox.getChildren().add(questionContainerHBox);
+        questionContainers.add(questionContainer);
+        questionContainerButtonHashMap.put(questionContainer, removeQuestionButton);
+        if (questionContainers.size() > 1) {
+            questionContainerButtonHashMap.get(questionContainers.get(0)).setDisable(false);
+        }
+        else {
+            removeQuestionButton.setDisable(true);
+        }
     }
     
-    @FXML
-    private void onAddNewAnswer(VBox vbox, ArrayList<TextField> textFields) {
-        int count = questionAnswersCounts.get(vbox)+1;
-        questionAnswersCounts.put(vbox, count);
-        TextField answerTextField = new TextField();
-        answerTextField.setPromptText("Answer "+count);
-        vbox.getChildren().add(answerTextField);
-        textFields.add(answerTextField);
+    private void onRemoveQuestion(QuestionContainer questionContainer, HBox questionContainerHBox) {
+        questionContainers.remove(questionContainer);
+        questionContainerButtonHashMap.remove(questionContainer);
+        questionsVBox.getChildren().remove(questionContainerHBox);
+        if (questionContainers.size() <= 1) {
+            questionContainerButtonHashMap.get(questionContainers.get(0)).setDisable(true);
+        }
     }
 }
