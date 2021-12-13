@@ -183,7 +183,7 @@ public class IODatabase implements IO{
 
             /* */
 
-            survey = new Survey(titleOfSurvey, descriptionOfSurvey, questions);
+            survey = new Survey(titleOfSurvey, descriptionOfSurvey, questions, 0);
             /* */
 
             System.out.println(titleOfSurvey + "\n" +
@@ -248,6 +248,11 @@ public class IODatabase implements IO{
 
     @Override
     public void remove(Survey survey) {
+    }
+    
+    @Override
+    public void update(Survey survey) {
+    
     }
     /*
     public void uploadToQuestion(String questionTitle, String questionDescription, String email){

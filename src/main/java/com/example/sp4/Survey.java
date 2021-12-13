@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class Survey implements Serializable, Comparable<Survey> {
     public static final long serialVersionUID = 104877509L;
+    private long id;
     private String surveyTitle;
     private String surveyDescription;
     private ArrayList<Question> questions = new ArrayList<>();
@@ -19,10 +20,11 @@ public class Survey implements Serializable, Comparable<Survey> {
         this.surveyDescription = surveyDescription;
     }
 
-    public Survey(String surveyTitle, String surveyDescription, ArrayList<Question> questions) {
+    public Survey(String surveyTitle, String surveyDescription, ArrayList<Question> questions, long id) {
         this.surveyTitle = surveyTitle;
         this.surveyDescription = surveyDescription;
         this.questions = questions;
+        this.id = id;
     }
 
     public String getSurveyTitle() {
@@ -46,6 +48,10 @@ public class Survey implements Serializable, Comparable<Survey> {
     
     public void setFromDB(boolean fromDB) {
         this.fromDB = fromDB;
+    }
+    
+    public long getId() {
+        return id;
     }
     
     @Override

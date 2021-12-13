@@ -64,6 +64,7 @@ public class IOFile implements IO {
             e.printStackTrace();
         }
     }
+    
     @Override
     public void remove(Survey survey) {
         File file = new File("surveys/" + survey.getSurveyTitle() + ".ser");
@@ -71,6 +72,22 @@ public class IOFile implements IO {
             System.out.println("Deleted the file: " + file.getName());
         } else {
             System.out.println("Failed to delete the file.");
+        }
+    }
+    
+    @Override
+    public void update(Survey survey) {
+        try {
+            FileOutputStream file = new FileOutputStream("surveys/Survey"+survey.getId()+".ser");
+            ObjectOutputStream out = new ObjectOutputStream(file);
+        
+            out.writeObject(survey);
+        
+            out.close();
+            file.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

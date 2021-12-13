@@ -9,4 +9,5 @@ public interface IO {
     Survey read(String name) throws Exception;
     void save(Survey survey);
     void remove(Survey survey);
+    void update(Survey survey);
 }
