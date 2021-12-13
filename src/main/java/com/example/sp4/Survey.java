@@ -54,6 +54,10 @@ public class Survey implements Serializable, Comparable<Survey> {
         return id;
     }
     
+    public void setId(long id) {
+        this.id = id;
+    }
+    
     @Override
     public int compareTo(Survey o) {
         return surveyTitle.compareTo(o.getSurveyTitle());
