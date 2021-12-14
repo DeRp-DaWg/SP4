@@ -176,7 +176,7 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
     }
     // NIX PILLE
     @FXML
-    private void setOpenSurveyResults(){
+    private void onOpenSurveyResults(){
         try {
             FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Read.fxml"));
             Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
