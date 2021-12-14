@@ -187,18 +187,6 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
         surveysBox.getChildren().clear();
         updateSurveysBox();
     }
-    // NIX PILLE
-    @FXML
-    private void onOpenSurveyResults(){
-        try {
-            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Read.fxml"));
-            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
-            stage.setScene(scene);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @FXML
     private void onShowLocal() {
