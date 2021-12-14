@@ -7,7 +7,6 @@ import com.example.sp4.IO.IOFile;
 import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
 import com.example.sp4.Survey;
-import com.example.sp4.UI.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
