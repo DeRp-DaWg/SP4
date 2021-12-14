@@ -32,7 +32,7 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
             questionBox.setPadding(insets);
             questionBox.setSpacing(20);
             Label questionTitle = new Label();
-            //The string in the new font dosen't change anything, I chose to write something because it looked weird when it was blank
+            //The string in the new font doesn't change anything, I chose to write something because it looked weird when it was blank
             Font font = new Font("System", 24);
             questionTitle.setFont(font);
             Label questionDescription = new Label();
