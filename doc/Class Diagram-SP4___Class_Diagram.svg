@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="793.6px" preserveAspectRatio="none" style="width:1010px;height:793px;background:#FFFFFF;" version="1.1" viewBox="0 0 1010 793" width="1010.4px" zoomAndPan="magnify"><defs><filter height="300%" id="fln9k4xuzfipr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="0.8000000000000002"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="1.6000000000000003" dy="1.6000000000000003" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="7.2" lengthAdjust="spacing" textLength="66.8" x="469.258" y="7.4742">SP4 - Class Diagram</text><!--MD5=[1f5e8df8bdcbaa76011e40089f9f669f]
+cluster Question--><polygon fill="#FFFFFF" filter="url(#fln9k4xuzfipr)" points="707.056,622.2563,735.056,622.2563,737.856,631.7,802.256,631.7,802.256,791.0563,707.056,791.0563,707.056,622.2563" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="707.056" x2="737.856" y1="631.7" y2="631.7"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="25.6" x="708.656" y="628.8695">Question</text><!--MD5=[bc864692dcbcfabb14522ce26278cd6d]
+cluster IO--><polygon fill="#FFFFFF" filter="url(#fln9k4xuzfipr)" points="432.656,431.4563,441.056,431.4563,443.856,440.9,533.056,440.9,533.056,592.4563,432.656,592.4563,432.656,431.4563" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="432.656" x2="443.856" y1="440.9" y2="440.9"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="6" x="434.256" y="438.0695">IO</text><!--MD5=[9681dc6e01e10c6b4fe06895ae94f592]
+cluster UI--><polygon fill="#FFFFFF" filter="url(#fln9k4xuzfipr)" points="242.656,37.4563,250.656,37.4563,253.456,46.9,903.056,46.9,903.056,421.8563,242.656,421.8563,242.656,37.4563" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="242.656" x2="253.456" y1="46.9" y2="46.9"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="244.256" y="44.0695">UI</text><!--MD5=[14200995ab835dc4c53296f4bd89c4c0]
+cluster UICommandLine--><polygon fill="#CCFFCC" filter="url(#fln9k4xuzfipr)" points="593.056,55.0563,640.656,55.0563,643.456,64.5,893.456,64.5,893.456,389.2563,593.056,389.2563,593.056,55.0563" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="593.056" x2="643.456" y1="64.5" y2="64.5"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="45.2" x="594.656" y="61.6695">UICommandLine</text><!--MD5=[61f0256e39d109cf4307c94811c168a9]
+cluster UIJavaFX--><polygon fill="#99DDFF" filter="url(#fln9k4xuzfipr)" points="252.256,57.6563,280.656,57.6563,283.456,67.1,583.456,67.1,583.456,412.2563,252.256,412.2563,252.256,57.6563" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="252.256" x2="283.456" y1="67.1" y2="67.1"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="26" x="253.856" y="64.2695">UIJavaFX</text><!--MD5=[a75aed0d76cb6dc35426e2333360643f]
+cluster Comparators--><polygon fill="#FFFFFF" filter="url(#fln9k4xuzfipr)" points="95.856,332.6563,134.256,332.6563,137.056,342.1,233.056,342.1,233.056,696.0563,95.856,696.0563,95.856,332.6563" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="95.856" x2="137.056" y1="342.1" y2="342.1"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="36" x="97.456" y="339.2695">Comparators</text><!--MD5=[fc7123defb831ecdd44b2d9bcef6cceb]
+class Question--><rect codeLine="8" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="75.4844" id="Question" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="63.2" x="723.056" y="636.6563"/><ellipse cx="737.876" cy="644.6938" fill="#A9DCDF" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M738.576,645.2938 L737.2573,645.2938 L737.0823,645.6938 L737.0823,645.6938 L737.2698,645.6938 L737.476,645.9438 L737.476,646.0938 L737.476,646.2438 L737.2698,646.4938 L737.0823,646.4938 L736.326,646.4938 L736.0823,646.4938 L735.876,646.2438 L735.876,646.0938 L735.876,645.9438 L736.0823,645.6938 L736.326,645.6938 L737.251,643.2938 L736.901,643.2938 L736.4823,643.2938 L736.276,643.0438 L736.276,642.8938 L736.276,642.7438 L736.4823,642.4938 L736.901,642.4938 L738.3698,642.4938 L739.4448,645.6938 L739.6698,645.6938 L739.6698,645.6938 L739.876,645.9438 L739.876,646.0938 L739.876,646.2438 L739.6698,646.4938 L739.4448,646.4938 L738.6885,646.4938 L738.4823,646.4938 L738.276,646.2438 L738.276,646.0938 L738.276,645.9438 L738.4823,645.6938 L738.6885,645.6938 L738.6885,645.6938 L738.576,645.2938 Z M738.3573,644.4938 L737.876,643.0625 L737.4635,644.4938 L738.3573,644.4938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="32.4" x="744.636" y="643.6391">«Serializable»</text><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="19.6" x="751.036" y="649.6766">Question</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="723.456" x2="785.856" y1="652.7313" y2="652.7313"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="726.256" y="655.9313"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="42" x="731.056" y="658.8988">questionName : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="726.256" y="661.4656"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="52.8" x="731.056" y="664.4332">questionDescription : String</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="723.456" x2="785.856" y1="667" y2="667"/><ellipse cx="727.456" cy="678.5344" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" font-style="italic" lengthAdjust="spacing" textLength="24.8" x="731.056" y="680.302">addAnswer()</text><ellipse cx="727.456" cy="684.0688" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" font-style="italic" lengthAdjust="spacing" textLength="23.2" x="731.056" y="685.8363">addResult()</text><ellipse cx="727.456" cy="689.6031" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" font-style="italic" lengthAdjust="spacing" textLength="26" x="731.056" y="691.3707">getAnswers()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="723.456" x2="737.456" y1="672.9672" y2="672.9672"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="34.4" x="737.456" y="674.5676">Abstract methods</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="771.856" x2="785.856" y1="672.9672" y2="672.9672"/><ellipse cx="727.456" cy="702.2719" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="37.2" x="731.056" y="704.0395">getQuestionName()</text><ellipse cx="727.456" cy="707.8063" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="48" x="731.056" y="709.5738">getQuestionDescription()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="723.456" x2="737.856" y1="696.7047" y2="696.7047"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="33.6" x="737.856" y="698.3051">Getters &amp; Setters</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="771.456" x2="785.856" y1="696.7047" y2="696.7047"/><!--MD5=[210f05ad84ecfe37f8378e5618b7165d]
+class MultipleChoice--><rect codeLine="21" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="48.4719" id="MultipleChoice" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="82.4" x="713.456" y="736.2563"/><ellipse cx="736.756" cy="742.6563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M737.556,741.2563 Q737.6373,741.0563 737.731,740.9563 Q737.8248,740.8563 737.931,740.8563 Q738.1185,740.8563 738.2373,740.9688 Q738.356,741.0813 738.356,741.3438 L738.356,741.9688 Q738.356,742.2313 738.2435,742.3438 Q738.131,742.4563 737.956,742.4563 Q737.7998,742.4563 737.6998,742.3875 Q737.5998,742.3188 737.556,742.1375 Q737.5373,742.0125 737.4685,741.9438 Q737.3435,741.8125 737.1185,741.7375 Q736.8935,741.6563 736.6685,741.6563 Q736.3873,741.6563 736.1498,741.7688 Q735.9185,741.8813 735.7373,742.1313 Q735.556,742.3813 735.556,742.725 L735.556,743.0938 Q735.556,743.5063 735.8935,743.7813 Q736.231,744.0563 736.831,744.0563 Q737.1873,744.0563 737.4373,743.975 Q737.581,743.9313 737.7435,743.7875 Q737.8498,743.7063 737.906,743.6813 Q737.9623,743.6563 738.031,743.6563 Q738.1623,743.6563 738.256,743.7625 Q738.356,743.8625 738.356,744.0063 Q738.356,744.1438 738.2185,744.3063 Q738.0185,744.5438 737.6998,744.675 Q737.281,744.8563 736.7685,744.8563 Q736.1685,744.8563 735.6873,744.6188 Q735.2998,744.4313 735.0248,744.025 Q734.756,743.6188 734.756,743.1375 L734.756,742.7 Q734.756,742.2 734.9935,741.7625 Q735.2373,741.325 735.656,741.0938 Q736.081,740.8563 736.556,740.8563 Q736.8435,740.8563 737.0935,740.9563 Q737.3435,741.0563 737.556,741.2563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="32.4" x="744.956" y="744.6203">MultipleChoice</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="713.856" x2="795.456" y1="749.0563" y2="749.0563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="716.656" y="752.2563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="72" x="721.456" y="755.2238">answers = HashMap&lt;String, Integer&gt;</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="713.856" x2="795.456" y1="757.7906" y2="757.7906"/><ellipse cx="717.856" cy="769.325" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="26.4" x="721.456" y="771.0926">addAnswer()</text><ellipse cx="717.856" cy="774.8594" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="22.4" x="721.456" y="776.627">addResult()</text><ellipse cx="717.856" cy="780.3938" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="27.6" x="721.456" y="782.1613">getAnswers()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="713.856" x2="735.056" y1="763.7578" y2="763.7578"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="39.2" x="735.056" y="765.3582">Overridden methods</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="774.256" x2="795.456" y1="763.7578" y2="763.7578"/><!--MD5=[8d6909d044ac0c385411b8170b0bfc43]
+class IO--><rect codeLine="55" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="41.3375" id="IO" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="28" x="489.856" y="445.8563"/><ellipse cx="500.356" cy="452.2563" fill="#B4A7E5" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M500.756,451.0563 L500.756,453.4563 L501.556,453.4563 L501.7498,453.4563 L501.956,453.7063 L501.956,453.8563 L501.956,454.0063 L501.7498,454.2563 L501.556,454.2563 L499.156,454.2563 L498.9623,454.2563 L498.756,454.0063 L498.756,453.8563 L498.756,453.7063 L498.9623,453.4563 L499.156,453.4563 L499.956,453.4563 L499.956,451.0563 L499.156,451.0563 L498.9623,451.0563 L498.756,450.8063 L498.756,450.6563 L498.756,450.5063 L498.9623,450.2563 L499.156,450.2563 L501.556,450.2563 L501.7498,450.2563 L501.956,450.5063 L501.956,450.6563 L501.956,450.8063 L501.7498,451.0563 L501.556,451.0563 L500.756,451.0563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="5.2" x="506.956" y="454.2203">IO</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="490.256" x2="517.456" y1="458.6563" y2="458.6563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="490.256" x2="517.456" y1="461.8563" y2="461.8563"/><ellipse cx="494.256" cy="466.2563" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="12" x="497.856" y="468.0238">read()</text><ellipse cx="494.256" cy="471.7906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="12.8" x="497.856" y="473.5582">save()</text><ellipse cx="494.256" cy="477.325" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="17.6" x="497.856" y="479.0926">remove()</text><ellipse cx="494.256" cy="482.8594" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="16.4" x="497.856" y="484.627">update()</text><!--MD5=[11dccae16622417353c5c34a5d12017a]
+class IOFile--><rect codeLine="62" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="48.4719" id="IOFile" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="28" x="439.056" y="537.6563"/><ellipse cx="446.136" cy="544.0563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M446.936,542.6563 Q447.0173,542.4563 447.111,542.3563 Q447.2048,542.2563 447.311,542.2563 Q447.4985,542.2563 447.6173,542.3688 Q447.736,542.4813 447.736,542.7438 L447.736,543.3688 Q447.736,543.6313 447.6235,543.7438 Q447.511,543.8563 447.336,543.8563 Q447.1798,543.8563 447.0798,543.7875 Q446.9798,543.7188 446.936,543.5375 Q446.9173,543.4125 446.8485,543.3438 Q446.7235,543.2125 446.4985,543.1375 Q446.2735,543.0563 446.0485,543.0563 Q445.7673,543.0563 445.5298,543.1688 Q445.2985,543.2813 445.1173,543.5313 Q444.936,543.7813 444.936,544.125 L444.936,544.4938 Q444.936,544.9063 445.2735,545.1813 Q445.611,545.4563 446.211,545.4563 Q446.5673,545.4563 446.8173,545.375 Q446.961,545.3313 447.1235,545.1875 Q447.2298,545.1063 447.286,545.0813 Q447.3423,545.0563 447.411,545.0563 Q447.5423,545.0563 447.636,545.1625 Q447.736,545.2625 447.736,545.4063 Q447.736,545.5438 447.5985,545.7063 Q447.3985,545.9438 447.0798,546.075 Q446.661,546.2563 446.1485,546.2563 Q445.5485,546.2563 445.0673,546.0188 Q444.6798,545.8313 444.4048,545.425 Q444.136,545.0188 444.136,544.5375 L444.136,544.1 Q444.136,543.6 444.3735,543.1625 Q444.6173,542.725 445.036,542.4938 Q445.461,542.2563 445.936,542.2563 Q446.2235,542.2563 446.4735,542.3563 Q446.7235,542.4563 446.936,542.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="12.8" x="451.976" y="546.0203">IOFile</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="439.456" x2="466.656" y1="550.4563" y2="550.4563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="439.456" x2="466.656" y1="553.6563" y2="553.6563"/><ellipse cx="443.456" cy="565.1906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="12" x="447.056" y="566.9582">read()</text><ellipse cx="443.456" cy="570.725" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="12.8" x="447.056" y="572.4926">save()</text><ellipse cx="443.456" cy="576.2594" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="17.6" x="447.056" y="578.027">remove()</text><ellipse cx="443.456" cy="581.7938" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="16.4" x="447.056" y="583.5613">update()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="439.456" x2="442.256" y1="559.6234" y2="559.6234"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="21.6" x="442.256" y="561.2238">Overridden</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="463.856" x2="466.656" y1="559.6234" y2="559.6234"/><!--MD5=[31579a67cff1bff06d6af92b0f1f1f0e]
+class IODatabase--><rect codeLine="71" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="35.8031" id="IODatabase" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="45.2" x="481.256" y="543.8563"/><ellipse cx="489.956" cy="550.2563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M490.756,548.8563 Q490.8373,548.6563 490.931,548.5563 Q491.0248,548.4563 491.131,548.4563 Q491.3185,548.4563 491.4373,548.5688 Q491.556,548.6813 491.556,548.9438 L491.556,549.5688 Q491.556,549.8313 491.4435,549.9438 Q491.331,550.0563 491.156,550.0563 Q490.9998,550.0563 490.8998,549.9875 Q490.7998,549.9188 490.756,549.7375 Q490.7373,549.6125 490.6685,549.5438 Q490.5435,549.4125 490.3185,549.3375 Q490.0935,549.2563 489.8685,549.2563 Q489.5873,549.2563 489.3498,549.3688 Q489.1185,549.4813 488.9373,549.7313 Q488.756,549.9813 488.756,550.325 L488.756,550.6938 Q488.756,551.1063 489.0935,551.3813 Q489.431,551.6563 490.031,551.6563 Q490.3873,551.6563 490.6373,551.575 Q490.781,551.5313 490.9435,551.3875 Q491.0498,551.3063 491.106,551.2813 Q491.1623,551.2563 491.231,551.2563 Q491.3623,551.2563 491.456,551.3625 Q491.556,551.4625 491.556,551.6063 Q491.556,551.7438 491.4185,551.9063 Q491.2185,552.1438 490.8998,552.275 Q490.481,552.4563 489.9685,552.4563 Q489.3685,552.4563 488.8873,552.2188 Q488.4998,552.0313 488.2248,551.625 Q487.956,551.2188 487.956,550.7375 L487.956,550.3 Q487.956,549.8 488.1935,549.3625 Q488.4373,548.925 488.856,548.6938 Q489.281,548.4563 489.756,548.4563 Q490.0435,548.4563 490.2935,548.5563 Q490.5435,548.6563 490.756,548.8563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="26.4" x="496.156" y="552.2203">IODatabase</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="481.656" x2="526.056" y1="556.6563" y2="556.6563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="484.456" y="559.8563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="34.8" x="489.256" y="562.8238">conn : Connection</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="481.656" x2="526.056" y1="565.3906" y2="565.3906"/><ellipse cx="485.656" cy="569.7906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="30" x="489.256" y="571.5582">uploadSurvey()</text><ellipse cx="485.656" cy="575.325" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="23.2" x="489.256" y="577.0926">getSurvey()</text><!--MD5=[8b57a167ef1a2ef6304fe88f8c2599be]
+class UICommandLineScanner--><rect codeLine="86" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="41.3375" id="UICommandLineScanner" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="99.2" x="784.256" y="341.6563"/><ellipse cx="803.956" cy="348.0563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M804.756,346.6563 Q804.8373,346.4563 804.931,346.3563 Q805.0248,346.2563 805.131,346.2563 Q805.3185,346.2563 805.4373,346.3688 Q805.556,346.4813 805.556,346.7438 L805.556,347.3688 Q805.556,347.6313 805.4435,347.7438 Q805.331,347.8563 805.156,347.8563 Q804.9998,347.8563 804.8998,347.7875 Q804.7998,347.7188 804.756,347.5375 Q804.7373,347.4125 804.6685,347.3438 Q804.5435,347.2125 804.3185,347.1375 Q804.0935,347.0563 803.8685,347.0563 Q803.5873,347.0563 803.3498,347.1688 Q803.1185,347.2813 802.9373,347.5313 Q802.756,347.7813 802.756,348.125 L802.756,348.4938 Q802.756,348.9063 803.0935,349.1813 Q803.431,349.4563 804.031,349.4563 Q804.3873,349.4563 804.6373,349.375 Q804.781,349.3313 804.9435,349.1875 Q805.0498,349.1063 805.106,349.0813 Q805.1623,349.0563 805.231,349.0563 Q805.3623,349.0563 805.456,349.1625 Q805.556,349.2625 805.556,349.4063 Q805.556,349.5438 805.4185,349.7063 Q805.2185,349.9438 804.8998,350.075 Q804.481,350.2563 803.9685,350.2563 Q803.3685,350.2563 802.8873,350.0188 Q802.4998,349.8313 802.2248,349.425 Q801.956,349.0188 801.956,348.5375 L801.956,348.1 Q801.956,347.6 802.1935,347.1625 Q802.4373,346.725 802.856,346.4938 Q803.281,346.2563 803.756,346.2563 Q804.0435,346.2563 804.2935,346.3563 Q804.5435,346.4563 804.756,346.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="56.4" x="812.156" y="350.0203">UICommandLineScanner</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="784.656" x2="883.056" y1="354.4563" y2="354.4563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="787.456" y="357.6563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="24.8" x="792.256" y="360.6238">sc : Scanner</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="784.656" x2="883.056" y1="363.1906" y2="363.1906"/><ellipse cx="788.656" cy="367.5906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="48" x="792.256" y="369.3582">getUserInput(String msg)</text><ellipse cx="788.656" cy="373.125" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="88.8" x="792.256" y="374.8926">getUserInput(String msg, String[] validOptions)</text><ellipse cx="788.656" cy="378.6594" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="66" x="792.256" y="380.427">getUserInputYesOrNo(String msg)</text><!--MD5=[3a86a76358e10933249b7851c6f5bace]
+class UICommandLineStart--><rect codeLine="93" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="41.3375" id="UICommandLineStart" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="71.6" x="708.056" y="69.4563"/><ellipse cx="718.916" cy="75.8563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M719.716,74.4563 Q719.7973,74.2563 719.891,74.1563 Q719.9848,74.0563 720.091,74.0563 Q720.2785,74.0563 720.3973,74.1688 Q720.516,74.2813 720.516,74.5438 L720.516,75.1688 Q720.516,75.4313 720.4035,75.5438 Q720.291,75.6563 720.116,75.6563 Q719.9598,75.6563 719.8598,75.5875 Q719.7598,75.5188 719.716,75.3375 Q719.6973,75.2125 719.6285,75.1438 Q719.5035,75.0125 719.2785,74.9375 Q719.0535,74.8563 718.8285,74.8563 Q718.5473,74.8563 718.3098,74.9688 Q718.0785,75.0813 717.8973,75.3313 Q717.716,75.5813 717.716,75.925 L717.716,76.2938 Q717.716,76.7063 718.0535,76.9813 Q718.391,77.2563 718.991,77.2563 Q719.3473,77.2563 719.5973,77.175 Q719.741,77.1313 719.9035,76.9875 Q720.0098,76.9063 720.066,76.8813 Q720.1223,76.8563 720.191,76.8563 Q720.3223,76.8563 720.416,76.9625 Q720.516,77.0625 720.516,77.2063 Q720.516,77.3438 720.3785,77.5063 Q720.1785,77.7438 719.8598,77.875 Q719.441,78.0563 718.9285,78.0563 Q718.3285,78.0563 717.8473,77.8188 Q717.4598,77.6313 717.1848,77.225 Q716.916,76.8188 716.916,76.3375 L716.916,75.9 Q716.916,75.4 717.1535,74.9625 Q717.3973,74.525 717.816,74.2938 Q718.241,74.0563 718.716,74.0563 Q719.0035,74.0563 719.2535,74.1563 Q719.5035,74.2563 719.716,74.4563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="48" x="725.596" y="77.8203">UICommandLineStart</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="708.456" x2="779.256" y1="82.2563" y2="82.2563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="711.256" y="85.4563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="40.8" x="716.056" y="88.4238">validOptions : String[]</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="711.256" y="90.9906"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="27.6" x="716.056" y="93.9582">choice : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="711.256" y="96.525"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="60" x="716.056" y="99.4926">scan : UICommandLineScanner</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="708.456" x2="779.256" y1="102.0594" y2="102.0594"/><ellipse cx="712.456" cy="106.4594" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="61.2" x="716.056" y="108.227">UIShowStart(Survey[] surveys)</text><!--MD5=[2853030a4efee5b0d6a2c1ea649cdeb4]
+class UICommandLineAnswer--><rect codeLine="100" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="52.4063" id="UICommandLineAnswer" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="78.4" x="704.656" y="188.4563"/><ellipse cx="715.696" cy="194.8563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M716.496,193.4563 Q716.5773,193.2563 716.671,193.1563 Q716.7648,193.0563 716.871,193.0563 Q717.0585,193.0563 717.1773,193.1688 Q717.296,193.2813 717.296,193.5438 L717.296,194.1688 Q717.296,194.4313 717.1835,194.5438 Q717.071,194.6563 716.896,194.6563 Q716.7398,194.6563 716.6398,194.5875 Q716.5398,194.5188 716.496,194.3375 Q716.4773,194.2125 716.4085,194.1438 Q716.2835,194.0125 716.0585,193.9375 Q715.8335,193.8563 715.6085,193.8563 Q715.3273,193.8563 715.0898,193.9688 Q714.8585,194.0813 714.6773,194.3313 Q714.496,194.5813 714.496,194.925 L714.496,195.2938 Q714.496,195.7063 714.8335,195.9813 Q715.171,196.2563 715.771,196.2563 Q716.1273,196.2563 716.3773,196.175 Q716.521,196.1313 716.6835,195.9875 Q716.7898,195.9063 716.846,195.8813 Q716.9023,195.8563 716.971,195.8563 Q717.1023,195.8563 717.196,195.9625 Q717.296,196.0625 717.296,196.2063 Q717.296,196.3438 717.1585,196.5063 Q716.9585,196.7438 716.6398,196.875 Q716.221,197.0563 715.7085,197.0563 Q715.1085,197.0563 714.6273,196.8188 Q714.2398,196.6313 713.9648,196.225 Q713.696,195.8188 713.696,195.3375 L713.696,194.9 Q713.696,194.4 713.9335,193.9625 Q714.1773,193.525 714.596,193.2938 Q715.021,193.0563 715.496,193.0563 Q715.7835,193.0563 716.0335,193.1563 Q716.2835,193.2563 716.496,193.4563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="54.4" x="722.416" y="196.8203">UICommandLineAnswer</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="705.056" x2="782.656" y1="201.2563" y2="201.2563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="707.856" y="204.4563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="40.8" x="712.656" y="207.4238">validOptions : String[]</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="707.856" y="209.9906"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="27.6" x="712.656" y="212.9582">choice : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="707.856" y="215.525"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="46" x="712.656" y="218.4926">chosenSurvey : Survey</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="707.856" y="221.0594"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="25.2" x="712.656" y="224.027">name : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="707.856" y="226.5938"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="60" x="712.656" y="229.5613">scan : UICommandLineScanner</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="705.056" x2="782.656" y1="232.1281" y2="232.1281"/><ellipse cx="709.056" cy="236.5281" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="68" x="712.656" y="238.2957">UIShowAnswer(Survey[] surveys)</text><!--MD5=[0e36e1a8e1e6b945f61e0e73f2a308cd]
+class UICommandLineCreate--><rect codeLine="109" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="52.4063" id="UICommandLineCreate" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="75.2" x="797.056" y="188.4563"/><ellipse cx="807.376" cy="194.8563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M808.176,193.4563 Q808.2573,193.2563 808.351,193.1563 Q808.4448,193.0563 808.551,193.0563 Q808.7385,193.0563 808.8573,193.1688 Q808.976,193.2813 808.976,193.5438 L808.976,194.1688 Q808.976,194.4313 808.8635,194.5438 Q808.751,194.6563 808.576,194.6563 Q808.4198,194.6563 808.3198,194.5875 Q808.2198,194.5188 808.176,194.3375 Q808.1573,194.2125 808.0885,194.1438 Q807.9635,194.0125 807.7385,193.9375 Q807.5135,193.8563 807.2885,193.8563 Q807.0073,193.8563 806.7698,193.9688 Q806.5385,194.0813 806.3573,194.3313 Q806.176,194.5813 806.176,194.925 L806.176,195.2938 Q806.176,195.7063 806.5135,195.9813 Q806.851,196.2563 807.451,196.2563 Q807.8073,196.2563 808.0573,196.175 Q808.201,196.1313 808.3635,195.9875 Q808.4698,195.9063 808.526,195.8813 Q808.5823,195.8563 808.651,195.8563 Q808.7823,195.8563 808.876,195.9625 Q808.976,196.0625 808.976,196.2063 Q808.976,196.3438 808.8385,196.5063 Q808.6385,196.7438 808.3198,196.875 Q807.901,197.0563 807.3885,197.0563 Q806.7885,197.0563 806.3073,196.8188 Q805.9198,196.6313 805.6448,196.225 Q805.376,195.8188 805.376,195.3375 L805.376,194.9 Q805.376,194.4 805.6135,193.9625 Q805.8573,193.525 806.276,193.2938 Q806.701,193.0563 807.176,193.0563 Q807.4635,193.0563 807.7135,193.1563 Q807.9635,193.2563 808.176,193.4563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="52.8" x="813.936" y="196.8203">UICommandLineCreate</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="797.456" x2="871.856" y1="201.2563" y2="201.2563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="800.256" y="204.4563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="27.6" x="805.056" y="207.4238">choice : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="800.256" y="209.9906"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="36" x="805.056" y="212.9582">surveyTitle : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="800.256" y="215.525"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="50" x="805.056" y="218.4926">surveyDescription : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="800.256" y="221.0594"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="31.2" x="805.056" y="224.027">survey : Survey</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="800.256" y="226.5938"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="60" x="805.056" y="229.5613">scan : UICommandLineScanner</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="797.456" x2="871.856" y1="232.1281" y2="232.1281"/><ellipse cx="801.456" cy="236.5281" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="64.8" x="805.056" y="238.2957">UIShowCreate(Survey[] surveys)</text><!--MD5=[ecae79dad28fa6562f1246ffd0522034]
+class UICommandLineViewAnswers--><rect codeLine="118" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="41.3375" id="UICommandLineViewAnswers" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="91.2" x="599.456" y="194.0563"/><ellipse cx="610.316" cy="200.4563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M611.116,199.0563 Q611.1973,198.8563 611.291,198.7563 Q611.3848,198.6563 611.491,198.6563 Q611.6785,198.6563 611.7973,198.7688 Q611.916,198.8813 611.916,199.1438 L611.916,199.7688 Q611.916,200.0313 611.8035,200.1438 Q611.691,200.2563 611.516,200.2563 Q611.3598,200.2563 611.2598,200.1875 Q611.1598,200.1188 611.116,199.9375 Q611.0973,199.8125 611.0285,199.7438 Q610.9035,199.6125 610.6785,199.5375 Q610.4535,199.4563 610.2285,199.4563 Q609.9473,199.4563 609.7098,199.5688 Q609.4785,199.6813 609.2973,199.9313 Q609.116,200.1813 609.116,200.525 L609.116,200.8938 Q609.116,201.3063 609.4535,201.5813 Q609.791,201.8563 610.391,201.8563 Q610.7473,201.8563 610.9973,201.775 Q611.141,201.7313 611.3035,201.5875 Q611.4098,201.5063 611.466,201.4813 Q611.5223,201.4563 611.591,201.4563 Q611.7223,201.4563 611.816,201.5625 Q611.916,201.6625 611.916,201.8063 Q611.916,201.9438 611.7785,202.1063 Q611.5785,202.3438 611.2598,202.475 Q610.841,202.6563 610.3285,202.6563 Q609.7285,202.6563 609.2473,202.4188 Q608.8598,202.2313 608.5848,201.825 Q608.316,201.4188 608.316,200.9375 L608.316,200.5 Q608.316,200 608.5535,199.5625 Q608.7973,199.125 609.216,198.8938 Q609.641,198.6563 610.116,198.6563 Q610.4035,198.6563 610.6535,198.7563 Q610.9035,198.8563 611.116,199.0563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="67.6" x="616.996" y="202.4203">UICommandLineViewAnswers</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="599.856" x2="690.256" y1="206.8563" y2="206.8563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="602.656" y="210.0563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="40.8" x="607.456" y="213.0238">validOptions : String[]</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="602.656" y="215.5906"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="27.6" x="607.456" y="218.5582">choice : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="602.656" y="221.125"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="60" x="607.456" y="224.0926">scan : UICommandLineScanner</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="599.856" x2="690.256" y1="226.6594" y2="226.6594"/><ellipse cx="603.856" cy="231.0594" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="80.8" x="607.456" y="232.827">UIShowViewAnswers(Survey[] surveys)</text><!--MD5=[32ed24bd52e4f343b588fb22aa16d17a]
+class UICommandLine--><rect fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="19.2" id="UICommandLine" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="50.8" x="718.456" y="352.6563"/><ellipse cx="724.456" cy="359.0563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M725.256,357.6563 Q725.3373,357.4563 725.431,357.3563 Q725.5248,357.2563 725.631,357.2563 Q725.8185,357.2563 725.9373,357.3688 Q726.056,357.4813 726.056,357.7438 L726.056,358.3688 Q726.056,358.6313 725.9435,358.7438 Q725.831,358.8563 725.656,358.8563 Q725.4998,358.8563 725.3998,358.7875 Q725.2998,358.7188 725.256,358.5375 Q725.2373,358.4125 725.1685,358.3438 Q725.0435,358.2125 724.8185,358.1375 Q724.5935,358.0563 724.3685,358.0563 Q724.0873,358.0563 723.8498,358.1688 Q723.6185,358.2813 723.4373,358.5313 Q723.256,358.7813 723.256,359.125 L723.256,359.4938 Q723.256,359.9063 723.5935,360.1813 Q723.931,360.4563 724.531,360.4563 Q724.8873,360.4563 725.1373,360.375 Q725.281,360.3313 725.4435,360.1875 Q725.5498,360.1063 725.606,360.0813 Q725.6623,360.0563 725.731,360.0563 Q725.8623,360.0563 725.956,360.1625 Q726.056,360.2625 726.056,360.4063 Q726.056,360.5438 725.9185,360.7063 Q725.7185,360.9438 725.3998,361.075 Q724.981,361.2563 724.4685,361.2563 Q723.8685,361.2563 723.3873,361.0188 Q722.9998,360.8313 722.7248,360.425 Q722.456,360.0188 722.456,359.5375 L722.456,359.1 Q722.456,358.6 722.6935,358.1625 Q722.9373,357.725 723.356,357.4938 Q723.781,357.2563 724.256,357.2563 Q724.5435,357.2563 724.7935,357.3563 Q725.0435,357.4563 725.256,357.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="38" x="730.056" y="361.0203">UICommandLine</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="718.856" x2="768.856" y1="365.4563" y2="365.4563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="718.856" x2="768.856" y1="368.6563" y2="368.6563"/><!--MD5=[e423da280ede7d542bc774221b398478]
+class UIJavaFXMain--><rect codeLine="141" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="35.8031" id="UIJavaFXMain" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="46.4" x="503.856" y="72.0563"/><ellipse cx="511.116" cy="78.4563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M511.916,77.0563 Q511.9973,76.8563 512.091,76.7563 Q512.1848,76.6563 512.291,76.6563 Q512.4785,76.6563 512.5973,76.7688 Q512.716,76.8813 512.716,77.1438 L512.716,77.7688 Q512.716,78.0313 512.6035,78.1438 Q512.491,78.2563 512.316,78.2563 Q512.1598,78.2563 512.0598,78.1875 Q511.9598,78.1188 511.916,77.9375 Q511.8973,77.8125 511.8285,77.7438 Q511.7035,77.6125 511.4785,77.5375 Q511.2535,77.4563 511.0285,77.4563 Q510.7473,77.4563 510.5098,77.5688 Q510.2785,77.6813 510.0973,77.9313 Q509.916,78.1813 509.916,78.525 L509.916,78.8938 Q509.916,79.3063 510.2535,79.5813 Q510.591,79.8563 511.191,79.8563 Q511.5473,79.8563 511.7973,79.775 Q511.941,79.7313 512.1035,79.5875 Q512.2098,79.5063 512.266,79.4813 Q512.3223,79.4563 512.391,79.4563 Q512.5223,79.4563 512.616,79.5625 Q512.716,79.6625 512.716,79.8063 Q512.716,79.9438 512.5785,80.1063 Q512.3785,80.3438 512.0598,80.475 Q511.641,80.6563 511.1285,80.6563 Q510.5285,80.6563 510.0473,80.4188 Q509.6598,80.2313 509.3848,79.825 Q509.116,79.4188 509.116,78.9375 L509.116,78.5 Q509.116,78 509.3535,77.5625 Q509.5973,77.125 510.016,76.8938 Q510.441,76.6563 510.916,76.6563 Q511.2035,76.6563 511.4535,76.7563 Q511.7035,76.8563 511.916,77.0563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="30.8" x="516.996" y="80.4203">UIJavaFXMain</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="504.256" x2="549.856" y1="84.8563" y2="84.8563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="507.056" y="88.0563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="36" x="511.856" y="91.0238">surveys[] : Survey</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="507.056" y="93.5906"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="511.856" y="96.5582">io : IO</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="504.256" x2="549.856" y1="99.125" y2="99.125"/><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="507.056" y="102.325"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="12" x="511.856" y="105.2926">start()</text><!--MD5=[d05e78bb340d6ee42293f5a8fda15e51]
+class UIJavaFX--><rect codeLine="146" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="73.8094" id="UIJavaFX" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="46.4" x="379.856" y="325.2563"/><ellipse cx="391.256" cy="331.6563" fill="#A9DCDF" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M391.956,332.2563 L390.6373,332.2563 L390.4623,332.6563 L390.4623,332.6563 L390.6498,332.6563 L390.856,332.9063 L390.856,333.0563 L390.856,333.2063 L390.6498,333.4563 L390.4623,333.4563 L389.706,333.4563 L389.4623,333.4563 L389.256,333.2063 L389.256,333.0563 L389.256,332.9063 L389.4623,332.6563 L389.706,332.6563 L390.631,330.2563 L390.281,330.2563 L389.8623,330.2563 L389.656,330.0063 L389.656,329.8563 L389.656,329.7063 L389.8623,329.4563 L390.281,329.4563 L391.7498,329.4563 L392.8248,332.6563 L393.0498,332.6563 L393.0498,332.6563 L393.256,332.9063 L393.256,333.0563 L393.256,333.2063 L393.0498,333.4563 L392.8248,333.4563 L392.0685,333.4563 L391.8623,333.4563 L391.656,333.2063 L391.656,333.0563 L391.656,332.9063 L391.8623,332.6563 L392.0685,332.6563 L392.0685,332.6563 L391.956,332.2563 Z M391.7373,331.4563 L391.256,330.025 L390.8435,331.4563 L391.7373,331.4563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="21.6" x="398.056" y="333.6203">UIJavaFX</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="380.256" x2="425.856" y1="338.0563" y2="338.0563"/><polygon fill="none" points="384.256,340.4563,385.856,342.0563,384.256,343.6563,382.656,342.0563" style="stroke:#B38D22;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="17.2" x="387.856" y="344.2238">ioFile : IO</text><polygon fill="none" points="384.256,345.9906,385.856,347.5906,384.256,349.1906,382.656,347.5906" style="stroke:#B38D22;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="29.2" x="387.856" y="349.7582">ioDatabase : IO</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="380.256" x2="425.856" y1="352.325" y2="352.325"/><polygon fill="none" points="384.256,354.725,385.856,356.325,384.256,357.925,382.656,356.325" style="stroke:#B38D22;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="25.6" x="387.856" y="358.4926">stage : Stage</text><polygon fill="none" points="384.256,360.2594,385.856,361.8594,384.256,363.4594,382.656,361.8594" style="stroke:#B38D22;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="36" x="387.856" y="364.027">surveys[] : Survey</text><polygon fill="none" points="384.256,365.7938,385.856,367.3938,384.256,368.9938,382.656,367.3938" style="stroke:#B38D22;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="31.2" x="387.856" y="369.5613">survey : Survey</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="380.256" x2="425.856" y1="372.1281" y2="372.1281"/><ellipse cx="384.256" cy="383.6625" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="20.4" x="387.856" y="385.4301">setStage()</text><ellipse cx="384.256" cy="389.1969" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="25.6" x="387.856" y="390.9645">setSurveys()</text><ellipse cx="384.256" cy="394.7313" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="23.2" x="387.856" y="396.4988">setSurvey()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="380.256" x2="386.256" y1="378.0953" y2="378.0953"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="33.6" x="386.256" y="379.6957">Getters &amp; Setters</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="419.856" x2="425.856" y1="378.0953" y2="378.0953"/><!--MD5=[ccd759b38eb454dd719ff5c5821fa0bd]
+class UIJavaFXStart--><rect codeLine="159" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="160.1" id="UIJavaFXStart" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="87.6" x="258.856" y="134.6563"/><ellipse cx="285.756" cy="142.6938" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M286.556,141.2938 Q286.6373,141.0938 286.731,140.9938 Q286.8248,140.8938 286.931,140.8938 Q287.1185,140.8938 287.2373,141.0063 Q287.356,141.1188 287.356,141.3813 L287.356,142.0063 Q287.356,142.2688 287.2435,142.3813 Q287.131,142.4938 286.956,142.4938 Q286.7998,142.4938 286.6998,142.425 Q286.5998,142.3563 286.556,142.175 Q286.5373,142.05 286.4685,141.9813 Q286.3435,141.85 286.1185,141.775 Q285.8935,141.6938 285.6685,141.6938 Q285.3873,141.6938 285.1498,141.8063 Q284.9185,141.9188 284.7373,142.1688 Q284.556,142.4188 284.556,142.7625 L284.556,143.1313 Q284.556,143.5438 284.8935,143.8188 Q285.231,144.0938 285.831,144.0938 Q286.1873,144.0938 286.4373,144.0125 Q286.581,143.9688 286.7435,143.825 Q286.8498,143.7438 286.906,143.7188 Q286.9623,143.6938 287.031,143.6938 Q287.1623,143.6938 287.256,143.8 Q287.356,143.9 287.356,144.0438 Q287.356,144.1813 287.2185,144.3438 Q287.0185,144.5813 286.6998,144.7125 Q286.281,144.8938 285.7685,144.8938 Q285.1685,144.8938 284.6873,144.6563 Q284.2998,144.4688 284.0248,144.0625 Q283.756,143.6563 283.756,143.175 L283.756,142.7375 Q283.756,142.2375 283.9935,141.8 Q284.2373,141.3625 284.656,141.1313 Q285.081,140.8938 285.556,140.8938 Q285.8435,140.8938 286.0935,140.9938 Q286.3435,141.0938 286.556,141.2938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="31.6" x="293.356" y="141.6391">«Initializable»</text><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="30.4" x="293.956" y="147.6766">UIJavaFXStart</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="259.256" x2="346.056" y1="150.7313" y2="150.7313"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="153.9313"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="66" x="266.856" y="156.8988">observableList : ObservableList&lt;&gt;</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="159.4656"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="69.2" x="266.856" y="162.4332">choiceBoxItems : LinkedHashMap&lt;&gt;</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="172.1344"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="38" x="266.856" y="175.102">surveysBox : VBox</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="177.6688"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="45.6" x="266.856" y="180.6363">surveyTitleLabel : Label</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="183.2031"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="59.6" x="266.856" y="186.1707">surveyDescriptionLabel : Label</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="188.7375"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="77.2" x="266.856" y="191.7051">surveyAmountOfQuestionsLabel : Label</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="194.2719"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="52" x="266.856" y="197.2395">openSurveyButton : Button</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="199.8063"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="66.4" x="266.856" y="202.7738">openSurveyResultsButton : Button</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="205.3406"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="64.4" x="266.856" y="208.3082">showLocalCheckBox : CheckBox</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="210.875"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="72.4" x="266.856" y="213.8426">showDatabaseCheckBox : CheckBox</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="216.4094"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="44.8" x="266.856" y="219.377">choiceBox : ChoiceBox</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="259.256" x2="297.256" y1="167.7672" y2="167.7672"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="297.256" y="169.3676">FXML</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="308.056" x2="346.056" y1="167.7672" y2="167.7672"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="259.256" x2="346.056" y1="221.9438" y2="221.9438"/><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="225.1438"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="24.4" x="266.856" y="228.1113">noSurveys()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="230.6781"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="40.4" x="266.856" y="233.6457">updateSurveysBox()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="236.2125"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="44" x="266.856" y="239.1801">changeActiveSurvey()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="241.7469"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="31.6" x="266.856" y="244.7145">removeSurvey()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="254.4156"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="32.4" x="266.856" y="257.3832">onOpenSurvey()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="259.95"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="44" x="266.856" y="262.9176">onCreateNewSurvey()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="265.4844"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="51.2" x="266.856" y="268.452">onChoiceBoxItemChange()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="271.0188"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="30" x="266.856" y="273.9863">onShowLocal()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="262.056" y="276.5531"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="38" x="266.856" y="279.5207">onShowDatabase()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="259.256" x2="297.256" y1="250.0484" y2="250.0484"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="297.256" y="251.6488">FXML</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="308.056" x2="346.056" y1="250.0484" y2="250.0484"/><ellipse cx="263.256" cy="290.4219" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="18" x="266.856" y="292.1895">initialize()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="259.256" x2="291.856" y1="284.8547" y2="284.8547"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="21.6" x="291.856" y="286.4551">Overridden</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="313.456" x2="346.056" y1="284.8547" y2="284.8547"/><!--MD5=[ac36f40438c944282108331277a24d47]
+class UIJavaFXAnswer--><rect codeLine="186" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="71.55" id="UIJavaFXAnswer" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="49.6" x="360.656" y="178.8563"/><ellipse cx="366.656" cy="186.8938" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M367.456,185.4938 Q367.5373,185.2938 367.631,185.1938 Q367.7248,185.0938 367.831,185.0938 Q368.0185,185.0938 368.1373,185.2063 Q368.256,185.3188 368.256,185.5813 L368.256,186.2063 Q368.256,186.4688 368.1435,186.5813 Q368.031,186.6938 367.856,186.6938 Q367.6998,186.6938 367.5998,186.625 Q367.4998,186.5563 367.456,186.375 Q367.4373,186.25 367.3685,186.1813 Q367.2435,186.05 367.0185,185.975 Q366.7935,185.8938 366.5685,185.8938 Q366.2873,185.8938 366.0498,186.0063 Q365.8185,186.1188 365.6373,186.3688 Q365.456,186.6188 365.456,186.9625 L365.456,187.3313 Q365.456,187.7438 365.7935,188.0188 Q366.131,188.2938 366.731,188.2938 Q367.0873,188.2938 367.3373,188.2125 Q367.481,188.1688 367.6435,188.025 Q367.7498,187.9438 367.806,187.9188 Q367.8623,187.8938 367.931,187.8938 Q368.0623,187.8938 368.156,188 Q368.256,188.1 368.256,188.2438 Q368.256,188.3813 368.1185,188.5438 Q367.9185,188.7813 367.5998,188.9125 Q367.181,189.0938 366.6685,189.0938 Q366.0685,189.0938 365.5873,188.8563 Q365.1998,188.6688 364.9248,188.2625 Q364.656,187.8563 364.656,187.375 L364.656,186.9375 Q364.656,186.4375 364.8935,186 Q365.1373,185.5625 365.556,185.3313 Q365.981,185.0938 366.456,185.0938 Q366.7435,185.0938 366.9935,185.1938 Q367.2435,185.2938 367.456,185.4938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="31.6" x="374.856" y="185.8391">«Initializable»</text><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="36.8" x="372.256" y="191.8766">UIJavaFXAnswer</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="361.056" x2="409.856" y1="194.9313" y2="194.9313"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="363.856" y="205.2656"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="38.4" x="368.656" y="208.2332">questionBox : VBox</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="361.056" x2="380.056" y1="200.8984" y2="200.8984"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="380.056" y="202.4988">FXML</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="390.856" x2="409.856" y1="200.8984" y2="200.8984"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="361.056" x2="409.856" y1="210.8" y2="210.8"/><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="363.856" y="214"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="30.8" x="368.656" y="216.9676">loadQuestions()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="363.856" y="219.5344"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="29.6" x="368.656" y="222.502">loadAnswers()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="363.856" y="232.2031"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="24.4" x="368.656" y="235.1707">endSurvey()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="361.056" x2="380.056" y1="227.8359" y2="227.8359"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="380.056" y="229.4363">FXML</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="390.856" x2="409.856" y1="227.8359" y2="227.8359"/><ellipse cx="365.056" cy="246.0719" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="18" x="368.656" y="247.8395">initialize()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="361.056" x2="374.656" y1="240.5047" y2="240.5047"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="21.6" x="374.656" y="242.1051">Overridden</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="396.256" x2="409.856" y1="240.5047" y2="240.5047"/><!--MD5=[bd966eb9b332d67e4222e52cab8a20cd]
+class UIJavaFXCreate--><rect codeLine="197" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="132.4281" id="UIJavaFXCreate" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="152.4" x="424.456" y="148.4563"/><ellipse cx="481.356" cy="156.4938" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M482.156,155.0938 Q482.2373,154.8938 482.331,154.7938 Q482.4248,154.6938 482.531,154.6938 Q482.7185,154.6938 482.8373,154.8063 Q482.956,154.9188 482.956,155.1813 L482.956,155.8063 Q482.956,156.0688 482.8435,156.1813 Q482.731,156.2938 482.556,156.2938 Q482.3998,156.2938 482.2998,156.225 Q482.1998,156.1563 482.156,155.975 Q482.1373,155.85 482.0685,155.7813 Q481.9435,155.65 481.7185,155.575 Q481.4935,155.4938 481.2685,155.4938 Q480.9873,155.4938 480.7498,155.6063 Q480.5185,155.7188 480.3373,155.9688 Q480.156,156.2188 480.156,156.5625 L480.156,156.9313 Q480.156,157.3438 480.4935,157.6188 Q480.831,157.8938 481.431,157.8938 Q481.7873,157.8938 482.0373,157.8125 Q482.181,157.7688 482.3435,157.625 Q482.4498,157.5438 482.506,157.5188 Q482.5623,157.4938 482.631,157.4938 Q482.7623,157.4938 482.856,157.6 Q482.956,157.7 482.956,157.8438 Q482.956,157.9813 482.8185,158.1438 Q482.6185,158.3813 482.2998,158.5125 Q481.881,158.6938 481.3685,158.6938 Q480.7685,158.6938 480.2873,158.4563 Q479.8998,158.2688 479.6248,157.8625 Q479.356,157.4563 479.356,156.975 L479.356,156.5375 Q479.356,156.0375 479.5935,155.6 Q479.8373,155.1625 480.256,154.9313 Q480.681,154.6938 481.156,154.6938 Q481.4435,154.6938 481.6935,154.7938 Q481.9435,154.8938 482.156,155.0938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="31.6" x="491.356" y="155.4391">«Initializable»</text><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="35.2" x="489.556" y="161.4766">UIJavaFXCreate</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="424.856" x2="576.456" y1="164.5313" y2="164.5313"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="167.7313"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="76.4" x="432.456" y="170.6988">questionContainers : QuestionContainer</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="173.2656"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="142" x="432.456" y="176.2332">questionContainerButtonHashMap : HashMap&lt;QuestionContainer, Button&gt;</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="178.8"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="36.4" x="432.456" y="181.7676">invalidStyle : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="184.3344"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="51.6" x="432.456" y="187.302">saveToDatabase : boolean</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="189.8688"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="31.2" x="432.456" y="192.8363">survey : Survey</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="195.4031"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="37.2" x="432.456" y="198.3707">question : Question</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="208.0719"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="50.8" x="432.456" y="211.0395">surveyTitleField : TextField</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="213.6063"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="65.6" x="432.456" y="216.5738">surveyDescriptionField : TextArea</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="219.1406"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="44" x="432.456" y="222.1082">questionsVBox : VBox</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="224.675"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="75.6" x="432.456" y="227.6426">saveToDatabaseCheckBox : CheckBox</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="424.856" x2="495.256" y1="203.7047" y2="203.7047"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="495.256" y="205.3051">FXML</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="506.056" x2="576.456" y1="203.7047" y2="203.7047"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="424.856" x2="576.456" y1="230.2094" y2="230.2094"/><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="233.4094"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="40.8" x="432.456" y="236.377">onRemoveQuestion()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="246.0781"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="32" x="432.456" y="249.0457">onSendSurvey()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="251.6125"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="42.4" x="432.456" y="254.5801">onAddNewQuestion()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="257.1469"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="41.2" x="432.456" y="260.1145">onSaveToDatabase()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="427.656" y="262.6813"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="21.2" x="432.456" y="265.6488">onCancel()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="424.856" x2="495.256" y1="241.7109" y2="241.7109"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="495.256" y="243.3113">FXML</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="506.056" x2="576.456" y1="241.7109" y2="241.7109"/><ellipse cx="428.856" cy="276.55" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="18" x="432.456" y="278.3176">initialize()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="424.856" x2="489.856" y1="270.9828" y2="270.9828"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="21.6" x="489.856" y="272.5832">Overridden</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="511.456" x2="576.456" y1="270.9828" y2="270.9828"/><!--MD5=[7149fa6b3563aee9c316d291564da5e9]
+class QuestionContainer--><rect codeLine="219" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="87.2125" id="QuestionContainer" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="86.4" x="457.456" y="318.6563"/><ellipse cx="478.156" cy="325.0563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M478.956,323.6563 Q479.0373,323.4563 479.131,323.3563 Q479.2248,323.2563 479.331,323.2563 Q479.5185,323.2563 479.6373,323.3688 Q479.756,323.4813 479.756,323.7438 L479.756,324.3688 Q479.756,324.6313 479.6435,324.7438 Q479.531,324.8563 479.356,324.8563 Q479.1998,324.8563 479.0998,324.7875 Q478.9998,324.7188 478.956,324.5375 Q478.9373,324.4125 478.8685,324.3438 Q478.7435,324.2125 478.5185,324.1375 Q478.2935,324.0563 478.0685,324.0563 Q477.7873,324.0563 477.5498,324.1688 Q477.3185,324.2813 477.1373,324.5313 Q476.956,324.7813 476.956,325.125 L476.956,325.4938 Q476.956,325.9063 477.2935,326.1813 Q477.631,326.4563 478.231,326.4563 Q478.5873,326.4563 478.8373,326.375 Q478.981,326.3313 479.1435,326.1875 Q479.2498,326.1063 479.306,326.0813 Q479.3623,326.0563 479.431,326.0563 Q479.5623,326.0563 479.656,326.1625 Q479.756,326.2625 479.756,326.4063 Q479.756,326.5438 479.6185,326.7063 Q479.4185,326.9438 479.0998,327.075 Q478.681,327.2563 478.1685,327.2563 Q477.5685,327.2563 477.0873,327.0188 Q476.6998,326.8313 476.4248,326.425 Q476.156,326.0188 476.156,325.5375 L476.156,325.1 Q476.156,324.6 476.3935,324.1625 Q476.6373,323.725 477.056,323.4938 Q477.481,323.2563 477.956,323.2563 Q478.2435,323.2563 478.4935,323.3563 Q478.7435,323.4563 478.956,323.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="41.6" x="486.356" y="327.0203">QuestionContainer</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="457.856" x2="543.456" y1="331.4563" y2="331.4563"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="334.6563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="58" x="465.456" y="337.6238">answerTextFields : TextField[]</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="340.1906"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="68" x="465.456" y="343.1582">textFieldButtonHashMap : HashMap</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="352.8594"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="41.6" x="465.456" y="355.827">questionVBox : VBox</text><ellipse cx="461.856" cy="359.5938" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="62" x="465.456" y="361.3613">questionTitleTextField : TextField</text><ellipse cx="461.856" cy="365.1281" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="76" x="465.456" y="366.8957">questionDescriptionTextField : TextField</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="369.4625"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="42.8" x="465.456" y="372.4301">answersVBox : VBox</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="374.9969"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="66.4" x="465.456" y="377.9645">onAddNewAnswerButton : Button</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="457.856" x2="495.256" y1="348.4922" y2="348.4922"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="10.8" x="495.256" y="350.0926">FXML</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="506.056" x2="543.456" y1="348.4922" y2="348.4922"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="457.856" x2="543.456" y1="380.5313" y2="380.5313"/><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="383.7313"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="41.2" x="465.456" y="386.6988">onAddNewAnswer()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="389.2656"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="39.6" x="465.456" y="392.2332">onRemoveAnswer()</text><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="460.656" y="394.8"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="43.6" x="465.456" y="397.7676">setDisableOnButtons()</text><ellipse cx="461.856" cy="401.5344" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" text-decoration="underline" textLength="29.6" x="465.456" y="403.302">removeStyles()</text><!--MD5=[cd6970f497fea80b7916f70526f851b9]
+class TitleComparator--><rect codeLine="252" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="30.2688" id="TitleComparator" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="48.4" x="102.456" y="347.0563"/><ellipse cx="108.456" cy="353.4563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M109.256,352.0563 Q109.3373,351.8563 109.431,351.7563 Q109.5248,351.6563 109.631,351.6563 Q109.8185,351.6563 109.9373,351.7688 Q110.056,351.8813 110.056,352.1438 L110.056,352.7688 Q110.056,353.0313 109.9435,353.1438 Q109.831,353.2563 109.656,353.2563 Q109.4998,353.2563 109.3998,353.1875 Q109.2998,353.1188 109.256,352.9375 Q109.2373,352.8125 109.1685,352.7438 Q109.0435,352.6125 108.8185,352.5375 Q108.5935,352.4563 108.3685,352.4563 Q108.0873,352.4563 107.8498,352.5688 Q107.6185,352.6813 107.4373,352.9313 Q107.256,353.1813 107.256,353.525 L107.256,353.8938 Q107.256,354.3063 107.5935,354.5813 Q107.931,354.8563 108.531,354.8563 Q108.8873,354.8563 109.1373,354.775 Q109.281,354.7313 109.4435,354.5875 Q109.5498,354.5063 109.606,354.4813 Q109.6623,354.4563 109.731,354.4563 Q109.8623,354.4563 109.956,354.5625 Q110.056,354.6625 110.056,354.8063 Q110.056,354.9438 109.9185,355.1063 Q109.7185,355.3438 109.3998,355.475 Q108.981,355.6563 108.4685,355.6563 Q107.8685,355.6563 107.3873,355.4188 Q106.9998,355.2313 106.7248,354.825 Q106.456,354.4188 106.456,353.9375 L106.456,353.5 Q106.456,353 106.6935,352.5625 Q106.9373,352.125 107.356,351.8938 Q107.781,351.6563 108.256,351.6563 Q108.5435,351.6563 108.7935,351.7563 Q109.0435,351.8563 109.256,352.0563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="35.6" x="114.056" y="355.4203">TitleComparator</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="102.856" x2="150.456" y1="359.8563" y2="359.8563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="102.856" x2="150.456" y1="363.0563" y2="363.0563"/><ellipse cx="106.856" cy="367.4563" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="28.8" x="110.456" y="369.2238">compareMain()</text><ellipse cx="106.856" cy="372.9906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="20" x="110.456" y="374.7582">compare()</text><!--MD5=[4cb1cf280398cdfe726ab41853d1c3b1]
+class DescriptionComparator--><rect codeLine="257" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="30.2688" id="DescriptionComparator" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="64.4" x="117.256" y="451.2563"/><ellipse cx="123.256" cy="457.6563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M124.056,456.2563 Q124.1373,456.0563 124.231,455.9563 Q124.3248,455.8563 124.431,455.8563 Q124.6185,455.8563 124.7373,455.9688 Q124.856,456.0813 124.856,456.3438 L124.856,456.9688 Q124.856,457.2313 124.7435,457.3438 Q124.631,457.4563 124.456,457.4563 Q124.2998,457.4563 124.1998,457.3875 Q124.0998,457.3188 124.056,457.1375 Q124.0373,457.0125 123.9685,456.9438 Q123.8435,456.8125 123.6185,456.7375 Q123.3935,456.6563 123.1685,456.6563 Q122.8873,456.6563 122.6498,456.7688 Q122.4185,456.8813 122.2373,457.1313 Q122.056,457.3813 122.056,457.725 L122.056,458.0938 Q122.056,458.5063 122.3935,458.7813 Q122.731,459.0563 123.331,459.0563 Q123.6873,459.0563 123.9373,458.975 Q124.081,458.9313 124.2435,458.7875 Q124.3498,458.7063 124.406,458.6813 Q124.4623,458.6563 124.531,458.6563 Q124.6623,458.6563 124.756,458.7625 Q124.856,458.8625 124.856,459.0063 Q124.856,459.1438 124.7185,459.3063 Q124.5185,459.5438 124.1998,459.675 Q123.781,459.8563 123.2685,459.8563 Q122.6685,459.8563 122.1873,459.6188 Q121.7998,459.4313 121.5248,459.025 Q121.256,458.6188 121.256,458.1375 L121.256,457.7 Q121.256,457.2 121.4935,456.7625 Q121.7373,456.325 122.156,456.0938 Q122.581,455.8563 123.056,455.8563 Q123.3435,455.8563 123.5935,455.9563 Q123.8435,456.0563 124.056,456.2563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="51.6" x="128.856" y="459.6203">DescriptionComparator</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="117.656" x2="181.256" y1="464.0563" y2="464.0563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="117.656" x2="181.256" y1="467.2563" y2="467.2563"/><ellipse cx="121.656" cy="471.6563" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="28.8" x="125.256" y="473.4238">compareMain()</text><ellipse cx="121.656" cy="477.1906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="20" x="125.256" y="478.9582">compare()</text><!--MD5=[5083cd75a4329e0c7e8c0877b589e037]
+class LocationComparator--><rect codeLine="262" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="30.2688" id="LocationComparator" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="58" x="102.456" y="546.6563"/><ellipse cx="108.456" cy="553.0563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M109.256,551.6563 Q109.3373,551.4563 109.431,551.3563 Q109.5248,551.2563 109.631,551.2563 Q109.8185,551.2563 109.9373,551.3688 Q110.056,551.4813 110.056,551.7438 L110.056,552.3688 Q110.056,552.6313 109.9435,552.7438 Q109.831,552.8563 109.656,552.8563 Q109.4998,552.8563 109.3998,552.7875 Q109.2998,552.7188 109.256,552.5375 Q109.2373,552.4125 109.1685,552.3438 Q109.0435,552.2125 108.8185,552.1375 Q108.5935,552.0563 108.3685,552.0563 Q108.0873,552.0563 107.8498,552.1688 Q107.6185,552.2813 107.4373,552.5313 Q107.256,552.7813 107.256,553.125 L107.256,553.4938 Q107.256,553.9063 107.5935,554.1813 Q107.931,554.4563 108.531,554.4563 Q108.8873,554.4563 109.1373,554.375 Q109.281,554.3313 109.4435,554.1875 Q109.5498,554.1063 109.606,554.0813 Q109.6623,554.0563 109.731,554.0563 Q109.8623,554.0563 109.956,554.1625 Q110.056,554.2625 110.056,554.4063 Q110.056,554.5438 109.9185,554.7063 Q109.7185,554.9438 109.3998,555.075 Q108.981,555.2563 108.4685,555.2563 Q107.8685,555.2563 107.3873,555.0188 Q106.9998,554.8313 106.7248,554.425 Q106.456,554.0188 106.456,553.5375 L106.456,553.1 Q106.456,552.6 106.6935,552.1625 Q106.9373,551.725 107.356,551.4938 Q107.781,551.2563 108.256,551.2563 Q108.5435,551.2563 108.7935,551.3563 Q109.0435,551.4563 109.256,551.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="45.2" x="114.056" y="555.0203">LocationComparator</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="102.856" x2="160.056" y1="559.4563" y2="559.4563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="102.856" x2="160.056" y1="562.6563" y2="562.6563"/><ellipse cx="106.856" cy="567.0563" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="28.8" x="110.456" y="568.8238">compareMain()</text><ellipse cx="106.856" cy="572.5906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="20" x="110.456" y="574.3582">compare()</text><!--MD5=[560f0b3ab43b544f43230cce78c32c69]
+class QuestionsComparator--><rect codeLine="267" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="30.2688" id="QuestionsComparator" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="62" x="123.256" y="659.2563"/><ellipse cx="129.256" cy="665.6563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M130.056,664.2563 Q130.1373,664.0563 130.231,663.9563 Q130.3248,663.8563 130.431,663.8563 Q130.6185,663.8563 130.7373,663.9688 Q130.856,664.0813 130.856,664.3438 L130.856,664.9688 Q130.856,665.2313 130.7435,665.3438 Q130.631,665.4563 130.456,665.4563 Q130.2998,665.4563 130.1998,665.3875 Q130.0998,665.3188 130.056,665.1375 Q130.0373,665.0125 129.9685,664.9438 Q129.8435,664.8125 129.6185,664.7375 Q129.3935,664.6563 129.1685,664.6563 Q128.8873,664.6563 128.6498,664.7688 Q128.4185,664.8813 128.2373,665.1313 Q128.056,665.3813 128.056,665.725 L128.056,666.0938 Q128.056,666.5063 128.3935,666.7813 Q128.731,667.0563 129.331,667.0563 Q129.6873,667.0563 129.9373,666.975 Q130.081,666.9313 130.2435,666.7875 Q130.3498,666.7063 130.406,666.6813 Q130.4623,666.6563 130.531,666.6563 Q130.6623,666.6563 130.756,666.7625 Q130.856,666.8625 130.856,667.0063 Q130.856,667.1438 130.7185,667.3063 Q130.5185,667.5438 130.1998,667.675 Q129.781,667.8563 129.2685,667.8563 Q128.6685,667.8563 128.1873,667.6188 Q127.7998,667.4313 127.5248,667.025 Q127.256,666.6188 127.256,666.1375 L127.256,665.7 Q127.256,665.2 127.4935,664.7625 Q127.7373,664.325 128.156,664.0938 Q128.581,663.8563 129.056,663.8563 Q129.3435,663.8563 129.5935,663.9563 Q129.8435,664.0563 130.056,664.2563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="49.2" x="134.856" y="667.6203">QuestionsComparator</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="123.656" x2="184.856" y1="672.0563" y2="672.0563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="123.656" x2="184.856" y1="675.2563" y2="675.2563"/><ellipse cx="127.656" cy="679.6563" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="28.8" x="131.256" y="681.4238">compareMain()</text><ellipse cx="127.656" cy="685.1906" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="20" x="131.256" y="686.9582">compare()</text><!--MD5=[9858ebd8724e5899b0c57858061ff08c]
+class SurveyFileComparator--><rect codeLine="272" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="30.2688" id="SurveyFileComparator" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="61.6" x="165.056" y="347.0563"/><ellipse cx="171.056" cy="353.4563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M171.856,352.0563 Q171.9373,351.8563 172.031,351.7563 Q172.1248,351.6563 172.231,351.6563 Q172.4185,351.6563 172.5373,351.7688 Q172.656,351.8813 172.656,352.1438 L172.656,352.7688 Q172.656,353.0313 172.5435,353.1438 Q172.431,353.2563 172.256,353.2563 Q172.0998,353.2563 171.9998,353.1875 Q171.8998,353.1188 171.856,352.9375 Q171.8373,352.8125 171.7685,352.7438 Q171.6435,352.6125 171.4185,352.5375 Q171.1935,352.4563 170.9685,352.4563 Q170.6873,352.4563 170.4498,352.5688 Q170.2185,352.6813 170.0373,352.9313 Q169.856,353.1813 169.856,353.525 L169.856,353.8938 Q169.856,354.3063 170.1935,354.5813 Q170.531,354.8563 171.131,354.8563 Q171.4873,354.8563 171.7373,354.775 Q171.881,354.7313 172.0435,354.5875 Q172.1498,354.5063 172.206,354.4813 Q172.2623,354.4563 172.331,354.4563 Q172.4623,354.4563 172.556,354.5625 Q172.656,354.6625 172.656,354.8063 Q172.656,354.9438 172.5185,355.1063 Q172.3185,355.3438 171.9998,355.475 Q171.581,355.6563 171.0685,355.6563 Q170.4685,355.6563 169.9873,355.4188 Q169.5998,355.2313 169.3248,354.825 Q169.056,354.4188 169.056,353.9375 L169.056,353.5 Q169.056,353 169.2935,352.5625 Q169.5373,352.125 169.956,351.8938 Q170.381,351.6563 170.856,351.6563 Q171.1435,351.6563 171.3935,351.7563 Q171.6435,351.8563 171.856,352.0563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="48.8" x="176.656" y="355.4203">SurveyFileComparator</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="165.456" x2="226.256" y1="359.8563" y2="359.8563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="165.456" x2="226.256" y1="363.0563" y2="363.0563"/><rect fill="#F24D5C" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="168.256" y="366.2563"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="22" x="173.056" y="369.2238">getLastInt()</text><ellipse cx="169.456" cy="372.9906" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="16.8" x="173.056" y="374.7582">compare</text><!--MD5=[84718776d214be480e4c259efcb737fc]
+class Main--><rect codeLine="4" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="19.2" id="Main" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="23.2" x="637.056" y="11.8563"/><ellipse cx="643.056" cy="18.2563" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M643.856,16.8563 Q643.9373,16.6563 644.031,16.5563 Q644.1248,16.4563 644.231,16.4563 Q644.4185,16.4563 644.5373,16.5688 Q644.656,16.6813 644.656,16.9438 L644.656,17.5688 Q644.656,17.8313 644.5435,17.9438 Q644.431,18.0563 644.256,18.0563 Q644.0998,18.0563 643.9998,17.9875 Q643.8998,17.9188 643.856,17.7375 Q643.8373,17.6125 643.7685,17.5438 Q643.6435,17.4125 643.4185,17.3375 Q643.1935,17.2563 642.9685,17.2563 Q642.6873,17.2563 642.4498,17.3688 Q642.2185,17.4813 642.0373,17.7313 Q641.856,17.9813 641.856,18.325 L641.856,18.6938 Q641.856,19.1063 642.1935,19.3813 Q642.531,19.6563 643.131,19.6563 Q643.4873,19.6563 643.7373,19.575 Q643.881,19.5313 644.0435,19.3875 Q644.1498,19.3063 644.206,19.2813 Q644.2623,19.2563 644.331,19.2563 Q644.4623,19.2563 644.556,19.3625 Q644.656,19.4625 644.656,19.6063 Q644.656,19.7438 644.5185,19.9063 Q644.3185,20.1438 643.9998,20.275 Q643.581,20.4563 643.0685,20.4563 Q642.4685,20.4563 641.9873,20.2188 Q641.5998,20.0313 641.3248,19.625 Q641.056,19.2188 641.056,18.7375 L641.056,18.3 Q641.056,17.8 641.2935,17.3625 Q641.5373,16.925 641.956,16.6938 Q642.381,16.4563 642.856,16.4563 Q643.1435,16.4563 643.3935,16.5563 Q643.6435,16.6563 643.856,16.8563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="10.4" x="648.656" y="20.2203">Main</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="637.456" x2="659.856" y1="24.6563" y2="24.6563"/><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="637.456" x2="659.856" y1="27.8563" y2="27.8563"/><!--MD5=[3145b4be7c5005b24cda6f18a1d594b0]
+class Survey--><rect codeLine="33" fill="#FEFECE" filter="url(#fln9k4xuzfipr)" height="101.5563" id="Survey" style="stroke:#A80036;stroke-width:0.6000000000000001;" width="60.4" x="724.456" y="511.0563"/><ellipse cx="738.016" cy="519.0938" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><path d="M738.816,517.6938 Q738.8973,517.4938 738.991,517.3938 Q739.0848,517.2938 739.191,517.2938 Q739.3785,517.2938 739.4973,517.4063 Q739.616,517.5188 739.616,517.7813 L739.616,518.4063 Q739.616,518.6688 739.5035,518.7813 Q739.391,518.8938 739.216,518.8938 Q739.0598,518.8938 738.9598,518.825 Q738.8598,518.7563 738.816,518.575 Q738.7973,518.45 738.7285,518.3813 Q738.6035,518.25 738.3785,518.175 Q738.1535,518.0938 737.9285,518.0938 Q737.6473,518.0938 737.4098,518.2063 Q737.1785,518.3188 736.9973,518.5688 Q736.816,518.8188 736.816,519.1625 L736.816,519.5313 Q736.816,519.9438 737.1535,520.2188 Q737.491,520.4938 738.091,520.4938 Q738.4473,520.4938 738.6973,520.4125 Q738.841,520.3688 739.0035,520.225 Q739.1098,520.1438 739.166,520.1188 Q739.2223,520.0938 739.291,520.0938 Q739.4223,520.0938 739.516,520.2 Q739.616,520.3 739.616,520.4438 Q739.616,520.5813 739.4785,520.7438 Q739.2785,520.9813 738.9598,521.1125 Q738.541,521.2938 738.0285,521.2938 Q737.4285,521.2938 736.9473,521.0563 Q736.5598,520.8688 736.2848,520.4625 Q736.016,520.0563 736.016,519.575 L736.016,519.1375 Q736.016,518.6375 736.2535,518.2 Q736.4973,517.7625 736.916,517.5313 Q737.341,517.2938 737.816,517.2938 Q738.1035,517.2938 738.3535,517.3938 Q738.6035,517.4938 738.816,517.6938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="4.8" font-style="italic" lengthAdjust="spacing" textLength="32.4" x="744.496" y="518.0391">«Serializable»</text><text fill="#000000" font-family="sans-serif" font-size="4.8" lengthAdjust="spacing" textLength="14.4" x="753.496" y="524.0766">Survey</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="724.856" x2="784.456" y1="527.1313" y2="527.1313"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="727.656" y="530.3313"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="15.2" x="732.456" y="533.2988">ID : long</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="727.656" y="535.8656"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="36" x="732.456" y="538.8332">surveyTitle : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="727.656" y="541.4"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="50" x="732.456" y="544.3676">surveyDescription : String</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="727.656" y="546.9344"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="42" x="732.456" y="549.902">questions : Question[]</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="727.656" y="552.4688"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="33.2" x="732.456" y="555.4363">fromDB : boolean</text><line style="stroke:#A80036;stroke-width:0.6000000000000001;" x1="724.856" x2="784.456" y1="558.0031" y2="558.0031"/><ellipse cx="728.856" cy="562.4031" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="24.8" x="732.456" y="564.1707">compareTo()</text><ellipse cx="728.856" cy="575.0719" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="30.8" x="732.456" y="576.8395">getSurveyTitle()</text><ellipse cx="728.856" cy="580.6063" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="44.8" x="732.456" y="582.3738">getSurveyDescription()</text><ellipse cx="728.856" cy="586.1406" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="28.8" x="732.456" y="587.9082">getQuestions()</text><ellipse cx="728.856" cy="591.675" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="21.6" x="732.456" y="593.4426">isFromDB()</text><ellipse cx="728.856" cy="597.2094" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="24.4" x="732.456" y="598.977">setFromDB()</text><ellipse cx="728.856" cy="602.7438" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="12.8" x="732.456" y="604.5113">getID()</text><ellipse cx="728.856" cy="608.2781" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="12.8" x="732.456" y="610.0457">setID()</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="724.856" x2="737.856" y1="569.5047" y2="569.5047"/><text fill="#000000" font-family="sans-serif" font-size="4.4" lengthAdjust="spacing" textLength="33.6" x="737.856" y="571.1051">Getters &amp; Setters</text><line style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:1.0,2.0;" x1="771.456" x2="784.456" y1="569.5047" y2="569.5047"/><!--MD5=[f5bccbd5bfaa05fddfe2ae56cb719779]
+reverse link Question to MultipleChoice--><path codeLine="30" d="M754.656,720.5323 C754.656,725.9203 754.656,731.2443 754.656,736.1523 " fill="none" id="Question-backto-MultipleChoice" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="none" points="751.856,720.3483,754.656,712.3483,757.456,720.3483,751.856,720.3483" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[ff846598607539b83d37e7215938dacf]
+reverse link Survey to Question--><path codeLine="51" d="M754.656,618.0163 C754.656,624.2803 754.656,630.5443 754.656,636.5003 " fill="none" id="Survey-backto-Question" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="754.656,612.7603,753.056,615.1603,754.656,617.5603,756.256,615.1603,754.656,612.7603" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.2" lengthAdjust="spacing" textLength="8" x="746.3498" y="632.3571">1..*</text><!--MD5=[4a2095317ede50c877a1450bc09d2817]
+reverse link IO to IOFile--><path codeLine="78" d="M485.332,492.7283 C481.452,498.6203 477.544,504.9483 474.256,511.0563 C469.732,519.4563 465.492,529.0283 462.012,537.5563 " fill="none" id="IO-backto-IOFile" style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="483.044,491.1163,489.836,486.0483,487.684,494.2443,483.044,491.1163" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[e982d912b0aba95c100335fc70029d56]
+reverse link IO to IODatabase--><path codeLine="79" d="M503.856,495.1603 C503.856,510.9323 503.856,530.0883 503.856,543.7443 " fill="none" id="IO-backto-IODatabase" style="stroke:#A80036;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="501.056,495.1523,503.856,487.1523,506.656,495.1523,501.056,495.1523" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[ecbc0a24fb4ae09a38138d386b3540db]
+link IO to Survey--><path codeLine="81" d="M517.876,472.1443 C557.336,487.0283 669.988,529.5203 724.448,550.0643 " fill="none" id="IO-Survey" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[6b51ea85f959eab8e11b2d60a215554e]
+link UICommandLineStart to UICommandLineAnswer--><path codeLine="125" d="M743.856,110.7603 C743.856,131.9563 743.856,165.2643 743.856,188.3443 " fill="none" id="UICommandLineStart-UICommandLineAnswer" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[e57ab48cdae67cc65b5fc0ff2f98e277]
+link UICommandLineStart to UICommandLineCreate--><path codeLine="126" d="M767.788,110.6683 C775.468,117.8002 783.68,126.1683 790.256,134.6563 C803.148,151.2923 814.628,172.1283 822.684,188.3083 " fill="none" id="UICommandLineStart-UICommandLineCreate" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[506330278be854c46bae2a9c7501dd1b]
+link UICommandLineStart to UICommandLineViewAnswers--><path codeLine="127" d="M720.868,110.6603 C713.184,117.8922 704.812,126.3243 697.856,134.6563 C682.076,153.5643 666.836,177.3203 656.82,193.9363 " fill="none" id="UICommandLineStart-UICommandLineViewAnswers" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[8e2fbb060f392cd2338b683ceffcb593]
+reverse link UICommandLineStart to UICommandLineScanner--><path codeLine="129" d="M785.044,91.6523 C816.54,95.0002 858.076,105.2002 879.456,134.6563 C921.228,192.2043 900.34,226.6803 879.456,294.6563 C874.092,312.1083 862.488,329.1003 852.328,341.6323 " fill="none" id="UICommandLineStart-backto-UICommandLineScanner" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="779.684,91.1363,781.9201,92.9583,784.462,91.5951,782.2259,89.773,779.684,91.1363" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[d50f3621790d5eaafa149fb249a66d29]
+reverse link UICommandLineAnswer to UICommandLineScanner--><path codeLine="130" d="M761.088,245.3963 C769.684,260.3323 780.34,278.5443 790.256,294.6563 C800.06,310.5883 811.596,328.3283 820.34,341.5803 " fill="none" id="UICommandLineAnswer-backto-UICommandLineScanner" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="758.488,240.8723,758.2954,243.7503,760.878,245.0349,761.0706,242.1569,758.488,240.8723" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[535b202ac3441020aa9f3b78a3cbde36]
+reverse link UICommandLineViewAnswers to UICommandLineScanner--><path codeLine="131" d="M655.916,239.9803 C664.804,257.6283 678.984,280.5763 697.856,294.6563 C727.06,316.4483 743.772,302.1443 776.256,318.6563 C788.4,324.8323 800.648,333.5803 810.704,341.5883 " fill="none" id="UICommandLineViewAnswers-backto-UICommandLineScanner" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="653.608,235.2723,653.2291,238.1317,655.7229,239.5812,656.1018,236.7218,653.608,235.2723" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[699156c2023fe026970ee6e2f206cab8]
+reverse link UICommandLineCreate to UICommandLineScanner--><path codeLine="132" d="M834.488,246.1803 C834.328,274.9843 834.1,316.9603 833.968,341.6323 " fill="none" id="UICommandLineCreate-backto-UICommandLineScanner" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="834.516,240.9643,832.9028,243.3554,834.4896,245.7642,836.1028,243.373,834.516,240.9643" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[00f470e9add19be5ff5cc29a468ba722]
+link UICommandLineViewAnswers to UICommandLine--><!--MD5=[9a8b0837f3a2a66559a86afb55d0c0f9]
+link UICommandLineAnswer to UICommandLine--><!--MD5=[c7f9c605b6761d0eae275020f08e3b07]
+link UICommandLineCreate to UICommandLine--><!--MD5=[2a59a8999efaa312a2bf7a027849710f]
+link UICommandLineStart to Main--><path codeLine="138" d="M715.408,69.3962 C696.984,56.2723 673.96,39.8762 660.328,30.1682 " fill="none" id="UICommandLineStart-Main" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[23279c8d596dd0e8a291a03fbf74b585]
+link UIJavaFXStart to UIJavaFX--><path codeLine="234" d="M346.524,283.8323 C348.984,287.5083 351.436,291.1363 353.856,294.6563 C360.54,304.3883 367.964,314.7483 374.98,324.3483 " fill="none" id="UIJavaFXStart-to-UIJavaFX" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="none" points="377.28,322.7483,379.756,330.8523,372.764,326.0603,377.28,322.7483" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[a5fc9e7c33b6683b11a67479461efcc3]
+link UIJavaFXAnswer to UIJavaFX--><path codeLine="235" d="M389.716,250.5923 C392.12,270.6443 395.148,295.8883 397.708,317.2603 " fill="none" id="UIJavaFXAnswer-to-UIJavaFX" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="none" points="400.496,316.9683,398.668,325.2443,394.936,317.6323,400.496,316.9683" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[2fe1edbd37bb8b1a11609dac8f06cc7e]
+link UIJavaFXCreate to UIJavaFX--><path codeLine="236" d="M456.852,280.9403 C448,294.2563 438.924,307.9043 430.812,320.1083 " fill="none" id="UIJavaFXCreate-to-UIJavaFX" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="none" points="433.044,321.8083,426.284,326.9203,428.38,318.7083,433.044,321.8083" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[ccf4d3f8c9763170ee344d91b62b5681]
+link UIJavaFXMain to UIJavaFXStart--><path codeLine="237" d="M503.784,91.1042 C468.26,93.1763 399.8,101.5403 353.856,134.6563 C351.324,136.4803 348.884,138.4763 346.54,140.6003 " fill="none" id="UIJavaFXMain-UIJavaFXStart" style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:1.0,3.0;"/><!--MD5=[3d4b537bcfce2dc9d366632b5cac8c2d]
+link UIJavaFXMain to UIJavaFXAnswer--><path codeLine="238" d="M503.756,94.3042 C479.296,99.4763 441.164,110.9243 417.456,134.6563 C405.508,146.6163 397.864,163.6163 393.056,178.8403 " fill="none" id="UIJavaFXMain-UIJavaFXAnswer" style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:1.0,3.0;"/><!--MD5=[068f978c0b39469f303ed381dbca2e60]
+link UIJavaFXMain to UIJavaFXCreate--><path codeLine="239" d="M523.3,108.0643 C520.996,118.8763 517.88,133.4803 514.7,148.3883 " fill="none" id="UIJavaFXMain-UIJavaFXCreate" style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:1.0,3.0;"/><!--MD5=[150c9793aa407ac73cbd042e21d23a78]
+reverse link UIJavaFXMain to Survey--><path codeLine="241" d="M555.248,100.6042 C566.82,104.3683 580.436,108.2922 593.056,110.6563 C628.844,117.3603 895.072,107.9842 919.856,134.6563 C1007.716,229.2043 974.284,308.4043 919.056,425.0563 C891.204,483.8843 824.276,526.1563 784.94,546.9283 " fill="none" id="UIJavaFXMain-backto-Survey" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="550.256,98.9523,552.0292,101.2272,554.8113,100.4654,553.038,98.1904,550.256,98.9523" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[b6a1eb8cc301b835febeb88fd8366c25]
+link Main to UIJavaFXMain--><path codeLine="242" d="M637.048,22.8243 C625.416,24.1563 607.244,27.2483 593.056,34.2563 C574.076,43.6323 555.916,59.5683 543.464,71.9483 " fill="none" id="Main-UIJavaFXMain" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[d2f92ccb89b5aa284bdfbd85997bc0a5]
+reverse link UIJavaFX to IO--><path codeLine="244" d="M429.584,400.7523 C436.084,409.1083 443.296,417.6603 450.656,425.0563 C462.788,437.2483 478.6,449.0003 489.824,456.7763 " fill="none" id="UIJavaFX-backto-IO" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="426.356,396.5403,426.5476,399.4183,429.278,400.3484,429.0864,397.4703,426.356,396.5403" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.2" lengthAdjust="spacing" textLength="2.8" x="483.8412" y="453.1181">2</text><!--MD5=[df1594d843cb76745f4d17c1dee4a565]
+reverse link UIJavaFXMain to IO--><path codeLine="245" d="M555.256,100.5643 C566.828,104.3203 580.444,108.2523 593.056,110.6563 C625.948,116.9283 870.74,110.0563 893.456,134.6563 C937.232,182.0723 936.636,377.0963 893.456,425.0563 C867.788,453.5683 584.732,463.6683 517.924,465.6643 " fill="none" id="UIJavaFXMain-backto-IO" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="550.264,98.9123,552.042,101.1835,554.8224,100.4159,553.0444,98.1446,550.264,98.9123" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[947087f3993b5cf510b047151d5dd0d0]
+link UIJavaFXCreate to QuestionContainer--><path codeLine="247" d="M500.656,280.9403 C500.656,291.8123 500.656,302.9083 500.656,313.2563 " fill="none" id="UIJavaFXCreate-to-QuestionContainer" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="500.656,318.5963,502.256,316.1963,500.656,313.7963,499.056,316.1963,500.656,318.5963" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[14a6556e2a8b10df5e833fd7d1433e5c]
+reverse link TitleComparator to DescriptionComparator--><path codeLine="278" d="M131.048,382.5763 C135.464,402.6083 142.176,433.0443 146.16,451.1003 " fill="none" id="TitleComparator-backto-DescriptionComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="129.924,377.4723,128.8782,380.1604,130.9574,382.1597,132.0032,379.4715,129.924,377.4723" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[7edd44564ce217f03af0d5694f0ed16c]
+link TitleComparator to QuestionsComparator--><path codeLine="279" d="M131.1715,382.0855 C131.1715,382.0855 143.92,415.1763 158.256,425.0563 C163.848,428.9123 184.112,423.2083 188.656,428.2563 C246.92,492.9763 165.6935,654.9944 165.6935,654.9944 " fill="none" id="TitleComparator-QuestionsComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="163.316,659.1643,165.8947,657.8718,165.6935,654.9944,163.1148,656.2868,163.316,659.1643" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="129.832,377.4763,128.9653,380.2274,131.1715,382.0855,132.0382,379.3344,129.832,377.4763" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[eaf6d8aa298652a5a383d66f70490535]
+link TitleComparator to LocationComparator--><path codeLine="280" d="M120.4493,382.1736 C120.4493,382.1736 112.172,412.6923 110.256,428.2563 C107.064,454.1923 106.64,461.1723 110.256,487.0563 C112.9,505.9763 124.3324,542.0808 124.3324,542.0808 " fill="none" id="TitleComparator-LocationComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="125.904,546.6163,126.63,543.8247,124.3324,542.0808,123.6064,544.8724,125.904,546.6163" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="121.816,377.5723,119.5989,379.4174,120.4493,382.1736,122.6664,380.3285,121.816,377.5723" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[84bcd00ba4b75160cc52284c7c842026]
+link DescriptionComparator to QuestionsComparator--><path codeLine="282" d="M159.1863,486.1216 C159.1863,486.1216 165.832,502.7603 167.456,511.0563 C176.132,555.3683 172.228,567.7523 167.456,612.6563 C165.964,626.6803 159.5615,654.5319 159.5615,654.5319 " fill="none" id="DescriptionComparator-QuestionsComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="158.38,659.1843,160.5215,657.2519,159.5615,654.5319,157.42,656.4643,158.38,659.1843" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="157.208,481.7483,156.7394,484.5944,159.1863,486.1216,159.6549,483.2755,157.208,481.7483" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[fb7d2b50e70b2a6a2b74b25f60747f02]
+link DescriptionComparator to LocationComparator--><path codeLine="283" d="M145.7273,486.4558 C145.7273,486.4558 135.1967,541.7847 135.1967,541.7847 " fill="none" id="DescriptionComparator-LocationComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="134.3,546.5003,136.3202,544.4414,135.1967,541.7847,133.1765,543.8436,134.3,546.5003" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="146.624,481.7403,144.6038,483.7991,145.7273,486.4558,147.7475,484.3969,146.624,481.7403" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[5ebf08ed272eef1c0b046b41b634c6e9]
+link LocationComparator to QuestionsComparator--><path codeLine="285" d="M135.4436,581.8074 C135.4436,581.8074 150.2564,654.4451 150.2564,654.4451 " fill="none" id="LocationComparator-QuestionsComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="151.216,659.1483,152.3039,656.4768,150.2564,654.4451,149.1685,657.1166,151.216,659.1483" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="134.484,577.1043,133.3961,579.7757,135.4436,581.8074,136.5315,579.1359,134.484,577.1043" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[0d02376bde39d529f103e5475dd3d116]
+link UIJavaFXStart to TitleComparator--><path codeLine="288" d="M258.832,241.2803 C228.676,260.5203 188.72,288.4683 158.256,318.6563 C149.644,327.1923 141.6,338.2523 135.784,347.0443 " fill="none" id="UIJavaFXStart-TitleComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[2ebe26f741e071a56af907a386362cfe]
+link UIJavaFXStart to LocationComparator--><path codeLine="289" d="M258.852,222.9403 C209.344,234.4443 131.032,261.0963 95.456,318.6563 C49.024,393.7843 101.368,506.4003 122.984,546.5683 " fill="none" id="UIJavaFXStart-LocationComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[24b90337131aad8306cc2b98276c29ab]
+link UIJavaFXStart to QuestionsComparator--><path codeLine="290" d="M258.8,220.6683 C204.56,230.2203 114.392,255.2283 73.456,318.6563 C2.4,428.7483 37.916,494.9323 95.456,612.6563 C104.564,631.2883 121.384,647.9603 134.708,659.2163 " fill="none" id="UIJavaFXStart-QuestionsComparator" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[624022d40d134596461271cf05ed4715]
+link SurveyFileComparator to IOFile--><path codeLine="292" d="M207.608,377.5763 C218.44,390.8363 235.348,410.3403 252.256,425.0563 C313.996,478.8003 397.644,529.5123 434.412,550.8523 " fill="none" id="SurveyFileComparator-to-IOFile" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><polygon fill="#A80036" points="438.972,553.4883,437.6937,550.9026,434.8152,551.0881,436.0935,553.6738,438.972,553.4883" style="stroke:#A80036;stroke-width:0.4000000000000001;"/><!--MD5=[e9a69ae8016bf7b6799f1fc7e7f39858]
+@startuml
+'https://plantuml.com/class-diagram
+title SP4 - Class Diagram
+
+class Main {
+}
+
+package Question{
+    abstract class Question <<Serializable>> {
+        - questionName : String
+        - questionDescription : String
+        __
+        ..Abstract methods..
+        + {abstract} addAnswer()
+        + {abstract} addResult()
+        + {abstract} getAnswers()
+        ..Getters & Setters..
+        + getQuestionName()
+        + getQuestionDescription()
+    }
+
+    class MultipleChoice {
+        - answers = HashMap<String, Integer>
+        __
+        ..Overridden methods..
+        + addAnswer()
+        + addResult()
+        + getAnswers()
+    }
+
+    Question <|- - MultipleChoice
+}
+
+class Survey <<Serializable>> {
+    - ID : long
+    - surveyTitle : String
+    - surveyDescription : String
+    - questions : Question[]
+    - fromDB : boolean
+    __
+    + compareTo()
+    ..Getters & Setters..
+    + getSurveyTitle()
+    + getSurveyDescription()
+    + getQuestions()
+    + isFromDB()
+    + setFromDB()
+    + getID()
+    + setID()
+}
+
+Survey *- -"1..*" Question
+
+
+package IO {
+    interface IO {
+        + read()
+        + save()
+        + remove()
+        + update()
+    }
+
+    class IOFile {
+        __
+        ..Overridden..
+        + read()
+        + save()
+        + remove()
+        + update()
+    }
+
+    class IODatabase {
+        - conn : Connection
+        __
+        + uploadSurvey()
+        + getSurvey()
+    }
+
+    IO <|.. IOFile
+    IO <|.. IODatabase
+
+    IO - - Survey
+}
+
+package UI {
+    package UICommandLine #CCFFCC {
+        class UICommandLineScanner {
+            -sc : Scanner
+
+            +getUserInput(String msg)
+            +getUserInput(String msg, String[] validOptions)
+            +getUserInputYesOrNo(String msg)
+        }
+        class UICommandLineStart {
+            -validOptions : String[]
+            -choice : String
+            -scan : UICommandLineScanner
+
+            +UIShowStart(Survey[] surveys)
+        }
+        class UICommandLineAnswer {
+            -validOptions : String[]
+            -choice : String
+            -chosenSurvey : Survey
+            -name : String
+            -scan : UICommandLineScanner
+
+            +UIShowAnswer(Survey[] surveys)
+        }
+        class UICommandLineCreate {
+            -choice : String
+            -surveyTitle : String
+            -surveyDescription : String
+            -survey : Survey
+            -scan : UICommandLineScanner
+
+            +UIShowCreate(Survey[] surveys)
+        }
+        class UICommandLineViewAnswers {
+            -validOptions : String[]
+            -choice : String
+            -scan : UICommandLineScanner
+
+            +UIShowViewAnswers(Survey[] surveys)
+        }
+        UICommandLineStart - - UICommandLineAnswer
+        UICommandLineStart - - UICommandLineCreate
+        UICommandLineStart - - UICommandLineViewAnswers
+
+        UICommandLineStart *- - UICommandLineScanner
+        UICommandLineAnswer *- - UICommandLineScanner
+        UICommandLineViewAnswers *- - UICommandLineScanner
+        UICommandLineCreate *- - UICommandLineScanner
+
+        UICommandLineViewAnswers -[hidden]- UICommandLine
+        UICommandLineAnswer -[hidden]- UICommandLine
+        UICommandLineCreate -[hidden]- UICommandLine
+
+        UICommandLineStart - - Main
+    }
+    package UIJavaFX #99DDFF {
+        class UIJavaFXMain {
+            - surveys[] : Survey
+            - io : IO
+            - start()
+        }
+        abstract class UIJavaFX {
+            # {static} ioFile : IO
+            # {static} ioDatabase : IO
+            ..
+            # {static} stage : Stage
+            # {static} surveys[] : Survey
+            # {static} survey : Survey
+            __
+            ..Getters & Setters..
+            + {static} setStage()
+            + {static} setSurveys()
+            + {static} setSurvey()
+        }
+        class UIJavaFXStart <<Initializable>> {
+            - observableList : ObservableList<>
+            - choiceBoxItems : LinkedHashMap<>
+            ..FXML..
+            - surveysBox : VBox
+            - surveyTitleLabel : Label
+            - surveyDescriptionLabel : Label
+            - surveyAmountOfQuestionsLabel : Label
+            - openSurveyButton : Button
+            - openSurveyResultsButton : Button
+            - showLocalCheckBox : CheckBox
+            - showDatabaseCheckBox : CheckBox
+            - choiceBox : ChoiceBox
+            __
+            - noSurveys()
+            - updateSurveysBox()
+            - changeActiveSurvey()
+            - removeSurvey()
+            ..FXML..
+            - onOpenSurvey()
+            - onCreateNewSurvey()
+            - onChoiceBoxItemChange()
+            - onShowLocal()
+            - onShowDatabase()
+            ..Overridden..
+            + initialize()
+        }
+        class UIJavaFXAnswer <<Initializable>> {
+            ..FXML..
+            - questionBox : VBox
+            __
+            - loadQuestions()
+            - loadAnswers()
+            ..FXML..
+            - endSurvey()
+            ..Overridden..
+            + initialize()
+        }
+        class UIJavaFXCreate <<Initializable>> {
+            - questionContainers : QuestionContainer
+            - questionContainerButtonHashMap : HashMap<QuestionContainer, Button>
+            - invalidStyle : String
+            - saveToDatabase : boolean
+            - survey : Survey
+            - question : Question
+            ..FXML..
+            - surveyTitleField : TextField
+            - surveyDescriptionField : TextArea
+            - questionsVBox : VBox
+            - saveToDatabaseCheckBox : CheckBox
+            __
+            - onRemoveQuestion()
+            ..FXML..
+            - onSendSurvey()
+            - onAddNewQuestion()
+            - onSaveToDatabase()
+            - onCancel()
+            ..Overridden..
+            + initialize()
+        }
+        class QuestionContainer {
+            - answerTextFields : TextField[]
+            - textFieldButtonHashMap : HashMap
+            ..FXML..
+            - questionVBox : VBox
+            + questionTitleTextField : TextField
+            + questionDescriptionTextField : TextField
+            - answersVBox : VBox
+            - onAddNewAnswerButton : Button
+            __
+            - onAddNewAnswer()
+            - onRemoveAnswer()
+            - setDisableOnButtons()
+            + {static} removeStyles()
+        }
+        UIJavaFXStart - -|> UIJavaFX
+        UIJavaFXAnswer - -|> UIJavaFX
+        UIJavaFXCreate - -|> UIJavaFX
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXStart
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXAnswer
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXCreate
+
+        UIJavaFXMain *- Survey
+        Main - - UIJavaFXMain
+
+        UIJavaFX *- -"2" IO
+        UIJavaFXMain *- - IO
+
+        UIJavaFXCreate - -* QuestionContainer
+    }
+}
+
+package Comparators {
+    class TitleComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class DescriptionComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class LocationComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class QuestionsComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class SurveyFileComparator {
+        __
+        - getLastInt()
+        + compare
+    }
+
+    TitleComparator *- - DescriptionComparator
+    TitleComparator *- -* QuestionsComparator
+    TitleComparator *- -* LocationComparator
+
+    DescriptionComparator *- -* QuestionsComparator
+    DescriptionComparator *- -* LocationComparator
+
+    LocationComparator *- -* QuestionsComparator
+}
+
+UIJavaFXStart - - TitleComparator
+UIJavaFXStart - - LocationComparator
+UIJavaFXStart - - QuestionsComparator
+
+SurveyFileComparator -* IOFile
+
+@enduml
+
+@startuml
+title SP4 - Class Diagram
+
+class Main {
+}
+
+package Question{
+    abstract class Question <<Serializable>> {
+        - questionName : String
+        - questionDescription : String
+        __
+        ..Abstract methods..
+        + {abstract} addAnswer()
+        + {abstract} addResult()
+        + {abstract} getAnswers()
+        ..Getters & Setters..
+        + getQuestionName()
+        + getQuestionDescription()
+    }
+
+    class MultipleChoice {
+        - answers = HashMap<String, Integer>
+        __
+        ..Overridden methods..
+        + addAnswer()
+        + addResult()
+        + getAnswers()
+    }
+
+    Question <|- - MultipleChoice
+}
+
+class Survey <<Serializable>> {
+    - ID : long
+    - surveyTitle : String
+    - surveyDescription : String
+    - questions : Question[]
+    - fromDB : boolean
+    __
+    + compareTo()
+    ..Getters & Setters..
+    + getSurveyTitle()
+    + getSurveyDescription()
+    + getQuestions()
+    + isFromDB()
+    + setFromDB()
+    + getID()
+    + setID()
+}
+
+Survey *- -"1..*" Question
+
+
+package IO {
+    interface IO {
+        + read()
+        + save()
+        + remove()
+        + update()
+    }
+
+    class IOFile {
+        __
+        ..Overridden..
+        + read()
+        + save()
+        + remove()
+        + update()
+    }
+
+    class IODatabase {
+        - conn : Connection
+        __
+        + uploadSurvey()
+        + getSurvey()
+    }
+
+    IO <|.. IOFile
+    IO <|.. IODatabase
+
+    IO - - Survey
+}
+
+package UI {
+    package UICommandLine #CCFFCC {
+        class UICommandLineScanner {
+            -sc : Scanner
+
+            +getUserInput(String msg)
+            +getUserInput(String msg, String[] validOptions)
+            +getUserInputYesOrNo(String msg)
+        }
+        class UICommandLineStart {
+            -validOptions : String[]
+            -choice : String
+            -scan : UICommandLineScanner
+
+            +UIShowStart(Survey[] surveys)
+        }
+        class UICommandLineAnswer {
+            -validOptions : String[]
+            -choice : String
+            -chosenSurvey : Survey
+            -name : String
+            -scan : UICommandLineScanner
+
+            +UIShowAnswer(Survey[] surveys)
+        }
+        class UICommandLineCreate {
+            -choice : String
+            -surveyTitle : String
+            -surveyDescription : String
+            -survey : Survey
+            -scan : UICommandLineScanner
+
+            +UIShowCreate(Survey[] surveys)
+        }
+        class UICommandLineViewAnswers {
+            -validOptions : String[]
+            -choice : String
+            -scan : UICommandLineScanner
+
+            +UIShowViewAnswers(Survey[] surveys)
+        }
+        UICommandLineStart - - UICommandLineAnswer
+        UICommandLineStart - - UICommandLineCreate
+        UICommandLineStart - - UICommandLineViewAnswers
+
+        UICommandLineStart *- - UICommandLineScanner
+        UICommandLineAnswer *- - UICommandLineScanner
+        UICommandLineViewAnswers *- - UICommandLineScanner
+        UICommandLineCreate *- - UICommandLineScanner
+
+        UICommandLineViewAnswers -[hidden]- UICommandLine
+        UICommandLineAnswer -[hidden]- UICommandLine
+        UICommandLineCreate -[hidden]- UICommandLine
+
+        UICommandLineStart - - Main
+    }
+    package UIJavaFX #99DDFF {
+        class UIJavaFXMain {
+            - surveys[] : Survey
+            - io : IO
+            - start()
+        }
+        abstract class UIJavaFX {
+            # {static} ioFile : IO
+            # {static} ioDatabase : IO
+            ..
+            # {static} stage : Stage
+            # {static} surveys[] : Survey
+            # {static} survey : Survey
+            __
+            ..Getters & Setters..
+            + {static} setStage()
+            + {static} setSurveys()
+            + {static} setSurvey()
+        }
+        class UIJavaFXStart <<Initializable>> {
+            - observableList : ObservableList<>
+            - choiceBoxItems : LinkedHashMap<>
+            ..FXML..
+            - surveysBox : VBox
+            - surveyTitleLabel : Label
+            - surveyDescriptionLabel : Label
+            - surveyAmountOfQuestionsLabel : Label
+            - openSurveyButton : Button
+            - openSurveyResultsButton : Button
+            - showLocalCheckBox : CheckBox
+            - showDatabaseCheckBox : CheckBox
+            - choiceBox : ChoiceBox
+            __
+            - noSurveys()
+            - updateSurveysBox()
+            - changeActiveSurvey()
+            - removeSurvey()
+            ..FXML..
+            - onOpenSurvey()
+            - onCreateNewSurvey()
+            - onChoiceBoxItemChange()
+            - onShowLocal()
+            - onShowDatabase()
+            ..Overridden..
+            + initialize()
+        }
+        class UIJavaFXAnswer <<Initializable>> {
+            ..FXML..
+            - questionBox : VBox
+            __
+            - loadQuestions()
+            - loadAnswers()
+            ..FXML..
+            - endSurvey()
+            ..Overridden..
+            + initialize()
+        }
+        class UIJavaFXCreate <<Initializable>> {
+            - questionContainers : QuestionContainer
+            - questionContainerButtonHashMap : HashMap<QuestionContainer, Button>
+            - invalidStyle : String
+            - saveToDatabase : boolean
+            - survey : Survey
+            - question : Question
+            ..FXML..
+            - surveyTitleField : TextField
+            - surveyDescriptionField : TextArea
+            - questionsVBox : VBox
+            - saveToDatabaseCheckBox : CheckBox
+            __
+            - onRemoveQuestion()
+            ..FXML..
+            - onSendSurvey()
+            - onAddNewQuestion()
+            - onSaveToDatabase()
+            - onCancel()
+            ..Overridden..
+            + initialize()
+        }
+        class QuestionContainer {
+            - answerTextFields : TextField[]
+            - textFieldButtonHashMap : HashMap
+            ..FXML..
+            - questionVBox : VBox
+            + questionTitleTextField : TextField
+            + questionDescriptionTextField : TextField
+            - answersVBox : VBox
+            - onAddNewAnswerButton : Button
+            __
+            - onAddNewAnswer()
+            - onRemoveAnswer()
+            - setDisableOnButtons()
+            + {static} removeStyles()
+        }
+        UIJavaFXStart - -|> UIJavaFX
+        UIJavaFXAnswer - -|> UIJavaFX
+        UIJavaFXCreate - -|> UIJavaFX
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXStart
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXAnswer
+        UIJavaFXMain -[dotted,thickness=2]- UIJavaFXCreate
+
+        UIJavaFXMain *- Survey
+        Main - - UIJavaFXMain
+
+        UIJavaFX *- -"2" IO
+        UIJavaFXMain *- - IO
+
+        UIJavaFXCreate - -* QuestionContainer
+    }
+}
+
+package Comparators {
+    class TitleComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class DescriptionComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class LocationComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class QuestionsComparator {
+        __
+        + compareMain()
+        + compare()
+    }
+    class SurveyFileComparator {
+        __
+        - getLastInt()
+        + compare
+    }
+
+    TitleComparator *- - DescriptionComparator
+    TitleComparator *- -* QuestionsComparator
+    TitleComparator *- -* LocationComparator
+
+    DescriptionComparator *- -* QuestionsComparator
+    DescriptionComparator *- -* LocationComparator
+
+    LocationComparator *- -* QuestionsComparator
+}
+
+UIJavaFXStart - - TitleComparator
+UIJavaFXStart - - LocationComparator
+UIJavaFXStart - - QuestionsComparator
+
+SurveyFileComparator -* IOFile
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 15:26:11 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>
