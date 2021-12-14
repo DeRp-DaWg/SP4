@@ -62,4 +62,9 @@ public class Survey implements Serializable, Comparable<Survey> {
     public int compareTo(Survey o) {
         return surveyTitle.compareTo(o.getSurveyTitle());
     }
+
+    @Override
+    public String toString(){
+        return this.surveyTitle+" : "+this.surveyDescription;
+    }
 }
