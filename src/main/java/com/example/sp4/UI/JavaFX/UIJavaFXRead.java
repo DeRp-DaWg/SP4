@@ -33,6 +33,7 @@ public class UIJavaFXRead extends UIJavaFX implements Initializable {
         for(Question i : survey.getQuestions()){
             ObservableList<PieChart.Data> pieChart = null;
             ArrayList<PieChart.Data> pieChartAdd = new ArrayList<>();
+
             Label questions = new Label(i.getQuestionName());
             Font font = new Font("system", 24);
             questions.setFont(font);
@@ -48,8 +49,7 @@ public class UIJavaFXRead extends UIJavaFX implements Initializable {
                 answers.setPadding(new Insets(0, 0, 5, 0));
                 vBox.getChildren().add(answers);
 
-                PieChart.Data e = new PieChart.Data(b.getKey(), value);
-                pieChartAdd.add(e);
+                pieChartAdd.add(new PieChart.Data(b.getKey(), value));
             }
             pieChart = FXCollections.observableArrayList(pieChartAdd);
 
