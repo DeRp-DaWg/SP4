@@ -2,7 +2,7 @@
 
 ##Class diagram
 
-![Class diagram](doc/Class Diagram-SP4___Class_Diagram.svg)
+
 
 ##GUI Sketches
 
