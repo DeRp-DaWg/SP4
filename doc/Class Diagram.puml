@@ -85,50 +85,44 @@ package IO {
 package UI {
     package UICommandLine #CCFFCC {
         class UICommandLineScanner {
-            -Scanner sc
+            -sc : Scanner
 
             +getUserInput(String msg)
             +getUserInput(String msg, String[] validOptions)
             +getUserInputYesOrNo(String msg)
         }
-        abstract class UICommandLine {
-        }
         class UICommandLineStart {
-            -String[] validOptions
-            -String choice
-            -UICommandLineScanner scan
+            -validOptions : String[]
+            -choice : String
+            -scan : UICommandLineScanner
 
-            +UIShowStart(ArrayList<Survey> surveys)
+            +UIShowStart(Survey[] surveys)
         }
         class UICommandLineAnswer {
-            -String[] validOptions
-            -String choice
-            -Survey chosenSurvey
-            -String name
-            -String email
-            -UICommandLineScanner scan
+            -validOptions : String[]
+            -choice : String
+            -chosenSurvey : Survey
+            -name : String
+            -scan : UICommandLineScanner
 
-            +UIShowAnswer(ArrayList<Survey> surveys)
+            +UIShowAnswer(Survey[] surveys)
         }
         class UICommandLineCreate {
-            -String choice
-            -String surveyTitle
-            -String surveyDescription
-            -Survey survey
-            -UICommandLineScanner scan
+            -choice : String
+            -surveyTitle : String
+            -surveyDescription : String
+            -survey : Survey
+            -scan : UICommandLineScanner
 
-            +UIShowCreate(ArrayList<Survey> surveys)
+            +UIShowCreate(Survey[] surveys)
         }
         class UICommandLineViewAnswers {
-            -String[] validOptions
-            -String choice
-            -UICommandLineScanner scan
+            -validOptions : String[]
+            -choice : String
+            -scan : UICommandLineScanner
 
-            +UIShowViewAnswers(ArrayList<Survey> surveys)
+            +UIShowViewAnswers(Survey[] surveys)
         }
-        'UICommandLineStart --|> UICommandLine'
-        'UICommandLineAnswer --|> UICommandLine'
-        'UICommandLineCreate --|> UICommandLine'
         UICommandLineStart -- UICommandLineAnswer
         UICommandLineStart -- UICommandLineCreate
         UICommandLineStart -- UICommandLineViewAnswers
