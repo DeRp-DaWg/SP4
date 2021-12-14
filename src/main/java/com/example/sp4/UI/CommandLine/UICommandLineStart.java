@@ -1,7 +1,6 @@
 package com.example.sp4.UI.CommandLine;
 
 import com.example.sp4.Survey;
-import com.example.sp4.UI.UI;
 
 import java.util.ArrayList;
 

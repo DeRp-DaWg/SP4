@@ -43,13 +43,6 @@ package IO {
 }
 
 package UI {
-    class UI {
-        + uiStart : UIStart
-        + uiAnswer : UIAnswer
-        + uiCreate : UICreate
-    }
-
-    UI *-- UIStart
 
  package UICommandLine #CCFFCC {
          class UICommandLineScanner {
@@ -128,8 +121,6 @@ package UI {
         hide UIJavaFXAnswerr
 
     }
-    UIStart <|..[#green,thickness=2] UICommandLineStart
-    UIStart <|..[#blue,thickness=2] UIJavaFXMain
 
 }
 
@@ -141,7 +132,7 @@ class Controller {
 
 Controller -- Survey
 Controller -- IO
-Controller -- UI
+Controller *-- UICommandLineStart
 
 
 @enduml
