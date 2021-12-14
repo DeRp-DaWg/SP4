@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class UIJavaFXCreate extends UIJavaFX implements Initializable {
-    private HashMap<TextField[], ArrayList<TextField>> questionsAndAnswersContainer = new HashMap<>();
     private ArrayList<QuestionContainer> questionContainers = new ArrayList<>();
     private HashMap<QuestionContainer, Button> questionContainerButtonHashMap = new HashMap<>();
     private String invalidStyle = "-fx-border-color: red";

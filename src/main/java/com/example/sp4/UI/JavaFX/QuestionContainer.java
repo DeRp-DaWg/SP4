@@ -31,7 +31,7 @@ public class QuestionContainer {
         onAddNewAnswer();
     }
     
-    public void onAddNewAnswer() {
+    private void onAddNewAnswer() {
         HBox answerHBox = new HBox();
         TextField answerTextField = new TextField();
         answerTextField.setPromptText("Answer "+(answerTextFields.size()+1));
