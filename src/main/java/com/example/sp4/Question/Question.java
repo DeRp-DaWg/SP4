@@ -26,4 +26,9 @@ public abstract class Question implements Serializable {
     }
     
     public abstract HashMap<String, Integer> getAnswers();
+
+    @Override
+    public String toString(){
+        return this.questionName+" : "+this.questionDescription;
+    }
 }
