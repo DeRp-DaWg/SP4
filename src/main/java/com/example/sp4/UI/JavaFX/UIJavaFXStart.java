@@ -56,25 +56,25 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
     private ChoiceBox choiceBox;
     
     private ObservableList<String> observableList;
-    private LinkedHashMap<String, Comparator<Survey>> choiceBoxItemss = new LinkedHashMap<>();
+    private LinkedHashMap<String, Comparator<Survey>> choiceBoxItems = new LinkedHashMap<>();
     
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        choiceBoxItemss.put("Sort by title", new TitleComparator());
-        choiceBoxItemss.put("Sort by questions", new QuestionsComparator());
-        choiceBoxItemss.put("Sort by save location", new LocationComparator());
+        choiceBoxItems.put("Sort by title", new TitleComparator());
+        choiceBoxItems.put("Sort by questions", new QuestionsComparator());
+        choiceBoxItems.put("Sort by save location", new LocationComparator());
         
-        observableList = FXCollections.observableArrayList(choiceBoxItemss.keySet().toArray(new String[0]));
+        observableList = FXCollections.observableArrayList(choiceBoxItems.keySet().toArray(new String[0]));
         choiceBox.setItems(observableList);
-        choiceBox.setValue(choiceBoxItemss.keySet().toArray()[0]);
+        choiceBox.setValue(choiceBoxItems.keySet().toArray()[0]);
         choiceBox.setOnAction(actionEvent -> onChoiceBoxItemChange());
         
         showLocal = showLocalCheckBox.isSelected();
         showDatabase = showDatabaseCheckBox.isSelected();
         
         if (surveys.size() > 0) {
-            surveys.sort(choiceBoxItemss.get("Sort by title"));
+            surveys.sort(choiceBoxItems.get("Sort by title"));
             updateSurveysBox();
             changeActiveSurvey(surveys.get(0));
         }
@@ -128,14 +128,12 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
     }
     
     private void removeSurvey(Survey survey) {
-        IO io = null;
         if (survey.isFromDB()) {
-            io = new IODatabase();
+            ioDatabase.remove(surveys, survey);
         }
         else {
-            io = new IOFile();
+            ioFile.remove(surveys, survey);
         }
-        io.remove(surveys, survey);
         surveys.remove(survey);
         updateSurveysBox();
     }
@@ -167,10 +165,10 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
     @FXML
     private void onChoiceBoxItemChange() {
         if (surveys == null) return;
-        String[] choiceBoxItemKeys = choiceBoxItemss.keySet().toArray(new String[0]);
+        String[] choiceBoxItemKeys = choiceBoxItems.keySet().toArray(new String[0]);
         for (int i = 0; i < choiceBoxItemKeys.length; i++) {
             if (choiceBoxItemKeys[i].equals(choiceBox.getValue())) {
-                surveys.sort(choiceBoxItemss.get(choiceBoxItemKeys[i]));
+                surveys.sort(choiceBoxItems.get(choiceBoxItemKeys[i]));
             }
         }
         surveysBox.getChildren().clear();

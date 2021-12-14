@@ -82,15 +82,13 @@ public class UIJavaFXCreate extends UIJavaFX implements Initializable {
                 }
                 survey.addQuestion(question);
             }
-            IO io = null;
             if (saveToDatabase) {
+                ioDatabase.save(survey);
                 survey.setFromDB(true);
-                io = new IODatabase();
             }
             else {
-                io = new IOFile();
+                ioFile.save(survey);
             }
-            io.save(survey);
             surveys.add(survey);
             try {
                 FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));

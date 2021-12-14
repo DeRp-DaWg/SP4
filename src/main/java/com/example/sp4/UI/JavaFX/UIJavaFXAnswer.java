@@ -92,12 +92,13 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
     }
     @FXML
     public void endSurvey(){
-      loadAnswers();
-        IO io = new IOFile();
+        loadAnswers();
         if(survey.isFromDB()){
-            io = new IODatabase();
+            ioDatabase.update(survey);
         }
-        io.update(survey);
+        else {
+            ioFile.update(survey);
+        }
         try {
             FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
             Scene scene = new Scene(createFXMLLoader.load(), 600, 400);

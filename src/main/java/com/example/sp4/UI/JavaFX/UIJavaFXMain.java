@@ -20,13 +20,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnswer, UICreate {
-    private Stage stage;
-    private ArrayList<Survey> surveys = new ArrayList<>();
+public class UIJavaFXMain extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        UI ui = new UI();
+        ArrayList<Survey> surveys = new ArrayList<>();
         try {
             IO io = new IOFile();
             surveys.addAll(io.read());
@@ -42,21 +40,19 @@ public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnsw
             System.out.println("Database not loaded");
         }
         UIJavaFX.setSurveys(surveys);
-        this.stage = stage;
-        
+    
         FXMLLoader startFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
         Scene startScene = new Scene(startFXMLLoader.load(), 600, 400);
         
         
         UIJavaFX.setStage(stage);
         
-        this.stage.setTitle("Survey program");
+        stage.setTitle("Survey program");
         
-        this.stage.setScene(startScene);
-        this.stage.show();
-        this.stage.setMinWidth(stage.getWidth());
-        this.stage.setMinHeight(stage.getHeight());
-    
+        stage.setScene(startScene);
+        stage.show();
+        stage.setMinWidth(stage.getWidth());
+        stage.setMinHeight(stage.getHeight());
         
     }
     public void launchButton(){
@@ -65,30 +61,5 @@ public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnsw
 
     public static void main(String[] args) {
         Application.launch();
-    }
-    
-    @Override
-    public void initt() {
-        Application.launch();
-    }
-    
-    @Override
-    public Survey UIShowAnswer(Survey survey) {
-        return null;
-    }
-    
-    @Override
-    public Survey UIShowCreate() {
-        return null;
-    }
-    
-    @Override
-    public Survey UIShowStart(Survey[] surveys) {
-        return null;
-    }
-    
-    @Override
-    public String getIOType() {
-        return null;
     }
 }

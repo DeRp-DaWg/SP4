@@ -88,7 +88,13 @@ public class IOFile implements IO {
         }
         System.out.println();
         int index = (int) survey.getId();
-        String[] fileNamesToBeChanged = Arrays.copyOfRange(fileNames, index+1, fileNames.length);
+        String[] fileNamesToBeChanged;
+        try {
+            fileNamesToBeChanged = Arrays.copyOfRange(fileNames, index+1, fileNames.length);
+        }
+        catch (Exception e) {
+            fileNamesToBeChanged = new String[0];
+        }
         File file = new File("surveys/Survey" + survey.getId() + ".ser");
         if (file.delete()) {
             for (int i = 0; i < fileNamesToBeChanged.length; i++) {
