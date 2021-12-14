@@ -2,18 +2,18 @@
 
 ##Class diagram
 
-
+![Class diagram](doc/Class Diagram-SP4___Class_Diagram.svg)
 
 ##GUI Sketches
 
 ###Survey selection/start screen
 
-![](doc/UIStart GUI.png)
+![Sketch]("doc/UIStart GUI.png")
 
 ###Survey creation screen
 
-![](doc/UICreate GUI.png)
+![Sketch]("doc/UICreate GUI.png")
 
 ###Survey answer screen
 
-![](doc/UIAnswer GUI.png)
+![Sketch]("doc/UIAnswer GUI.png")
