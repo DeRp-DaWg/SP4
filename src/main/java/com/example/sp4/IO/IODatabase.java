@@ -92,7 +92,6 @@ public class IODatabase implements IO {
                     questionTitle = rs1.getString("questionTitle");
                     questionDescription = rs1.getString("questionDescription");
                     int questionID = rs1.getInt("id");
-                    System.out.println(questionTitle);
 
                     //Iterate through each question
 
@@ -105,11 +104,7 @@ public class IODatabase implements IO {
                         String answer4 = rs2.getString("answer4");
                         String answer5 = rs2.getString("answer5");
 
-                        System.out.println(answer1 + "\n" +
-                                answer2 + "\n" +
-                                answer3 + "\n" +
-                                answer4 + "\n" +
-                                answer5);
+
                         String[] answerArray = {answer1, answer2, answer3, answer4, answer5};
                         MultipleChoice multipleChoice = new MultipleChoice(questionTitle, questionDescription, answerArray);
                         questions.add(multipleChoice);
@@ -124,8 +119,6 @@ public class IODatabase implements IO {
             survey.setFromDB(true);
             /* */
 
-            System.out.println(titleOfSurvey + "\n" +
-                    descriptionOfSurvey + "\n" + questionTitleAndDescription);
 
         } catch (SQLException e) {
             e.printStackTrace();
