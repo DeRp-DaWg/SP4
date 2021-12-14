@@ -1,12 +1,8 @@
 package com.example.sp4.UI.JavaFX;
 
-import com.example.sp4.IO.IO;
-import com.example.sp4.IO.IODatabase;
-import com.example.sp4.IO.IOFile;
 import com.example.sp4.Question.MultipleChoice;
 import com.example.sp4.Question.Question;
 import com.example.sp4.Survey;
-import com.example.sp4.UI.UICreate;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,16 +11,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 

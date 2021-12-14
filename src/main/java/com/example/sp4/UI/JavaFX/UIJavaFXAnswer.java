@@ -1,30 +1,19 @@
 package com.example.sp4.UI.JavaFX;
 
-import com.example.sp4.IO.IO;
-import com.example.sp4.IO.IODatabase;
-import com.example.sp4.IO.IOFile;
 import com.example.sp4.Question.Question;
-import com.example.sp4.Survey;
-import com.example.sp4.UI.UIAnswer;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.control.skin.TextInputControlSkin;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
