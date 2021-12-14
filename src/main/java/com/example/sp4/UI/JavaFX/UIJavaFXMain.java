@@ -59,7 +59,10 @@ public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnsw
     
         
     }
-    
+    public void launchButton(){
+        launch();
+    }
+
     public static void main(String[] args) {
         Application.launch();
     }

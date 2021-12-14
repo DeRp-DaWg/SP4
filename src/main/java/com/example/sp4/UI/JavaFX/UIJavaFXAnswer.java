@@ -65,7 +65,21 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
     }
     @FXML
     public void endSurvey(){
-       for (int i = 0; i < questionBox.getChildren().size(); i++){
+        loadAnswers();
+        try {
+            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
+            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
+            stage.setScene(scene);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void test(){
+    }
+    @FXML
+    public void loadAnswers(){
+        for (int i = 0; i < questionBox.getChildren().size(); i++){
             if (questionBox.getChildren().get(i) instanceof VBox){
                 for (int j = 0; j < ((VBox) questionBox.getChildren().get(i)).getChildren().size(); j++){
                     if(((VBox) questionBox.getChildren().get(i)).getChildren().get(j) instanceof RadioButton){
@@ -77,7 +91,7 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
                 }
             }
         }
-       // this foreach loop is used to check if answers get registered, can be removed when were done.
+        // this foreach loop is used to check if answers get registered, can be removed when were done.
         for (Question question : survey.getQuestions()){
             System.out.println(question.getQuestionName());
             for (String name : question.getAnswers().keySet()){
@@ -86,15 +100,5 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
                 System.out.println(key + " " + value);
             }
         }
-        try {
-            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
-            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
-            stage.setScene(scene);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void test(){
     }
 }
