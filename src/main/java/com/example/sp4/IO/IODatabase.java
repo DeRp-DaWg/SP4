@@ -29,65 +29,7 @@ public class IODatabase implements IO{
     private String descriptionOfSurvey = null;
     private HashMap<String, String> questionTitleAndDescription = new HashMap<>();
 
-    /*
-    @Override
-    public Survey[] read() throws Exception {
-        String surveyTitle = "";
-        String surveyDescription = "";
-        String questionName = "";
-        String questionDescription = "";
 
-        conn = DriverManager.getConnection(DB_URL, USER, PASS);
-        Statement st = conn.createStatement();
-
-        // Get survey table
-        String sql = "select * from survey";
-        ResultSet rs = st.executeQuery(sql);
-
-        List<Survey> surveys = new ArrayList<Survey>(); //hellig
-
-        while (rs.next()) {
-            surveyTitle = rs.getString("titleOfSurvey");
-            surveyDescription = rs.getString("descriptionOfSurvey");
-
-            System.out.println(surveyTitle);
-
-            //Get question table
-            String sql1 = "select * from question";
-            rs =  st.executeQuery(sql1);
-
-            while (rs.next()){
-                questionName = rs.getString("questionTitle");
-                questionDescription = rs.getString("questionDescription");
-
-
-                //Get answer table
-                String sql2 = "select * from answer";
-                rs =  st.executeQuery(sql2);
-                while (rs.next()){
-                    String answer1 = rs.getString("answer1");
-                    String answer2 = rs.getString("answer2");
-                    String answer3 = rs.getString("answer3");
-                    String answer4 = rs.getString("answer4");
-                    String answer5 = rs.getString("answer5");
-                    String[] answers = {answer1, answer2, answer3, answer4, answer5};
-
-                    MultipleChoice multipleChoice = new MultipleChoice(questionName, questionDescription, answers);
-                    ArrayList<Question> questions = new ArrayList<>();
-
-                    questions.add(multipleChoice);
-                    Survey survey = new Survey(surveyTitle, surveyDescription, questions);
-
-                    surveys.add(survey);
-                }
-            }
-        }
-
-        Survey[] convertSurveys = new Survey[surveys.size()];
-        convertSurveys = surveys.toArray(convertSurveys);
-
-        return convertSurveys;
-    }*/
 
     @Override
     public ArrayList<Survey> read() {
@@ -108,6 +50,13 @@ public class IODatabase implements IO{
 
     }
 
+    private Statement st;
+    private Statement st1;
+    private Statement st2;
+    private ResultSet rs;
+    private ResultSet rs1;
+    private ResultSet rs2;
+
     @Override
     public Survey read(String titleOfSurvey) {
         int id = -1;
@@ -117,71 +66,59 @@ public class IODatabase implements IO{
             id = getIdOfSurvey(titleOfSurvey);
         }
         Survey survey = null;
+
         try {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
-            Statement st = conn.createStatement();
 
-            /* Få variablerne til survey table */
-
-            String sql = "select * from survey where id = " + id;
-            ResultSet rs = st.executeQuery(sql);
-
-            while (rs.next()){
-                titleOfSurvey = rs.getString("titleOfSurvey");
-                descriptionOfSurvey = rs.getString("descriptionOfSurvey");
-            }
-
-            /* Få variablerne til question table */
-
-            String sql1 = "select * from question where survey_id = " + id;
-            rs = st.executeQuery(sql1);
+            st = conn.createStatement();
+            st1 = conn.createStatement();
+            st2 = conn.createStatement();
 
             String questionTitle = "";
-            String questionDescription = "";
-            while (rs.next()){
-                questionTitle = rs.getString("questionTitle");
-                questionDescription = rs.getString("questionDescription");
-                questionTitleAndDescription.put(questionTitle, questionDescription);
-            }
-
-            /* Få variablerne til answer table */
+            String questionDescription = "Under ombygning";
 
             ArrayList<Question> questions = new ArrayList<>();
-            HashMap<String, String> hashmapAnswers = new HashMap<>();
 
-            String sql2 = "select * from answer where question_id = " + id;
-            rs = st.executeQuery(sql2);
+            String sql = "select * from survey where id = "  + id;
+            rs = st.executeQuery(sql);
+            while(rs.next()){
+                titleOfSurvey = rs.getString("titleOfSurvey");
+                descriptionOfSurvey = rs.getString("descriptionOfSurvey");
 
-            while (rs.next()){
-                getAnswer1 = rs.getString("answer1");
-                getAnswer2 = rs.getString("answer2");
-                getAnswer3 = rs.getString("answer3");
-                getAnswer4 = rs.getString("answer4");
-                getAnswer5 = rs.getString("answer5");
-                hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer1);
-                hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer2);
-                hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer3);
-                hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer4);
-                hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer5);
-            }
+                String sql1 = "select * from question where survey_id = "  + id;
+                rs1 = st1.executeQuery(sql1);
+                while (rs1.next()){
+                    questionTitle = rs1.getString("questionTitle");
+                    questionDescription = rs1.getString("questionDescription");
+                    int questionID = rs1.getInt("id");
+                    System.out.println(questionTitle);
 
-            String[] convertAnswers = {};
-            for(Map.Entry<String, String> i : questionTitleAndDescription.entrySet()){
-                ArrayList<String> testerArray = new ArrayList<>();
-                for(Map.Entry<String, String> b : hashmapAnswers.entrySet()){
-                    if(b.getKey().toLowerCase(Locale.ROOT).equals(i.getKey().toLowerCase(Locale.ROOT))){
-                        testerArray.add(b.getValue());
-                        convertAnswers = new String[testerArray.size()];
-                        convertAnswers = testerArray.toArray(convertAnswers);
+                    //Iterate through each question
+
+                    String sql2 = "select * from answer where question_id = "  + questionID;
+                    ResultSet rs2 = st2.executeQuery(sql2);
+                    while (rs2.next()){
+                        String answer1 = rs2.getString("answer1");
+                        String answer2 = rs2.getString("answer2");
+                        String answer3 = rs2.getString("answer3");
+                        String answer4 = rs2.getString("answer4");
+                        String answer5 = rs2.getString("answer5");
+
+                        System.out.println(answer1 + "\n" +
+                                answer2 + "\n" +
+                                answer3 + "\n" +
+                                answer4 + "\n" +
+                                answer5);
+                        String[] answerArray = {answer1, answer2, answer3, answer4, answer5};
+                        MultipleChoice multipleChoice = new MultipleChoice(questionTitle, questionDescription, answerArray);
+                        questions.add(multipleChoice);
                     }
                 }
-
-                MultipleChoice multipleChoice = new MultipleChoice(i.getKey(), i.getValue(), convertAnswers);
-                questions.add(multipleChoice);
             }
 
             /* */
+
 
             survey = new Survey(titleOfSurvey, descriptionOfSurvey, questions, 0);
             survey.setFromDB(true);
