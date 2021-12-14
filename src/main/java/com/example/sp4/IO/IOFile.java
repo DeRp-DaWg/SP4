@@ -106,9 +106,9 @@ public class IOFile implements IO {
                 File f = new File(fileName);
                 f.renameTo(new File (newFileName));
             }
-            System.out.println("Deleted the file: " + file.getName());
+            System.out.println("File deleted: " + file.getName());
         } else {
-            System.out.println("Failed to delete the file.");
+            System.out.println("Failed to delete file.");
         }
     }
     
