@@ -1,19 +1,19 @@
 # SP4 - Survey program
 
-##Class diagram
+## Class diagram
 
-![Class diagram](doc/Class Diagram-SP4___Class_Diagram.svg)
+![Class diagram](doc/Class%20Diagram-SP4___Class_Diagram.svg)
 
-##GUI Sketches
+## GUI Sketches
 
-###Survey selection/start screen
+### Survey selection/start screen
 
-![Sketch](doc/UIStart GUI.png)
+![Sketch](doc/UIStart%20GUI.png)
 
-###Survey creation screen
+### Survey creation screen
 
-![Sketch](doc/UICreate GUI.png)
+![Sketch](doc/UICreate%20GUI.png)
 
-###Survey answer screen
+### Survey answer screen
 
-![Sketch](doc/UIAnswer GUI.png)
+![Sketch](doc/UIAnswer%20GUI.png)
