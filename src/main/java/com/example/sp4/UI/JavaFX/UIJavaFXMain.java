@@ -12,6 +12,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -39,15 +40,17 @@ public class UIJavaFXMain extends Application {
             System.out.println("Database not loaded");
         }
         UIJavaFX.setSurveys(surveys);
-    
+
         FXMLLoader startFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
         Scene startScene = new Scene(startFXMLLoader.load(), 600, 400);
         
         
         UIJavaFX.setStage(stage);
-        
+
+        stage.getIcons().add(new Image("file:resources/logo.png"));
+
         stage.setTitle("Survey program");
-        
+
         stage.setScene(startScene);
         stage.show();
         stage.setMinWidth(stage.getWidth());

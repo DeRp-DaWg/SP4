@@ -15,11 +15,11 @@ public class IODatabase implements IO {
     private Connection conn = null;
     // database URL
     final String DB_URL = "jdbc:mysql://localhost/Test";
-    
+
     //  Database credentials
     private final String USER = "root";
     private String PASS = "test";
-    
+
     private String getAnswer1 = null;
     private String getAnswer2 = null;
     private String getAnswer3 = null;
@@ -29,66 +29,8 @@ public class IODatabase implements IO {
     private String descriptionOfSurvey = null;
     private HashMap<String, String> questionTitleAndDescription = new HashMap<>();
 
-    /*
-    @Override
-    public Survey[] read() throws Exception {
-        String surveyTitle = "";
-        String surveyDescription = "";
-        String questionName = "";
-        String questionDescription = "";
-
-        conn = DriverManager.getConnection(DB_URL, USER, PASS);
-        Statement st = conn.createStatement();
-
-        // Get survey table
-        String sql = "select * from survey";
-        ResultSet rs = st.executeQuery(sql);
-
-        List<Survey> surveys = new ArrayList<Survey>(); //hellig
-
-        while (rs.next()) {
-            surveyTitle = rs.getString("titleOfSurvey");
-            surveyDescription = rs.getString("descriptionOfSurvey");
-
-            System.out.println(surveyTitle);
-
-            //Get question table
-            String sql1 = "select * from question";
-            rs =  st.executeQuery(sql1);
-
-            while (rs.next()){
-                questionName = rs.getString("questionTitle");
-                questionDescription = rs.getString("questionDescription");
 
 
-                //Get answer table
-                String sql2 = "select * from answer";
-                rs =  st.executeQuery(sql2);
-                while (rs.next()){
-                    String answer1 = rs.getString("answer1");
-                    String answer2 = rs.getString("answer2");
-                    String answer3 = rs.getString("answer3");
-                    String answer4 = rs.getString("answer4");
-                    String answer5 = rs.getString("answer5");
-                    String[] answers = {answer1, answer2, answer3, answer4, answer5};
-
-                    MultipleChoice multipleChoice = new MultipleChoice(questionName, questionDescription, answers);
-                    ArrayList<Question> questions = new ArrayList<>();
-
-                    questions.add(multipleChoice);
-                    Survey survey = new Survey(surveyTitle, surveyDescription, questions);
-
-                    surveys.add(survey);
-                }
-            }
-        }
-
-        Survey[] convertSurveys = new Survey[surveys.size()];
-        convertSurveys = surveys.toArray(convertSurveys);
-
-        return convertSurveys;
-    }*/
-    
     @Override
     public ArrayList<Survey> read() throws Exception {
         ArrayList<Survey> surveys = new ArrayList<>();
@@ -97,7 +39,7 @@ public class IODatabase implements IO {
         }
         return surveys;
     }
-    
+
     public boolean isNumber(String myString) {
         try {
             int x = Integer.parseInt(myString);
@@ -105,9 +47,16 @@ public class IODatabase implements IO {
         } catch (NumberFormatException e) {
             return false;
         }
-        
+
     }
-    
+
+    private Statement st;
+    private Statement st1;
+    private Statement st2;
+    private ResultSet rs;
+    private ResultSet rs1;
+    private ResultSet rs2;
+
     @Override
     public Survey read(String titleOfSurvey) throws Exception {
         int id = -1;
@@ -117,102 +66,85 @@ public class IODatabase implements IO {
             id = getIdOfSurvey(titleOfSurvey);
         }
         Survey survey = null;
-        conn = DriverManager.getConnection(DB_URL, USER, PASS);
-        
-        Statement st = conn.createStatement();
-        
-        /* Få variablerne til survey table */
-        
-        String sql = "select * from survey where id = " + id;
-        ResultSet rs = st.executeQuery(sql);
-        
-        while (rs.next()) {
-            titleOfSurvey = rs.getString("titleOfSurvey");
-            descriptionOfSurvey = rs.getString("descriptionOfSurvey");
-        }
-        
-        /* Få variablerne til question table */
-        
-        String sql1 = "select * from question where survey_id = " + id;
-        rs = st.executeQuery(sql1);
-        
-        String questionTitle = "";
-        String questionDescription = "";
-        while (rs.next()) {
-            questionTitle = rs.getString("questionTitle");
-            questionDescription = rs.getString("questionDescription");
-            questionTitleAndDescription.put(questionTitle, questionDescription);
-        }
-        
-        /* Få variablerne til answer table */
-        
-        ArrayList<Question> questions = new ArrayList<>();
-        HashMap<String, String> hashmapAnswers = new HashMap<>();
-        
-        String sql2 = "select * from answer where question_id = " + id;
-        rs = st.executeQuery(sql2);
-        
-        while (rs.next()) {
-            getAnswer1 = rs.getString("answer1");
-            getAnswer2 = rs.getString("answer2");
-            getAnswer3 = rs.getString("answer3");
-            getAnswer4 = rs.getString("answer4");
-            getAnswer5 = rs.getString("answer5");
-            hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer1);
-            hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer2);
-            hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer3);
-            hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer4);
-            hashmapAnswers.put(questionTitle.toLowerCase(Locale.ROOT), getAnswer5);
-        }
-        
-        String[] convertAnswers = {};
-        for (Map.Entry<String, String> i : questionTitleAndDescription.entrySet()) {
-            ArrayList<String> testerArray = new ArrayList<>();
-            for (Map.Entry<String, String> b : hashmapAnswers.entrySet()) {
-                if (b.getKey().toLowerCase(Locale.ROOT).equals(i.getKey().toLowerCase(Locale.ROOT))) {
-                    testerArray.add(b.getValue());
-                    convertAnswers = new String[testerArray.size()];
-                    convertAnswers = testerArray.toArray(convertAnswers);
-                }
-            }
-            
-            MultipleChoice multipleChoice = new MultipleChoice(i.getKey(), i.getValue(), convertAnswers);
-            questions.add(multipleChoice);
-        }
-        
-        /* */
-        
-        survey = new Survey(titleOfSurvey, descriptionOfSurvey, questions, 0);
-        /* */
-        
-        System.out.println(titleOfSurvey + "\n" +
-                descriptionOfSurvey + "\n" + questionTitleAndDescription);
-        
-        return survey;
-    }
-    
-    public void deleteSurvey(String titleOfSurvey) {
+
         try {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            Statement st = conn.createStatement();
-            String sql = "DELETE FROM survey WHERE id = " + getIdOfSurvey(titleOfSurvey);
-            st.execute(sql);
+
+
+            st = conn.createStatement();
+            st1 = conn.createStatement();
+            st2 = conn.createStatement();
+
+            String questionTitle = "";
+            String questionDescription = "Under ombygning";
+
+            ArrayList<Question> questions = new ArrayList<>();
+
+            String sql = "select * from survey where id = "  + id;
+            rs = st.executeQuery(sql);
+            while(rs.next()){
+                titleOfSurvey = rs.getString("titleOfSurvey");
+                descriptionOfSurvey = rs.getString("descriptionOfSurvey");
+
+                String sql1 = "select * from question where survey_id = "  + id;
+                rs1 = st1.executeQuery(sql1);
+                while (rs1.next()){
+                    questionTitle = rs1.getString("questionTitle");
+                    questionDescription = rs1.getString("questionDescription");
+                    int questionID = rs1.getInt("id");
+                    System.out.println(questionTitle);
+
+                    //Iterate through each question
+
+                    String sql2 = "select * from answer where question_id = "  + questionID;
+                    ResultSet rs2 = st2.executeQuery(sql2);
+                    while (rs2.next()){
+                        String answer1 = rs2.getString("answer1");
+                        String answer2 = rs2.getString("answer2");
+                        String answer3 = rs2.getString("answer3");
+                        String answer4 = rs2.getString("answer4");
+                        String answer5 = rs2.getString("answer5");
+
+                        System.out.println(answer1 + "\n" +
+                                answer2 + "\n" +
+                                answer3 + "\n" +
+                                answer4 + "\n" +
+                                answer5);
+                        String[] answerArray = {answer1, answer2, answer3, answer4, answer5};
+                        MultipleChoice multipleChoice = new MultipleChoice(questionTitle, questionDescription, answerArray);
+                        questions.add(multipleChoice);
+                    }
+                }
+            }
+
+            /* */
+
+
+            survey = new Survey(titleOfSurvey, descriptionOfSurvey, questions, 0);
+            survey.setFromDB(true);
+            /* */
+
+            System.out.println(titleOfSurvey + "\n" +
+                    descriptionOfSurvey + "\n" + questionTitleAndDescription);
+
         } catch (SQLException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
+        return survey;
     }
-    
+
+
     public int getIdOfSurvey(String titleOfSurvey) {
         int myId = -1;
         try {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             Statement st = conn.createStatement();
             /* Få variablerne til survey table */
-            
+
             String sql = "select id from survey where lower(titleOfSurvey) = \"" + titleOfSurvey.toLowerCase() + "\"";
             ResultSet rs = st.executeQuery(sql);
-            
-            while (rs.next()) {
+
+            while (rs.next()){
                 myId = rs.getInt("id");
             }
         } catch (SQLException e) {
@@ -220,7 +152,7 @@ public class IODatabase implements IO {
         }
         return myId;
     }
-    
+
     public int sizeOfTable(String tableName) throws Exception {
         int size = -1;
         conn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -232,19 +164,93 @@ public class IODatabase implements IO {
         }
         return size;
     }
-    
+
     @Override
     public void save(Survey survey) {
-        //Laves når survey er færdig
+        try {
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            //Survey
+            String sql = "INSERT INTO survey (titleOfSurvey, descriptionOfSurvey)"
+                    + "VALUES (?, ?)";
+            PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            pstmt.setString(1, survey.getSurveyTitle());
+            pstmt.setString(2, survey.getSurveyDescription());
+
+            pstmt.addBatch();
+            pstmt.executeBatch();
+
+            //Question
+            sql = "INSERT INTO question (questionTitle, questionDescription, survey_id)"
+                    + "VALUES (?, ?, ?)";
+            pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            int counter = 1;
+            for(Question i : survey.getQuestions()){
+                pstmt.setString(counter, i.getQuestionName());
+                counter++;
+                pstmt.setString(counter, i.getQuestionDescription());
+                counter++;
+                pstmt.setInt(counter, getIdOfSurvey(survey.getSurveyTitle()));
+            }
+            pstmt.addBatch();
+            pstmt.executeBatch();
+
+
+
+            /*
+            //Answer
+            sql = "INSERT INTO answer (question_id, answer1, answer2, answer3, answer4, answer5)"
+                    + "VALUES (?, ?, ?, ?, ?, ?)";
+            foriegnkey constrainst thingy
+
+            pstmt = conn.prepareStatement("SET FOREIGN_KEY_CHECKS = 0", Statement.RETURN_GENERATED_KEYS);
+            pstmt.addBatch();
+
+
+
+            pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            pstmt.setInt(1, 6);
+            pstmt.setString(2, "ansewer1");
+            pstmt.setString(3, "ansewer1");
+            pstmt.setString(4, "ansewer1");
+            pstmt.setString(5, "ansewer1");
+            pstmt.addBatch();
+            int testCounter = 2;
+
+            pstmt = conn.prepareStatement("SET FOREIGN_KEY_CHECKS = 1", Statement.RETURN_GENERATED_KEYS);
+            pstmt.addBatch();
+
+
+            for(Question i : survey.getQuestions()){
+                for (String b : i.getAnswers().keySet()){
+                    System.out.println(b);
+                    pstmt.setString(testCounter, b);
+                    pstmt.addBatch();
+                }
+            }
+            pstmt.executeBatch();
+            */
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
-    
+
     @Override
     public void remove(ArrayList<Survey> surveys, Survey survey) {
+        try {
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            Statement st = conn.createStatement();
+            String sql = "DELETE FROM survey WHERE id = " + getIdOfSurvey(survey.getSurveyTitle());
+            st.execute(sql);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
-    
+
     @Override
     public void update(Survey survey) {
-    
+
     }
     /*
     public void uploadToQuestion(String questionTitle, String questionDescription, String email){

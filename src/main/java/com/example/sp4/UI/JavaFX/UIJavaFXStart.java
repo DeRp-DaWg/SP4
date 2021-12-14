@@ -149,6 +149,18 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void onOpenSurveyResults(){
+        try {
+            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Read.fxml"));
+            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
+            stage.setScene(scene);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     
     @FXML
     private void onCreateNewSurvey() {
@@ -161,6 +173,7 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
             e.printStackTrace();
         }
     }
+
     
     @FXML
     private void onChoiceBoxItemChange() {
