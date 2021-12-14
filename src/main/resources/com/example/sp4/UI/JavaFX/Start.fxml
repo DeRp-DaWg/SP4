@@ -48,7 +48,7 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
                   <Button fx:id="openSurveyButton" mnemonicParsing="false" onAction="#onOpenSurvey" prefWidth="125.0" text="Open survey" />
-                  <Button fx:id="openSurveyResultsButton" mnemonicParsing="false" prefWidth="125.0" text="Open survey results" />
+                  <Button fx:id="openSurveyResultsButton" mnemonicParsing="false" onAction="#onOpenSurveyResults" prefWidth="125.0" text="Open survey results" />
                </children>
             </HBox>
             <Button fx:id="createNewSurveyButton" mnemonicParsing="false" onAction="#onCreateNewSurvey" prefWidth="260.0" text="Create new survey" />
