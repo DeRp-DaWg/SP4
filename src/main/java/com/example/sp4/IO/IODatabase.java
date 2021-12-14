@@ -133,16 +133,6 @@ public class IODatabase implements IO {
         return survey;
     }
 
-    public void deleteSurvey(String titleOfSurvey) {
-        try {
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            Statement st = conn.createStatement();
-            String sql = "DELETE FROM survey WHERE id = " + getIdOfSurvey(titleOfSurvey);
-            st.execute(sql);
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
-    }
 
     public int getIdOfSurvey(String titleOfSurvey) {
         int myId = -1;
@@ -177,11 +167,85 @@ public class IODatabase implements IO {
 
     @Override
     public void save(Survey survey) {
-        //Laves når survey er færdig
+        try {
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            //Survey
+            String sql = "INSERT INTO survey (titleOfSurvey, descriptionOfSurvey)"
+                    + "VALUES (?, ?)";
+            PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            pstmt.setString(1, survey.getSurveyTitle());
+            pstmt.setString(2, survey.getSurveyDescription());
+
+            pstmt.addBatch();
+            pstmt.executeBatch();
+
+            //Question
+            sql = "INSERT INTO question (questionTitle, questionDescription, survey_id)"
+                    + "VALUES (?, ?, ?)";
+            pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            int counter = 1;
+            for(Question i : survey.getQuestions()){
+                pstmt.setString(counter, i.getQuestionName());
+                counter++;
+                pstmt.setString(counter, i.getQuestionDescription());
+                counter++;
+                pstmt.setInt(counter, getIdOfSurvey(survey.getSurveyTitle()));
+            }
+            pstmt.addBatch();
+            pstmt.executeBatch();
+
+
+
+            /*
+            //Answer
+            sql = "INSERT INTO answer (question_id, answer1, answer2, answer3, answer4, answer5)"
+                    + "VALUES (?, ?, ?, ?, ?, ?)";
+            foriegnkey constrainst thingy
+
+            pstmt = conn.prepareStatement("SET FOREIGN_KEY_CHECKS = 0", Statement.RETURN_GENERATED_KEYS);
+            pstmt.addBatch();
+
+
+
+            pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            pstmt.setInt(1, 6);
+            pstmt.setString(2, "ansewer1");
+            pstmt.setString(3, "ansewer1");
+            pstmt.setString(4, "ansewer1");
+            pstmt.setString(5, "ansewer1");
+            pstmt.addBatch();
+            int testCounter = 2;
+
+            pstmt = conn.prepareStatement("SET FOREIGN_KEY_CHECKS = 1", Statement.RETURN_GENERATED_KEYS);
+            pstmt.addBatch();
+
+
+            for(Question i : survey.getQuestions()){
+                for (String b : i.getAnswers().keySet()){
+                    System.out.println(b);
+                    pstmt.setString(testCounter, b);
+                    pstmt.addBatch();
+                }
+            }
+            pstmt.executeBatch();
+            */
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void remove(ArrayList<Survey> surveys, Survey survey) {
+        try {
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            Statement st = conn.createStatement();
+            String sql = "DELETE FROM survey WHERE id = " + getIdOfSurvey(survey.getSurveyTitle());
+            st.execute(sql);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 
     @Override
