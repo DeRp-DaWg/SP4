@@ -33,12 +33,11 @@ public class IOFile implements IO {
         try {
             FileInputStream file = new FileInputStream("surveys/"+name+".ser");
             ObjectInputStream in = new ObjectInputStream(file);
-    
-            survey = (Survey) in.readObject();
             
+            survey = (Survey) in.readObject();
             survey.setId(Long.parseLong(name.split("Survey")[1]));
             System.out.println(survey.getId());
-    
+            
             in.close();
             file.close();
     

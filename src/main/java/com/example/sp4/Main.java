@@ -1,22 +1,32 @@
 package com.example.sp4;
 
+import com.example.sp4.IO.IO;
 import com.example.sp4.IO.IODatabase;
+import com.example.sp4.IO.IOFile;
+import com.example.sp4.UI.CommandLine.UICommandLineStart;
 import com.example.sp4.UI.JavaFX.UIJavaFXMain;
+import javafx.application.Application;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        //Survey survey = new Survey();
-
-        IODatabase ioDatabase = new IODatabase();
-        //System.out.println(ioDatabase.read("age survey"));
-        //System.out.println(ioDatabase.getIdOfSurvey("Age survey"));
-        //ioDatabase.read();
-        UIJavaFXMain uiJavaFXMain = new UIJavaFXMain();
-        uiJavaFXMain.launchButton();
-
-        //Controller controller = new Controller();
-      //Anders test
-       // HelloApplication helloApplication = new HelloApplication();
-       // helloApplication.hello = "Oh No";
+        if (args.length == 0) {
+            Application.launch(UIJavaFXMain.class);
+        }
+        else {
+            for (String arg : args) {
+                if (arg.equals("-cmd")) {
+                    UICommandLineStart ui = new UICommandLineStart();
+                    IO io = new IOFile();
+                    ArrayList<Survey> surveys = io.read();
+                    ui.UIShowStart(surveys);
+                    for (Survey survey : surveys) {
+                        io.save(survey);
+                    }
+                }
+            }
+        }
     }
 }
