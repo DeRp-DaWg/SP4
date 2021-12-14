@@ -8,12 +8,12 @@
 
 ###Survey selection/start screen
 
-![Sketch](doc/UIStart GUI.png?raw=true)
+![Sketch](doc/UIStart GUI.png)
 
 ###Survey creation screen
 
-![Sketch](doc/UICreate GUI.png?raw=true)
+![Sketch](doc/UICreate GUI.png)
 
 ###Survey answer screen
 
-![Sketch](doc/UIAnswer GUI.png?raw=true)
+![Sketch](doc/UIAnswer GUI.png)
