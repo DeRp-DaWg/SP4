@@ -11,7 +11,7 @@ import java.util.*;
 Klik for at se databasens sql: https://ghostbin.com/cehZs
  */
 
-public class IODatabase implements IO{
+public class IODatabase implements IO {
     private Connection conn = null;
     // database URL
     final String DB_URL = "jdbc:mysql://localhost/Test";
@@ -32,19 +32,19 @@ public class IODatabase implements IO{
 
 
     @Override
-    public ArrayList<Survey> read() {
+    public ArrayList<Survey> read() throws Exception {
         ArrayList<Survey> surveys = new ArrayList<>();
-        for(int i = 0; i <= sizeOfTable("survey"); i++){
+        for (int i = 0; i <= sizeOfTable("survey"); i++) {
             surveys.add(read(String.valueOf(i)));
         }
         return surveys;
     }
 
-    public boolean isNumber(String myString){
-        try{
+    public boolean isNumber(String myString) {
+        try {
             int x = Integer.parseInt(myString);
             return true;
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             return false;
         }
 
@@ -58,11 +58,11 @@ public class IODatabase implements IO{
     private ResultSet rs2;
 
     @Override
-    public Survey read(String titleOfSurvey) {
+    public Survey read(String titleOfSurvey) throws Exception {
         int id = -1;
-        if(isNumber(titleOfSurvey) == true){
+        if (isNumber(titleOfSurvey) == true) {
             id = Integer.parseInt(titleOfSurvey);
-        }else{
+        } else {
             id = getIdOfSurvey(titleOfSurvey);
         }
         Survey survey = null;
@@ -133,18 +133,18 @@ public class IODatabase implements IO{
         return survey;
     }
 
-    public void deleteSurvey(String titleOfSurvey){
-        try{
+    public void deleteSurvey(String titleOfSurvey) {
+        try {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             Statement st = conn.createStatement();
             String sql = "DELETE FROM survey WHERE id = " + getIdOfSurvey(titleOfSurvey);
             st.execute(sql);
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e);
         }
     }
 
-    public int getIdOfSurvey(String titleOfSurvey){
+    public int getIdOfSurvey(String titleOfSurvey) {
         int myId = -1;
         try {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -163,18 +163,14 @@ public class IODatabase implements IO{
         return myId;
     }
 
-    public int sizeOfTable(String tableName){
+    public int sizeOfTable(String tableName) throws Exception {
         int size = -1;
-        try {
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select * from " + tableName);
-            size = 0;
-            while (rs.next()){
-                size = rs.getInt(1);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        conn = DriverManager.getConnection(DB_URL, USER, PASS);
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery("select * from " + tableName);
+        size = 0;
+        while (rs.next()) {
+            size = rs.getInt(1);
         }
         return size;
     }
@@ -185,7 +181,7 @@ public class IODatabase implements IO{
     }
 
     @Override
-    public void remove(Survey survey) {
+    public void remove(ArrayList<Survey> surveys, Survey survey) {
     }
 
     @Override

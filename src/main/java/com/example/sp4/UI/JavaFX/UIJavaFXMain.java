@@ -21,23 +21,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnswer, UICreate {
-    private Stage stage;
-    private ArrayList<Survey> surveys;
+public class UIJavaFXMain extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        UI ui = new UI();
-        IO io = new IODatabase();
+        ArrayList<Survey> surveys = new ArrayList<>();
         try {
-            surveys = io.read();
+            IO io = new IOFile();
+            surveys.addAll(io.read());
         }
         catch (Exception e) {
-            surveys = new ArrayList<>();
+            System.out.println("Files not loaded");
+        }
+        try {
+            IO io = new IODatabase();
+            surveys.addAll(io.read());
+        }
+        catch (Exception e) {
+            System.out.println("Database not loaded");
         }
         UIJavaFX.setSurveys(surveys);
-        this.stage = stage;
-        
+
         FXMLLoader startFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
         Scene startScene = new Scene(startFXMLLoader.load(), 600, 400);
         
@@ -46,41 +50,19 @@ public class UIJavaFXMain extends Application implements UIInit, UIStart, UIAnsw
 
         stage.getIcons().add(new Image("file:resources/logo.png"));
 
-        this.stage.setTitle("Survey program");
+        stage.setTitle("Survey program");
 
-        this.stage.setScene(startScene);
-        this.stage.show();
-        this.stage.setMinWidth(stage.getWidth());
-        this.stage.setMinHeight(stage.getHeight());
+        stage.setScene(startScene);
+        stage.show();
+        stage.setMinWidth(stage.getWidth());
+        stage.setMinHeight(stage.getHeight());
         
     }
-    
+    public void launchButton(){
+        launch();
+    }
+
     public static void main(String[] args) {
         Application.launch();
-    }
-    
-    @Override
-    public void initt() {
-        Application.launch();
-    }
-    
-    @Override
-    public Survey UIShowAnswer(Survey survey) {
-        return null;
-    }
-    
-    @Override
-    public Survey UIShowCreate() {
-        return null;
-    }
-    
-    @Override
-    public Survey UIShowStart(Survey[] surveys) {
-        return null;
-    }
-    
-    @Override
-    public String getIOType() {
-        return null;
     }
 }

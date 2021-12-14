@@ -1,5 +1,8 @@
 package com.example.sp4.UI.JavaFX;
 
+import com.example.sp4.IO.IO;
+import com.example.sp4.IO.IODatabase;
+import com.example.sp4.IO.IOFile;
 import com.example.sp4.Survey;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +18,8 @@ public abstract class UIJavaFX {
     protected static Stage stage;
     protected static Survey survey;
     protected static ArrayList<Survey> surveys;
+    protected static IO ioFile = new IOFile();
+    protected static IO ioDatabase = new IODatabase();
     
 //    public static void setSceneHashMap(HashMap<String, Scene> sceneHashMap) {
 //        UIJavaFX.sceneHashMap = sceneHashMap;
@@ -34,9 +39,5 @@ public abstract class UIJavaFX {
     
     public static void setSurveys(ArrayList<Survey> surveys) {
         UIJavaFX.surveys = surveys;
-    }
-    
-    public static void reloadScene(Scene scene) {
-    
     }
 }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Survey implements Serializable, Comparable<Survey> {
     public static final long serialVersionUID = 104877509L;
-    private long id;
+    private transient long id;
     private String surveyTitle;
     private String surveyDescription;
     private ArrayList<Question> questions = new ArrayList<>();

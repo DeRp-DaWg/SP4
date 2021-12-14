@@ -3,6 +3,9 @@ package com.example.sp4.UI.JavaFX;
 import com.example.sp4.Comparators.LocationComparator;
 import com.example.sp4.Comparators.QuestionsComparator;
 import com.example.sp4.Comparators.TitleComparator;
+import com.example.sp4.IO.IO;
+import com.example.sp4.IO.IODatabase;
+import com.example.sp4.IO.IOFile;
 import com.example.sp4.Survey;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -52,53 +56,86 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
     private ChoiceBox choiceBox;
     
     private ObservableList<String> observableList;
-    private LinkedHashMap<String, Comparator<Survey>> choiceBoxItemss = new LinkedHashMap<>();
+    private LinkedHashMap<String, Comparator<Survey>> choiceBoxItems = new LinkedHashMap<>();
     
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        choiceBoxItemss.put("Sort by title", new TitleComparator());
-        choiceBoxItemss.put("Sort by questions", new QuestionsComparator());
-        choiceBoxItemss.put("Sort by save location", new LocationComparator());
+        choiceBoxItems.put("Sort by title", new TitleComparator());
+        choiceBoxItems.put("Sort by questions", new QuestionsComparator());
+        choiceBoxItems.put("Sort by save location", new LocationComparator());
         
-        observableList = FXCollections.observableArrayList(choiceBoxItemss.keySet().toArray(new String[0]));
+        observableList = FXCollections.observableArrayList(choiceBoxItems.keySet().toArray(new String[0]));
         choiceBox.setItems(observableList);
-        choiceBox.setValue(choiceBoxItemss.keySet().toArray()[0]);
+        choiceBox.setValue(choiceBoxItems.keySet().toArray()[0]);
         choiceBox.setOnAction(actionEvent -> onChoiceBoxItemChange());
         
         showLocal = showLocalCheckBox.isSelected();
         showDatabase = showDatabaseCheckBox.isSelected();
         
-        if (surveys == null) return;
-        surveys.sort(choiceBoxItemss.get("Sort by title"));
-        updateSurveysBox();
-        changeActiveSurvey(0);
+        if (surveys.size() > 0) {
+            surveys.sort(choiceBoxItems.get("Sort by title"));
+            updateSurveysBox();
+            changeActiveSurvey(surveys.get(0));
+        }
+        else {
+            noSurveys();
+        }
+    }
+    
+    private void noSurveys() {
+        openSurveyButton.setDisable(true);
+        openSurveyResultsButton.setDisable(true);
+        surveyTitleLabel.setText("");
+        surveyDescriptionLabel.setText("");
+        surveyAmountOfQuestionsLabel.setText("");
     }
     
     private void updateSurveysBox() {
+        if (surveys.size() == 0) noSurveys();
         surveysBox.getChildren().clear();
         for (int i = 0; i < surveys.size(); i++) {
             boolean fromDB = surveys.get(i).isFromDB();
             boolean fromFile = !fromDB;
             if ((fromFile == showLocal || fromDB == showDatabase) && (showLocal || showDatabase)) {
+                HBox buttonHBox = new HBox();
+                Button removeButton = new Button("X");
                 Button button = new Button(surveys.get(i).getSurveyTitle());
+                buttonHBox.getChildren().addAll(button, removeButton);
                 button.setMinHeight(Double.NEGATIVE_INFINITY);
                 button.setMinWidth(Double.NEGATIVE_INFINITY);
                 button.setMnemonicParsing(false);
                 button.setPrefHeight(40);
                 button.setMinWidth(213);
                 int finalI = i;
-                button.setOnAction(actionEvent -> changeActiveSurvey(finalI));
-                surveysBox.getChildren().add(button);
+                Survey buttonSurvey = surveys.get(finalI);
+                button.setOnAction(actionEvent -> changeActiveSurvey(buttonSurvey));
+                
+                removeButton.setPrefHeight(40);
+                removeButton.setOnAction(actionEvent -> removeSurvey(buttonSurvey));
+                //int finalI = i;
+                //button.setOnAction(actionEvent -> changeActiveSurvey(finalI));
+                surveysBox.getChildren().add(buttonHBox);
             }
         }
     }
     
-    private void changeActiveSurvey(int i) {
-        survey = surveys.get(i);
+    private void changeActiveSurvey(Survey buttonSurvey) {
+        survey = buttonSurvey;
         surveyTitleLabel.setText(survey.getSurveyTitle());
         surveyDescriptionLabel.setText(survey.getSurveyDescription());
         surveyAmountOfQuestionsLabel.setText("Questions: "+survey.getQuestions().size());
+    }
+    
+    private void removeSurvey(Survey survey) {
+        if (survey.isFromDB()) {
+            ioDatabase.remove(surveys, survey);
+        }
+        else {
+            ioFile.remove(surveys, survey);
+        }
+        surveys.remove(survey);
+        updateSurveysBox();
     }
     
     @FXML
@@ -141,10 +178,10 @@ public class UIJavaFXStart extends UIJavaFX implements Initializable {
     @FXML
     private void onChoiceBoxItemChange() {
         if (surveys == null) return;
-        String[] choiceBoxItemKeys = choiceBoxItemss.keySet().toArray(new String[0]);
+        String[] choiceBoxItemKeys = choiceBoxItems.keySet().toArray(new String[0]);
         for (int i = 0; i < choiceBoxItemKeys.length; i++) {
             if (choiceBoxItemKeys[i].equals(choiceBox.getValue())) {
-                surveys.sort(choiceBoxItemss.get(choiceBoxItemKeys[i]));
+                surveys.sort(choiceBoxItems.get(choiceBoxItemKeys[i]));
             }
         }
         surveysBox.getChildren().clear();
