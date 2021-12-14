@@ -34,9 +34,8 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadQuestions();
     }
-    
-    @FXML
-    public void loadQuestions(){
+
+    private void loadQuestions(){
         for(int i = 0; i < survey.getQuestions().size();i++){
             ToggleGroup toggleGroup = new ToggleGroup();
             VBox questionBox = new VBox();
@@ -65,8 +64,7 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
             this.questionBox.getChildren().add(questionBox);
         }
     }
-    @FXML
-    public void loadAnswers(){
+    private void loadAnswers(){
         for (int i = 0; i < questionBox.getChildren().size(); i++){
             if (questionBox.getChildren().get(i) instanceof VBox){
                 for (int j = 0; j < ((VBox) questionBox.getChildren().get(i)).getChildren().size(); j++){
@@ -90,7 +88,7 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
         }
     }
     @FXML
-    public void endSurvey(){
+    private void endSurvey(){
         loadAnswers();
         if(survey.isFromDB()){
             ioDatabase.update(survey);
@@ -111,7 +109,7 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
     }
     @FXML
     //If one doesn't want to send their answers
-    public void cancel(){
+    private void cancel(){
         try {
             FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
             Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
