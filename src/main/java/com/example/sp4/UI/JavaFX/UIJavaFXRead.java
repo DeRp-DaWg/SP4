@@ -39,7 +39,6 @@ public class UIJavaFXRead extends UIJavaFX implements Initializable {
             questions.setPadding(new Insets(0, 0, 10, 0));
             vBox.getChildren().add(questions);
             for(Map.Entry<String, Integer> b : i.getAnswers().entrySet()){
-                String key = b.getKey().toString();
                 value = Integer.parseInt(i.getAnswers().get(b.getKey()).toString());
                 System.out.println("boi" + value);
 
@@ -49,11 +48,14 @@ public class UIJavaFXRead extends UIJavaFX implements Initializable {
                 answers.setPadding(new Insets(0, 0, 5, 0));
                 vBox.getChildren().add(answers);
 
-                pieChartAdd.add(new PieChart.Data(b.getKey(), value));
+                PieChart.Data e = new PieChart.Data(b.getKey(), value);
+                pieChartAdd.add(e);
             }
             pieChart = FXCollections.observableArrayList(pieChartAdd);
 
             PieChart chart = new PieChart(pieChart);
+            chart.setLabelsVisible(true);
+            chart.setLegendVisible(true);
             chart.setTitle("Graph");
             vBox.getChildren().add(chart);
         }
