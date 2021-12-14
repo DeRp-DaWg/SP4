@@ -30,10 +30,6 @@ import java.util.ResourceBundle;
 public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
     @FXML
     private VBox questionBox;
-    @FXML
-    private Label questionTitle;
-    @FXML
-    private Label questionDescription;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadQuestions();
@@ -55,7 +51,10 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
             questionTitle.setText(survey.getQuestions().get(i).getQuestionName());
             questionBox.getChildren().add(questionTitle);
             questionDescription.setText(survey.getQuestions().get(i).getQuestionDescription());
-            questionBox.getChildren().add(questionDescription);
+            //This just checks if the description contains anything, if not it'll not waste space on it.
+            if(!survey.getQuestions().get(i).getQuestionDescription().equals("")) {
+                questionBox.getChildren().add(questionDescription);
+            }
             String[] answers = survey.getQuestions().get(i).getAnswers().keySet().toArray(new String[0]);
             for (int j = 0; j < survey.getQuestions().get(i).getAnswers().size(); j++){
                 RadioButton radioButton = new RadioButton();
@@ -109,5 +108,17 @@ public class UIJavaFXAnswer extends UIJavaFX implements Initializable {
         }
     }
     public void test(){
+    }
+    @FXML
+    //If one doesn't want to send their answers
+    public void cancel(){
+        try {
+            FXMLLoader createFXMLLoader = new FXMLLoader(getClass().getResource("Start.fxml"));
+            Scene scene = new Scene(createFXMLLoader.load(), 600, 400);
+            stage.setScene(scene);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
